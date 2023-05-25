@@ -10360,7 +10360,7 @@ header {
     padding: 0; }
 
 .dropdown-menu hr {
-  margin: .5rem 0; }
+  margin: 0.5rem 0; }
 
 .user-profile-setting {
   display: flex;
@@ -10374,7 +10374,7 @@ header {
     text-align: left;
     line-height: 1.2; }
   .user-profile-setting .avatar-type {
-    font-size: .8rem; }
+    font-size: 0.8rem; }
   .user-profile-setting .avatar-name {
     font-size: 1rem;
     font-weight: 600; }
@@ -10456,7 +10456,7 @@ header {
   position: absolute;
   top: 2px;
   left: 4px;
-  transition: .2s; }
+  transition: 0.2s; }
 
 .toggle-checkbox[type="checkbox"]:checked::before {
   transform: translateX(26px);
@@ -10478,5 +10478,11 @@ header {
   border-radius: 6px;
   padding: 4px;
   box-shadow: 0px 0px 2px #ddd; }
+
+.cursor-pointer {
+  cursor: pointer; }
+
+.hidden {
+  display: none; }
 
 /*# sourceMappingURL=bootstrap.css.map */
