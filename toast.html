@@ -9,16 +9,30 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.css" />
   </head>
 
   <body>
-    <!-- successfully saved -->
-    <div class="cancel-toast position-fixed top-0 start-0 m-4">
+    <div class="d-flex flex-column m-4 align-items-start">
+      <button id="show-saved-toast" class="btn btn-primary mt-2">Saved</button>
+      <button id="show-archived-toast" class="btn btn-primary mt-2">
+        Discussion Archived
+      </button>
+      <button id="show-moved-toast" class="btn btn-primary mt-2">
+        Discussion Moved
+      </button>
+      <button id="show-avatar-toast" class="btn btn-primary mt-2">
+        with Avatar
+      </button>
+    </div>
+
+    <div class="position-fixed top-0 end-0 d-flex flex-column align-items-end">
+      <!-- successfully saved -->
       <div
-        id="liveToast"
-        class="shadow p-3 bg-body-tertiary rounded"
+        id="savedToast"
+        class="shadow p-3 bg-body-tertiary rounded cancel-toast mt-4 me-4 d-none"
         role="alert"
         aria-live="assertive"
         aria-atomic="true"
@@ -42,13 +56,11 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- discussion rchived -->
-    <div class="cancel-toast position-fixed top-0 end-0 m-4">
+      <!-- discussion rchived -->
       <div
-        id="liveToast"
-        class="shadow px-3 py-1 bg-body-tertiary rounded"
+        id="archivedToast"
+        class="shadow px-3 py-1 bg-body-tertiary rounded cancel-toast mt-4 me-4 d-none"
         role="alert"
         aria-live="assertive"
         aria-atomic="true"
@@ -62,7 +74,7 @@
           <div class="ms-5 d-flex" style="transform: translateY(6px)">
             <p class="text-primary">Undo</p>
             <div
-              class="mx-3 cancel-toast-button cursor-pointer"
+              class="ms-3 me-2 cancel-toast-button cursor-pointer"
               style="transform: translateY(2px)"
             >
               <i class="fs-5 fa-solid fa-xmark"></i>
@@ -70,13 +82,11 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- discussion moved -->
-    <div class="cancel-toast position-fixed top-50 start-0 m-4">
+      <!-- discussion moved -->
       <div
-        id="liveToast"
-        class="shadow p-3 bg-body-tertiary rounded"
+        id="movedToast"
+        class="shadow p-3 bg-body-tertiary rounded cancel-toast mt-4 me-4 d-none"
         role="alert"
         aria-live="assertive"
         aria-atomic="true"
@@ -99,13 +109,11 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- With Avatar -->
-    <div class="cancel-toast position-fixed bottom-0 end-0 m-4">
+      <!-- With Avatar -->
       <div
-        id="liveToast"
-        class="shadow p-3 bg-body-tertiary rounded"
+        id="avatarToast"
+        class="shadow p-3 bg-body-tertiary rounded cancel-toast mt-4 me-4 d-none"
         role="alert"
         aria-live="assertive"
         aria-atomic="true"
