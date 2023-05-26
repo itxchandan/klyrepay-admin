@@ -36,7 +36,7 @@ $(document).ready(function () {
   });
 
   // Toggle Password
-  $(".eye-toggle-button").click(function (e) {
+  $(".show-password").click(function (e) {
     e.preventDefault();
     var eyeToggleButton = $(this);
     var input = eyeToggleButton.siblings("input");
@@ -48,5 +48,11 @@ $(document).ready(function () {
     } else {
       input.attr("type", "password");
     }
+  });
+
+  // Cancel Toast
+  $(".cancel-toast-button").on("click", function (e) {
+    e.preventDefault();
+    $(this).closest(".cancel-toast").addClass("invisible");
   });
 });
