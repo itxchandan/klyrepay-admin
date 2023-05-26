@@ -59,25 +59,21 @@ $(document).ready(function () {
   // Show Toast
   $("#show-saved-toast").on("click", function (e) {
     e.preventDefault();
-    console.log("jhkjhkjhk");
     $("#savedToast").removeClass("d-none");
   });
 
   $("#show-moved-toast").on("click", function (e) {
     e.preventDefault();
-    console.log("jhkjhkjhk");
     $("#movedToast").removeClass("d-none");
   });
 
   $("#show-archived-toast").on("click", function (e) {
     e.preventDefault();
-    console.log("jhkjhkjhk");
     $("#archivedToast").removeClass("d-none");
   });
 
   $("#show-avatar-toast").on("click", function (e) {
     e.preventDefault();
-    console.log("jhkjhkjhk");
     $("#avatarToast").removeClass("d-none");
   });
 });
