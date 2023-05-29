@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Klyrepay HTML Compoments</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+  </head>
+
+  <body>
+    <!-- Mobile Menu -->
+    <div class="text-bg-light">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center">
+          <h3>Brand</h3>
+          <button class="mobile-menu-toggle btn fs-5">
+            <i class="fa-solid fa-bars-staggered"></i>
+            <i class="d-none fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="level-one-menu d-none d-flex flex-column">
+          <!-- Level 1 -->
+          <div>
+            <a class="nav-link" href="#">Home</a>
+          </div>
+          <div class="">
+            <div class="d-flex justify-content-between align-items-center">
+              <a class="nav-link" href="#">Level 1 Item 1</a>
+              <button class="level-one-toggle btn fs-5">
+                <i class="fa-solid fa-angle-down"></i>
+                <i class="d-none fa-solid fa-angle-up"></i>
+              </button>
+            </div>
+            <!-- Level 2 -->
+            <div class="level-two-menu d-none ms-2">
+              <div class="d-flex flex-column">
+                <div class="">
+                  <a class="nav-link" href="#">Level 2 Item 1</a>
+                </div>
+                <div>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <a class="nav-link" href="#">Level 2 Item 2</a>
+                    <button class="level-two-toggle btn fs-5">
+                      <i class="fa-solid fa-angle-down"></i>
+                      <i class="d-none fa-solid fa-angle-up"></i>
+                    </button>
+                  </div>
+                  <!-- Level 3 -->
+                  <div class="level-three-menu d-none d-flex flex-column ms-4">
+                    <div class="mb-2">
+                      <a class="nav-link" href="#">Level 3 Item 1</a>
+                    </div>
+                    <div class="mb-2">
+                      <a class="nav-link" href="#">Level 3 Item 3</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-2">
+                  <a class="nav-link" href="#">Level 2 Item 3</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-2">
+            <a class="nav-link" href="#">Level 1 Item 2</a>
+          </div>
+          <div class="mb-2">
+            <a class="nav-link" href="#">Level 1 Item 3</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- All Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Required All Three Libraries Below -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -76,4 +76,51 @@ $(document).ready(function () {
     e.preventDefault();
     $("#avatarToast").removeClass("d-none");
   });
+
+  // Date Range Empty Picker
+  $(function () {
+    $('input[name="datefilter"]').daterangepicker({
+      autoUpdateInput: false,
+      locale: {
+        cancelLabel: "Clear",
+      },
+    });
+
+    $('input[name="datefilter"]').on(
+      "apply.daterangepicker",
+      function (ev, picker) {
+        $(this).val(
+          picker.startDate.format("MM/DD/YYYY") +
+            " - " +
+            picker.endDate.format("MM/DD/YYYY")
+        );
+      }
+    );
+
+    $('input[name="datefilter"]').on(
+      "cancel.daterangepicker",
+      function (ev, picker) {
+        $(this).val("");
+      }
+    );
+  });
+
+  // Three Level Deep Mobile Menu
+  $(".mobile-menu-toggle").on("click", function (e) {
+    e.preventDefault();
+    $(this).find("i").toggleClass("d-none");
+    $(".level-one-menu").toggleClass("d-none");
+  });
+
+  $(".level-one-toggle").on("click", function (e) {
+    e.preventDefault();
+    $(this).find("i").toggleClass("d-none");
+    $(".level-two-menu").toggleClass("d-none");
+  });
+
+  $(".level-two-toggle").on("click", function (e) {
+    e.preventDefault();
+    $(this).find("i").toggleClass("d-none");
+    $(".level-three-menu").toggleClass("d-none");
+  });
 });
