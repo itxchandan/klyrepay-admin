@@ -14,6 +14,16 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
     />
+    <!-- Pivot Table -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.23.0/pivot.min.css"
+    />
+    <!-- Data Tables -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css"
+    />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.css" />
@@ -190,7 +200,6 @@
 
     <!-- Toaster Section -->
     <section class="">
-
       <div class="container">
         <div class="col">
           <div class="row">
@@ -239,7 +248,7 @@
                   </div>
                 </div>
               </div>
-      
+
               <!-- discussion rchived -->
               <div
                 id="archivedToast"
@@ -251,7 +260,9 @@
                 <div class="d-flex align-items-center">
                   <div>
                     <div class="toast-header me-5">
-                      <strong class="me-auto fw-medium">Discussion archived</strong>
+                      <strong class="me-auto fw-medium"
+                        >Discussion archived</strong
+                      >
                     </div>
                   </div>
                   <div class="ms-5 d-flex" style="transform: translateY(6px)">
@@ -265,7 +276,7 @@
                   </div>
                 </div>
               </div>
-      
+
               <!-- discussion moved -->
               <div
                 id="movedToast"
@@ -280,7 +291,9 @@
                   </div>
                   <div style="max-width: 300px">
                     <div class="toast-header">
-                      <strong class="me-auto fw-medium mb-2">Discussion Moved</strong>
+                      <strong class="me-auto fw-medium mb-2"
+                        >Discussion Moved</strong
+                      >
                     </div>
                     <div class="toast-body fw-light fs-6">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit
@@ -292,7 +305,7 @@
                   </div>
                 </div>
               </div>
-      
+
               <!-- With Avatar -->
               <div
                 id="avatarToast"
@@ -310,10 +323,12 @@
                       alt=""
                     />
                   </div>
-      
+
                   <div class="pe-5">
                     <div class="toast-header">
-                      <strong class="me-auto fw-medium mb-1">Emilia Gates!</strong>
+                      <strong class="me-auto fw-medium mb-1"
+                        >Emilia Gates!</strong
+                      >
                     </div>
                     <div class="toast-body fw-light fs-6">
                       Sure! 8:30pm works great!
@@ -330,7 +345,6 @@
           </div>
         </div>
       </div>
-
     </section>
 
     <!-- Date Range Picker -->
@@ -352,16 +366,16 @@
       </div>
     </section>
 
-    <!-- Mobile Menu -->
+    <!-- Website & Mobile Menu -->
     <section class="mx-auto my-5">
       <div class="container">
         <div class="col">
           <div class="row">
             <div>
-              <h3 class="text-center my-5">Mobile Menu</h3>
-              <!-- Mobile Menu -->
+              <h3 class="text-center my-5">Website & Mobile Menu</h3>
               <header>
                 <div class="container-fluid">
+                  <!-- ******* Website Menu ******* -->
                   <!-- <div class="d-flex justify-content-between align-items-center"> -->
                   <div class="header-wrapper">
                     <div class="header-left-area">
@@ -420,19 +434,29 @@
                                 </div>
                                 <div class="avatar-info">
                                   <div class="avatar-type">Admin User</div>
-                                  <div class="avatar-email">admin@admin.com</div>
+                                  <div class="avatar-email">
+                                    admin@admin.com
+                                  </div>
                                 </div>
                               </div>
                               <hr />
-                              <li><a class="dropdown-item" href="#">Profile</a></li>
                               <li>
-                                <a class="dropdown-item" href="#">Edit Profile</a>
+                                <a class="dropdown-item" href="#">Profile</a>
                               </li>
                               <li>
-                                <a class="dropdown-item" href="#">Activity Log</a>
+                                <a class="dropdown-item" href="#"
+                                  >Edit Profile</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Activity Log</a
+                                >
                               </li>
                               <hr />
-                              <li><a class="dropdown-item" href="#">Sign Out</a></li>
+                              <li>
+                                <a class="dropdown-item" href="#">Sign Out</a>
+                              </li>
                             </ul>
                           </div>
                         </div>
@@ -445,7 +469,7 @@
                       <i class="d-none fa-solid fa-xmark"></i>
                     </button>
                   </div>
-                  <!-- Mobile Navlinks and Admin Profile -->
+                  <!-- ******* Mobile Navlinks and Admin Profile ******* -->
                   <div class="level-one-menu d-none d-flex flex-column">
                     <!-- Navlinks -->
                     <div>
@@ -491,9 +515,13 @@
                                 class="d-flex justify-content-between align-items-center"
                               >
                                 <div class="nav">
-                                  <a class="nav-link" href="#">Level 2 Item 2</a>
+                                  <a class="nav-link" href="#"
+                                    >Level 2 Item 2</a
+                                  >
                                 </div>
-                                <button class="text-light level-two-toggle btn fs-5">
+                                <button
+                                  class="text-light level-two-toggle btn fs-5"
+                                >
                                   <i class="fa-solid fa-angle-down"></i>
                                   <i class="d-none fa-solid fa-angle-up"></i>
                                 </button>
@@ -504,12 +532,16 @@
                               >
                                 <div class="mb-2">
                                   <div class="nav">
-                                    <a class="nav-link" href="#">Level 3 Item 1</a>
+                                    <a class="nav-link" href="#"
+                                      >Level 3 Item 1</a
+                                    >
                                   </div>
                                 </div>
                                 <div class="mb-2">
                                   <div class="nav">
-                                    <a class="nav-link" href="#">Level 3 Item 3</a>
+                                    <a class="nav-link" href="#"
+                                      >Level 3 Item 3</a
+                                    >
                                   </div>
                                 </div>
                               </div>
@@ -526,7 +558,9 @@
                     <!-- Admin Profile -->
                     <div class="my-2">
                       <div class="text-end">
-                        <div class="d-flex justify-content-center align-items-center">
+                        <div
+                          class="d-flex justify-content-center align-items-center"
+                        >
                           <div class="lh-sm">
                             <div class="f6" id="clock">
                               Fri, May 19 2023, 13:48:16
@@ -564,19 +598,29 @@
                                 </div>
                                 <div class="avatar-info">
                                   <div class="avatar-type">Admin User</div>
-                                  <div class="avatar-email">admin@admin.com</div>
+                                  <div class="avatar-email">
+                                    admin@admin.com
+                                  </div>
                                 </div>
                               </div>
                               <hr />
-                              <li><a class="dropdown-item" href="#">Profile</a></li>
                               <li>
-                                <a class="dropdown-item" href="#">Edit Profile</a>
+                                <a class="dropdown-item" href="#">Profile</a>
                               </li>
                               <li>
-                                <a class="dropdown-item" href="#">Activity Log</a>
+                                <a class="dropdown-item" href="#"
+                                  >Edit Profile</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Activity Log</a
+                                >
                               </li>
                               <hr />
-                              <li><a class="dropdown-item" href="#">Sign Out</a></li>
+                              <li>
+                                <a class="dropdown-item" href="#">Sign Out</a>
+                              </li>
                             </ul>
                           </div>
                         </div>
@@ -591,8 +635,158 @@
       </div>
     </section>
 
+    <!-- Tab Views -->
+    <section class="my-5">
+      <h3 class="text-center">Tab View</h3>
+      <div class="container">
+        <div class="d-inline-flex rounded-2 shadow-sm border border-light">
+          <div
+            class="tab-view cursor-pointer py-2 px-5 border border-top-0 border-bottom-0 border-start-0"
+          >
+            My Accounts
+          </div>
+          <div
+            class="tab-view cursor-pointer py-2 px-5 border border-top-0 border-bottom-0"
+          >
+            Company
+          </div>
+          <div
+            class="tab-view cursor-pointer py-2 px-5 border border-top-0 border-bottom-0"
+          >
+            Team Members
+          </div>
+          <div
+            class="tab-view cursor-pointer py-2 px-5 border border-top-0 border-bottom-0 border-end-0"
+          >
+            Billing
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pivot Table -->
+    <section class="my-5">
+      <h3 class="text-center">Pivot Table</h3>
+      <div class="container">
+        <div id="pivot-table"></div>
+      </div>
+    </section>
+
+    <!-- Multi Select And Search -->
+    <section class="my-5">
+      <div class="container">
+        <div class="d-flex justify-content-between">
+          <!-- Multi Select -->
+          <div>
+            <h3 class="text-center">Multi Select</h3>
+            <!-- Accordian -->
+            <div>
+              <!-- Dropdown -->
+              <div
+                class="show-options py-1 px-2 shadow-sm cursor-pointer d-block"
+              >
+                <div class="d-flex justify-content-end">
+                  <div class="">
+                    <input
+                      type="text"
+                      id="total-selected"
+                      value=""
+                      class="border-0"
+                    />
+                    <i class="d-none fa-solid fa-xmark"></i>
+                    <i class="fa-solid fa-angle-down"></i>
+                    <i class="d-none fa-solid fa-angle-up"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Hidden Options -->
+              <div id="multi-options" class="d-none">
+                <div class="list-group mt-2 shadow-lg">
+                  <button
+                    type="button"
+                    class="multi-selected list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                    aria-current="true"
+                  >
+                    The current button
+                    <input
+                      type="hidden"
+                      name="multi_select[]"
+                      class=""
+                      value="1"
+                    />
+                    <div class="d-none">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                  </button>
+                  <button
+                    type="button"
+                    class="multi-selected list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                    aria-current="true"
+                  >
+                    The current button
+                    <input
+                      type="hidden"
+                      name="multi_select[]"
+                      class=""
+                      value="1"
+                    />
+                    <div class="d-none">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                  </button>
+                  <button
+                    type="button"
+                    class="multi-selected list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                    aria-current="true"
+                  >
+                    The current button
+                    <input
+                      type="hidden"
+                      name="multi_select[]"
+                      class=""
+                      value="1"
+                    />
+                    <div class="d-none">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                  </button>
+                  <button
+                    type="button"
+                    class="multi-selected list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                    aria-current="true"
+                  >
+                    The current button
+                    <input
+                      type="hidden"
+                      name="multi_select[]"
+                      class=""
+                      value="1"
+                    />
+                    <div class="d-none">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Search -->
+          <div>
+            <h3>Live Search</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- All Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Pivot Table -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.23.0/pivot.min.js"></script>
+
+    <!-- Data Tables -->
+    <script src="//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 
     <!-- Required All Three Libraries Below -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>

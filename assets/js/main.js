@@ -123,9 +123,83 @@ $(document).ready(function () {
     $(this).find("i").toggleClass("d-none");
     $(".level-three-menu").toggleClass("d-none");
   });
+
+  // Tab View
+  $(".tab-view").on("click", function (e) {
+    e.preventDefault();
+
+    $(".tab-view").removeClass("border-bottom fw-bold border-primary border-3");
+    $(".tab-view").addClass("border border-bottom-0");
+    $(this).removeClass("border border-bottom-0");
+    $(this).addClass("border-bottom fw-bold border-primary border-3");
+  });
+
+  // ***** Multi Select *****
+  $(".show-options").on("click", function (e) {
+    e.preventDefault();
+    var toggleButton = $(this).find("i");
+
+    toggleButton.toggleClass("d-none");
+    $(this).find(".fa-xmark").addClass("d-none");
+    $("#multi-options").toggleClass("d-none");
+  });
+
+  $(".multi-selected").on("click", function (e) {
+    e.preventDefault();
+    var tickMark = $(this).find("div");
+    var selectedValue = $(this).find("input");
+
+    $(this).toggleClass("active");
+    tickMark.toggleClass("d-none");
+    selectedValue.toggleClass("count");
+
+    var counts = $("#multi-options").find(".count");
+    $("#total-selected").val(counts.length + " selected");
+
+    if (counts.length > 0) {
+      $(".show-options").find("i").addClass("d-none");
+      $(".show-options").find(".fa-xmark").removeClass("d-none");
+    } else {
+      $(".show-options").find(".fa-angle-down").addClass("d-none");
+      $(".show-options").find(".fa-xmark").addClass("d-none");
+      $(".show-options").find(".fa-angle-up").removeClass("d-none");
+    }
+  });
+
+  // cancel all selected
+  $(".show-options")
+    .find(".fa-xmark")
+    .on("click", function (e) {
+      e.preventDefault();
+      $("#multi-options").addClass("d-none");
+      $("#multi-options").find(".count").removeClass("count");
+      $(".show-options").find(".fa-angle-down").removeClass("d-none");
+      $(".show-options").find(".fa-xmark").addClass("d-none");
+      $(".show-options").find(".fa-angle-up").addClass("d-none");
+      $(".multi-selected").removeClass("active");
+    });
+
+  // End Document Ready
 });
 
 // Responsive Table
 $(document).ready(function () {
-  $('#example').DataTable();
+  $("#example").DataTable();
+});
+
+// Pivot Table Not Working
+var data = [
+  ["Name", "Age", "Country"],
+  ["John", 30, "USA"],
+  ["Mary", 25, "UK"],
+  ["Peter", 40, "Canada"],
+];
+
+// Convert data to a format compatible with PivotTable.js
+// Generate the pivot table
+$("#pivot-table").pivot(data, {
+  rows: ["Name"],
+  cols: ["Country"],
+  aggregator: $.pivotUtilities.aggregators.Sum(["Age"]),
+  renderer: $.pivotUtilities.renderers.Table,
 });
