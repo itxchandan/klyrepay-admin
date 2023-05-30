@@ -124,3 +124,8 @@ $(document).ready(function () {
     $(".level-three-menu").toggleClass("d-none");
   });
 });
+
+// Responsive Table
+$(document).ready(function () {
+  $('#example').DataTable();
+});
