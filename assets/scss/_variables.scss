@@ -37,8 +37,7 @@ $grays: (
 
 // scss-docs-start color-variables
 $blue:    #0d6efd !default;
-// $indigo:  #6610f2 !default;
-$indigo:  #4f46e5 !default;
+$indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #d63384 !default;
 $red:     #dc3545 !default;
@@ -299,8 +298,7 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-// $primary:       $purple !default;
-$primary:       $indigo !default;
+$primary:       $gray-900 !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -312,7 +310,7 @@ $dark:          $gray-900 !default;
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
-  "primary":    $indigo,
+  "primary":    $dark,
   "secondary":  $secondary,
   "success":    $success,
   "info":       $info,
@@ -657,7 +655,7 @@ $headings-font-family:        null !default;
 $headings-font-style:         null !default;
 $headings-font-weight:        500 !default;
 $headings-line-height:        1.2 !default;
-$headings-color:              null !default;
+$headings-color:              inherit !default;
 // scss-docs-end headings-variables
 
 // scss-docs-start display-headings
@@ -733,7 +731,7 @@ $table-cell-padding-x-sm:     .25rem !default;
 $table-cell-vertical-align:   top !default;
 
 $table-color:                 var(--#{$prefix}body-color) !default;
-$table-bg:                    transparent !default;
+$table-bg:                    var(--#{$prefix}body-bg) !default;
 $table-accent-bg:             transparent !default;
 
 $table-th-font-weight:        null !default;
