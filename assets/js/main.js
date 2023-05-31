@@ -134,7 +134,7 @@ $(document).ready(function () {
     $(this).addClass("border-bottom fw-bold border-primary border-3");
   });
 
-  // ***** Multi Select *****
+  // ******* Multi Select *******
   $(".show-options").on("click", function (e) {
     e.preventDefault();
     var toggleButton = $(this).find("i");
@@ -184,7 +184,13 @@ $(document).ready(function () {
     var searchText = $(this).val();
 
     // Dummy live search result
-    var liveSearchResult = ["Result 1", "Result 2", "Result 3"];
+    var liveSearchResult = [
+      "Result 1",
+      "Result 2",
+      "Result 3",
+      "Vikas",
+      "Chandan",
+    ];
 
     var resultsContainer = $("#search-results");
     resultsContainer.empty();
