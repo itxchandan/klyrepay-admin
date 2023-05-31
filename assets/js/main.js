@@ -179,6 +179,25 @@ $(document).ready(function () {
       $(".multi-selected").removeClass("active");
     });
 
+  // ******* Live Search *******
+  $("#search").on("input", function () {
+    var searchText = $(this).val();
+
+    // Dummy live search result
+    var liveSearchResult = ["Result 1", "Result 2", "Result 3"];
+
+    var resultsContainer = $("#search-results");
+    resultsContainer.empty();
+    if (searchText !== "") {
+      $.each(liveSearchResult, function (index, result) {
+        if (result.toLowerCase().includes(searchText.toLowerCase())) {
+          var resultItem = $('<li class="list-group-item">').text(result);
+          resultsContainer.append(resultItem);
+        }
+      });
+    }
+  });
+
   // End Document Ready
 });
 
