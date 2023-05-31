@@ -125,13 +125,21 @@ $(document).ready(function () {
   });
 
   // Tab View
-  $(".tab-view").on("click", function (e) {
+  $(".tab-button").on("click", function (e) {
     e.preventDefault();
 
-    $(".tab-view").removeClass("border-bottom fw-bold border-primary border-3");
-    $(".tab-view").addClass("border border-bottom-0");
+    // Click Styling Condition
+    $(".tab-button").removeClass(
+      "border-bottom fw-bold border-primary border-3"
+    );
+    $(".tab-button").addClass("border border-bottom-0");
     $(this).removeClass("border border-bottom-0");
     $(this).addClass("border-bottom fw-bold border-primary border-3");
+
+    // Tab Conditions
+    $(".tab-view").addClass("d-none");
+    var currentTabView = $(".tab-view").eq($(this).index());
+    currentTabView.removeClass("d-none");
   });
 
   // ******* Multi Select *******
