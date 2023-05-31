@@ -246,3 +246,37 @@ header {
 .hidden {
   display: none;
 }
+
+// Filter Area
+
+.filter-area {
+  .container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px 20px 20px 20px;
+  }
+}
+
+// Input Fields
+.form-label {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+
+// Table
+
+.table {
+  margin: 0;
+  overflow: hidden;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.table > :not(caption) > * > * {
+  padding: 1rem;
+}

@@ -58,12 +58,6 @@
                         aria-expanded="false"
                       >
                         <div class="user-profile-setting">
-                          <div class="avatar-thumb">
-                            <img
-                              src="https://elstar.themenate.net/img/avatars/thumb-1.jpg"
-                              alt="Avatar"
-                            />
-                          </div>
                           <div class="avatar-info">
                             <div class="avatar-type">Admin</div>
                             <div class="avatar-name">John Deo</div>
@@ -103,16 +97,342 @@
         </div>
       </div>
     </header>
+
     <section class="page-title-section">
       <div class="container">
         <div class="row">
           <div class="col-6">
             <div class="d-flex align-items-center column-gap-4">
-              <h1 class="page-title">Transactions</h1>
-              <a class="btn btn-primary" href="#!">Add New</a>
+              <h1 class="page-title">Program Report</h1>
+              <a class="btn btn-secondary" href="#!">Add New</a>
             </div>
           </div>
           <div class="col-6"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="filter-area">
+
+      <!-- Dashboard Filter -->
+      <div class="container">
+        <h4>Dashboard</h4>
+        <div class="row row-cols-3">
+          <div class="col">
+            <div>
+              <label for="program" class="form-label">Program</label>
+              <input type="text" class="form-control" id="program">
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <label for="datefilter" class="form-label">Date Range</label>
+              <input type="text" class="form-control" name="datefilter" placeholder="Enter Date"/>
+            </div>
+          </div>
+          <div class="col">
+            <label for="emptyspace" class="form-label">&nbsp;</label><br>
+            <a href="#!" class="btn btn-primary">Submit</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-4"></div>
+
+      <!-- Transactions Filter -->
+      <div class="container">
+        <h4>Transactions</h4>
+        <div class="row row-cols-4">
+          <div class="col">
+            <div>
+              <label for="program" class="form-label">Program</label>
+              <input type="text" class="form-control" id="program" placeholder="Programs">
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <label for="datefilter" class="form-label">Date Range</label>
+              <input type="text" class="form-control" name="datefilter" placeholder="Enter Date"/>
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <label for="daterange" class="form-label">Transaction Status</label>
+              <input type="text" class="form-control" placeholder="Transaction Status"/>
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <label for="daterange" class="form-label">Amount</label>
+              <input type="text" class="form-control" placeholder="Enter Date"/>
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <label for="daterange" class="form-label">Customer ID</label>
+              <input type="text" class="form-control" placeholder="Customer ID"/>
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <label for="daterange" class="form-label">VRXID</label>
+              <input type="text" class="form-control" placeholder="VRXID"/>
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <label for="daterange" class="form-label">Decline Reason</label>
+              <input type="text" class="form-control" placeholder="Decline Reason"/>
+            </div>
+          </div>
+          <div class="col">
+            <div class="d-flex">
+              <div>
+                <label for="daterange" class="form-label">Search</label>
+                <input type="text" class="form-control" placeholder="Search"/>
+              </div>
+              <div class="ms-2">
+                <label for="emptyspace" class="form-label">&nbsp;</label><br>
+                <a href="#!" class="btn btn-primary lh-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                  </svg>
+                </a>
+              </div>
+              <div>
+                <label for="emptyspace" class="form-label">&nbsp;</label><br>
+                <a href="#!" class="btn btn-link text-decoration-none d-flex fw-bold">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                  </svg>
+                  <span class="ms-1">Export</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-4"></div>
+
+      <!-- Users Filter -->
+      <div class="container">
+        <h4>Users</h4>
+        <div class="row row-cols-3">
+          <div class="col">
+            <div>
+              <label for="datefilter" class="form-label">Date Range</label>
+              <input type="text" class="form-control" name="datefilter" placeholder="Enter Date"/>
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <label for="useremail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="useremail" placeholder="Email"/>
+            </div>
+          </div>
+         
+          <div class="col">
+            <div class="d-flex">
+              <div>
+                <label for="usersearch" class="form-label">Search</label>
+                <input type="text" class="form-control" id="usersearch" placeholder="Search"/>
+              </div>
+              <div class="ms-2">
+                <label for="emptyspace" class="form-label">&nbsp;</label><br>
+                <a href="#!" class="btn btn-primary lh-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                  </svg>
+                </a>
+              </div>
+              <div>
+                <label for="emptyspace" class="form-label">&nbsp;</label><br>
+                <a href="#!" class="btn btn-link text-decoration-none d-flex fw-bold">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                  </svg>
+                  <span class="ms-1">Export</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-4"></div>
+
+      <!-- Patients Filter -->
+      <div class="container">
+        <h4>Patients</h4>
+        <div class="row row-cols-4">
+          <div class="col">
+            <div>
+              <label for="PatientsProgram" class="form-label">Program</label>
+              <select class="form-select" id="PatientsProgram">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col">
+            <div>
+              <label for="PatientsCustomerStatus" class="form-label">Customer Status</label>
+              <select class="form-select" id="PatientsCustomerStatus">
+                <option selected>All</option>
+                <option value="verified">Verified</option>
+                <option value="NotVerified">Not Verified</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div>
+              <label for="PatientDetails" class="form-label">Patient Details</label>
+              <div class="d-flex">
+                <input type="text" class="form-control" id="PatientDetails" placeholder="Customer ID"/>
+                <input type="text" class="form-control mx-2" id="PatientFirstName" placeholder="First Name"/>
+                <input type="text" class="form-control" id="PatientLastName" placeholder="Last Name"/>
+              </div>
+            </div>
+          </div>
+         
+          <div class="col">
+            <div class="d-flex">
+              <div>
+                <label for="PatientDetailsVRXID" class="form-label">VRXID</label>
+                <input type="text" class="form-control" id="usersearch" placeholder="VRXID"/>
+              </div>
+              <div class="ms-2">
+                <label for="emptyspace" class="form-label">&nbsp;</label><br>
+                <a href="#!" class="btn btn-primary lh-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                  </svg>
+                </a>
+              </div>
+              <div>
+                <label for="emptyspace" class="form-label">&nbsp;</label><br>
+                <a href="#!" class="btn btn-link text-decoration-none d-flex fw-bold">
+
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                  </svg>
+
+                  <span class="ms-1">Reset</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Component Area -->
+    <section class="component-area">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+
+            <div class="card mt-5 overflow-auto">
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">DateTime</th>
+                      <th scope="col">Program</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">MerchantName</th>
+                      <th scope="col">Customer ID</th>
+                      <th scope="col">VRXID</th>
+                      <th scope="col">Amount</th>
+                      <th scope="col">Holds</th>
+                      <th scope="col">Balance</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>05/31/2023 07:35:15</td>
+                      <td>Dupixent MyWay® Copay Card Program</td>
+                      <td>Payment</td>
+                      <td>Dupixent</td>
+                      <td>1371256863</td>
+                      <td>2912186</td>
+                      <td>$86.26</td>
+                      <td>$0.00</td>
+                      <td>$86.26</td>
+                    </tr>
+    
+                    <tr>
+                      <td>05/31/2023 07:35:15</td>
+                      <td>Dupixent MyWay® Copay Card Program</td>
+                      <td>Authorization</td>
+                      <td>Dupixent</td>
+                      <td>1371256863</td>
+                      <td>2912186</td>
+                      <td>$86.26</td>
+                      <td>$0.00</td>
+                      <td>$86.26</td>
+                    </tr>
+    
+                    <tr>
+                      <td>05/31/2023 07:35:15</td>
+                      <td>Dupixent MyWay® Copay Card Program</td>
+                      <td>VoidPayment</td>
+                      <td>Dupixent</td>
+                      <td>1371256863</td>
+                      <td>2912186</td>
+                      <td>$86.26</td>
+                      <td>$0.00</td>
+                      <td>$86.26</td>
+                    </tr>
+    
+                    <tr>
+                      <td>05/31/2023 07:35:15</td>
+                      <td>Dupixent MyWay® Copay Card Program</td>
+                      <td>Payment</td>
+                      <td>Dupixent</td>
+                      <td>1371256863</td>
+                      <td>2912186</td>
+                      <td>$86.26</td>
+                      <td>$0.00</td>
+                      <td>$86.26</td>
+                    </tr>
+    
+                    <tr>
+                      <td>05/31/2023 07:35:15</td>
+                      <td>Dupixent MyWay® Copay Card Program</td>
+                      <td>Authorization</td>
+                      <td>Dupixent</td>
+                      <td>1371256863</td>
+                      <td>2912186</td>
+                      <td>$86.26</td>
+                      <td>$0.00</td>
+                      <td>$86.26</td>
+                    </tr>
+    
+                    <tr>
+                      <td>05/31/2023 07:35:15</td>
+                      <td>Dupixent MyWay® Copay Card Program</td>
+                      <td>VoidPayment</td>
+                      <td>Dupixent</td>
+                      <td>1371256863</td>
+                      <td>2912186</td>
+                      <td>$86.26</td>
+                      <td>$0.00</td>
+                      <td>$86.26</td>
+                    </tr>
+    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
@@ -346,17 +666,33 @@
         </header>
       </div>
     </section>
+    
+		<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 
-    <!-- All Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+		<!-- All Scripts -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Required All Three Libraries Below -->
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
-    ></script>
-    <script src="assets/js/main.js"></script>
+		<!-- Data Tables -->
+		<script src="//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+		<!-- Required All Three Libraries Below -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+		<script src="assets/js/main.js"></script>
+
+    <script>
+      // $(document).ready(function() {
+      //   var elementHeight = $('.filter-area').height();
+      //   var negativeHeight = -0.5 * elementHeight;
+      //   $('.filter-area .container').css('margin-top', negativeHeight);
+
+      //   $(window).resize(function() {
+      //     var elementHeight = $('.filter-area').height();
+      //     var negativeHeight = -0.5 * elementHeight;
+      //     $('.filter-area .container').css('margin-top', negativeHeight);
+      //   });
+      // });
+    </script>
+
   </body>
 </html>
