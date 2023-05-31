@@ -212,6 +212,36 @@ $(document).ready(function () {
     }
   });
 
+  // ******* Mulit Checkbox With Search *******
+  $("#checkbox-toggle-button").on("click", function (e) {
+    e.preventDefault();
+    $(this).find("button").toggleClass("d-none");
+    $("#checkbox-container").toggleClass("d-none");
+  });
+
+  $(".checkbox-selected").on("click", function (e) {
+    e.preventDefault();
+    $(this).find("div").toggleClass("d-none");
+    $(this).toggleClass("fw-bold");
+  });
+
+  $("#search-checkbox").on("input", function () {
+    var searchQuery = $(this).val().toLowerCase();
+    console.log(searchQuery);
+    // Reset previous highlighting
+    $(".checkbox-selected").addClass("d-none");
+
+    // Perform search
+    $(".checkbox-selected").each(function () {
+      var text = $(this).text().toLowerCase();
+      console.log(text.indexOf(searchQuery));
+      if (text.indexOf(searchQuery) !== -1) {
+        $(this).removeClass("d-none");
+        $(".checkbox-selected.fw-bold").removeClass("d-none");
+      }
+    });
+  });
+
   // End Document Ready
 });
 
