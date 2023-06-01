@@ -237,9 +237,9 @@ $(document).ready(function () {
     var myArrayJoin = myArray.join(", ");
     $("#selected-item-text").val(myArrayJoin);
 
-    $(".checkbox-selected").hasClass("fw-bold")
-      ? $(".clear-all-checkbox").removeClass("d-none")
-      : $(".clear-all-checkbox").addClass("d-none");
+    // $(".checkbox-selected").hasClass("fw-bold")
+    //   ? $(".clear-all-checkbox").removeClass("d-none")
+    //   : $(".clear-all-checkbox").addClass("d-none");
   });
 
   $("#search-checkbox").on("input", function () {
@@ -260,23 +260,44 @@ $(document).ready(function () {
     });
   });
 
-  // Select all checkbox
+  // Select all and clear all same button checkbox
   $(".select-all-checkbox").on("click", function (e) {
     e.preventDefault();
-    $(".checkbox-selected").find("div").removeClass("d-none");
-    $(".checkbox-selected").addClass("fw-bold");
+    if (
+      $(".checkbox-selected.fw-bold").length < $(".checkbox-selected").length
+    ) {
+      console.log($(".checkbox-selected.fw-bold").length);
+      $(".checkbox-selected").find("div").removeClass("d-none");
+      $(".checkbox-selected").addClass("fw-bold");
 
-    var myArray = new Array();
-    $(".checkbox-selected.fw-bold").each(function () {
-      var text = $(this).text().trim().toString();
-      myArray.push(text);
-    });
+      var myArray = new Array();
+      $(".checkbox-selected.fw-bold").each(function () {
+        var text = $(this).text().trim().toString();
+        myArray.push(text);
+      });
 
-    var myArrayJoin = myArray.join(", ");
-    $("#selected-item-text").val(myArrayJoin);
+      var myArrayJoin = myArray.join(", ");
+      $("#selected-item-text").val(myArrayJoin);
 
-    $("#search-checkbox").trigger("input"); // re-render the #search-checkbox
-    $(".clear-all-checkbox").removeClass("d-none");
+      $("#search-checkbox").trigger("input"); // re-render the #search-checkbox
+      // $(".clear-all-checkbox").removeClass("d-none");
+    } else {
+      console.log($(".checkbox-selected.fw-bold").length);
+      $(".checkbox-selected").find("div").addClass("d-none");
+      $(".checkbox-selected").removeClass("fw-bold");
+
+      var myArray = new Array();
+      $(".checkbox-selected.fw-bold").each(function () {
+        var text = $(this).text().trim().toString();
+        myArray.push(text);
+      });
+
+      var myArrayJoin = myArray.join(", ");
+      $("#selected-item-text").val(myArrayJoin);
+
+      $("#search-checkbox").trigger("input"); // re-render the #search-checkbox
+      $(".clear-all-checkbox").addClass("d-none");
+    }
   });
 
   // Clear all checkbox
