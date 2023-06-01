@@ -314,18 +314,22 @@ $(document).ready(function () {
 });
 
 // Pivot Table Not Working
-var data = [
-  ["Name", "Age", "Country"],
-  ["John", 30, "USA"],
-  ["Mary", 25, "UK"],
-  ["Peter", 40, "Canada"],
-];
+// var data = [
+//   ["Name", "Age", "Country"],
+//   ["John", 30, "USA"],
+//   ["Mary", 25, "UK"],
+//   ["Peter", 40, "Canada"],
+// ];
 
-// Convert data to a format compatible with PivotTable.js
-// Generate the pivot table
-$("#pivot-table").pivot(data, {
-  rows: ["Name"],
-  cols: ["Country"],
-  aggregator: $.pivotUtilities.aggregators.Sum(["Age"]),
-  renderer: $.pivotUtilities.renderers.Table,
-});
+// // Convert data to a format compatible with PivotTable.js
+// // Generate the pivot table
+// $("#pivot-table").pivot(data, {
+//   rows: ["Name"],
+//   cols: ["Country"],
+//   aggregator: $.pivotUtilities.aggregators.Sum(["Age"]),
+//   renderer: $.pivotUtilities.renderers.Table,
+// });
+
+// Tooltips
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))

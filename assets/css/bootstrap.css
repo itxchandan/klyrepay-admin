@@ -12080,6 +12080,13 @@ header .header-right-area {
   box-shadow: 0px 0px 2px #ddd;
 }
 
+header .theme-icon {
+  border: none;
+  box-shadow: none;
+  fill: #fff;
+  stroke: #fff;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -12089,8 +12096,8 @@ header .header-right-area {
 }
 
 .filter-area .container {
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: var(--bs-body-bg);
+  border: 1px solid var(--bs-border-color);
   border-radius: 6px;
   padding: 10px 20px 20px 20px;
 }
