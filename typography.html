@@ -692,205 +692,6 @@
       </div>
     </section>
 
-    <!-- Pivot Table -->
-    <section class="my-5">
-      <h3 class="text-center">Pivot Table</h3>
-      <div class="container">
-        <div id="pivot-table"></div>
-      </div>
-    </section>
-
-    <!-- Multi Select And Search -->
-    <section class="my-5">
-      <div class="container">
-        <div class="d-flex justify-content-between">
-          <!-- Multi Select -->
-          <div>
-            <h3 class="text-center">Multi Select</h3>
-            <!-- Accordian -->
-            <div>
-              <!-- Dropdown -->
-              <div
-                class="show-options py-1 px-2 shadow-sm cursor-pointer d-block"
-              >
-                <div class="d-flex justify-content-end">
-                  <div class="position-relative">
-                    <input
-                      type="text"
-                      id="total-selected"
-                      value=""
-                      class="border-0"
-                    />
-                    <i
-                      style="width: 100%"
-                      class="z-1 position-absolute d-none fa-solid fa-xmark"
-                    ></i>
-                    <i
-                      style="width: 100%"
-                      class="z-1 position-absolute fa-solid fa-angle-down w-100"
-                    ></i>
-                    <i
-                      style="width: 100%"
-                      class="z-1 position-absolute d-none fa-solid fa-angle-up"
-                    ></i>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Hidden Options -->
-              <div id="multi-options" class="d-none">
-                <div class="list-group mt-2 shadow-lg">
-                  <button
-                    type="button"
-                    class="multi-selected list-group-item list-group-item-action d-flex justify-content-between align-items-center"
-                    aria-current="true"
-                  >
-                    The current button
-                    <input
-                      type="hidden"
-                      name="multi_select[]"
-                      class=""
-                      value="1"
-                    />
-                    <div class="d-none">
-                      <i class="fa-solid fa-check"></i>
-                    </div>
-                  </button>
-                  <button
-                    type="button"
-                    class="multi-selected list-group-item list-group-item-action d-flex justify-content-between align-items-center"
-                    aria-current="true"
-                  >
-                    The current button
-                    <input
-                      type="hidden"
-                      name="multi_select[]"
-                      class=""
-                      value="1"
-                    />
-                    <div class="d-none">
-                      <i class="fa-solid fa-check"></i>
-                    </div>
-                  </button>
-                  <button
-                    type="button"
-                    class="multi-selected list-group-item list-group-item-action d-flex justify-content-between align-items-center"
-                    aria-current="true"
-                  >
-                    The current button
-                    <input
-                      type="hidden"
-                      name="multi_select[]"
-                      class=""
-                      value="1"
-                    />
-                    <div class="d-none">
-                      <i class="fa-solid fa-check"></i>
-                    </div>
-                  </button>
-                  <button
-                    type="button"
-                    class="multi-selected list-group-item list-group-item-action d-flex justify-content-between align-items-center"
-                    aria-current="true"
-                  >
-                    The current button
-                    <input
-                      type="hidden"
-                      name="multi_select[]"
-                      class=""
-                      value="1"
-                    />
-                    <div class="d-none">
-                      <i class="fa-solid fa-check"></i>
-                    </div>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Search -->
-          <div>
-            <h3>Live Search</h3>
-            <!-- Button trigger modal -->
-            <button
-              type="button"
-              class="btn btn-primary"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-            >
-              Open Search
-            </button>
-
-            <!-- Modal -->
-            <div
-              class="modal fade"
-              id="exampleModal"
-              tabindex="-1"
-              aria-labelledby="exampleModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                  <!-- <div class="modal-header">
-                    <h1 class="modal-title fs-6" id="staticBackdropLabel">
-                      Quick Search
-                    </h1>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div> -->
-                  <div class="modal-body">
-                    <!-- close -->
-                    <div class="d-flex justify-content-between mb-3">
-                      <h1 class="modal-title fs-6" id="staticBackdropLabel">
-                        Quick Search
-                      </h1>
-                      <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-
-                    <!-- Search -->
-                    <div class="input-group position-relative">
-                      <input
-                        style="width: 100%"
-                        type="text"
-                        class="rounded-2 shadow-sm border py-1 px-2 pe-5"
-                        placeholder="Search ..."
-                        aria-label="Search ..."
-                        aria-describedby="button-addon2"
-                        id="search"
-                      />
-                      <div
-                        id="search-submit"
-                        style="transform: translateX(-15px) translateY(5px)"
-                        class="position-absolute end-0 cursor-pointer"
-                      >
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                      </div>
-                    </div>
-
-                    <!-- Live Results -->
-                    <ul
-                      id="search-results"
-                      class="list-group list-group-flush m-2"
-                    ></ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Mulit Checkbox With Search -->
     <section class="my-5">
       <h3 class="text-center">Mulit Checkbox With Search</h3>
@@ -929,7 +730,7 @@
                   Select All
                 </div>
                 <div
-                  class="clear-all-checkbox mx-3 my-2 cursor-pointer text-danger"
+                  class="clear-all-checkbox mx-3 my-2 cursor-pointer text-danger d-none"
                 >
                   Clear All
                 </div>
@@ -1016,6 +817,52 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section class="my-5 container">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa similique
+      numquam sapiente dolores! Illum, porro neque dolorem, asperiores sint enim
+      in distinctio, atque quia error temporibus dicta animi eligendi accusamus?
+      Quaerat dolor impedit fugit asperiores, magni ea libero vero consectetur
+      quibusdam voluptatum similique, inventore sunt pariatur ex nihil neque
+      aspernatur saepe deleniti est a magnam eligendi explicabo, aliquam
+      nostrum! Repudiandae fugiat earum ratione porro, debitis praesentium quos
+      commodi nulla quia mollitia delectus ipsum inventore, maxime nesciunt quis
+      natus id similique fugit illum dolorum. Qui nesciunt nobis corrupti
+      blanditiis neque, reprehenderit suscipit esse facilis? Sed et qui
+      repellendus architecto rerum perspiciatis quidem quam neque nulla
+      doloribus, ad non laborum at accusantium possimus amet ratione totam autem
+      impedit? Laborum nulla dolores eius? Itaque soluta architecto ipsam hic
+      voluptates debitis et vero, consequatur expedita doloribus repellat magni
+      veniam corporis natus. Esse eum exercitationem ad quisquam velit eos sed,
+      quia delectus illum, perferendis deleniti! Delectus repellendus neque in
+      saepe ipsa soluta id quaerat? Iste, porro cupiditate praesentium, officia
+      a molestiae numquam, dicta delectus ipsam voluptatibus laborum. Impedit
+      dolorum quas exercitationem in, tempore quo aliquid soluta dolore,
+      adipisci, inventore fugiat odit. Neque, deleniti? Architecto alias,
+      quisquam minus dolores et adipisci illo, esse exercitationem odit eaque
+      possimus libero in ab facilis aliquam iusto? Voluptatem aspernatur quas
+      facilis asperiores repudiandae nisi? Placeat ratione totam id amet magni
+      corporis illum quis necessitatibus pariatur rem! Ipsa ratione magni sunt
+      dignissimos et pariatur voluptate laboriosam atque, natus neque quae
+      voluptatum aliquid reiciendis dolor. Fuga voluptate mollitia dolorum
+      doloremque eveniet cupiditate pariatur repellat modi dicta explicabo
+      tempora maiores quis, minima, officia cum voluptas? Incidunt distinctio
+      illo, ducimus temporibus nisi, tenetur minus doloremque beatae sequi sit
+      eligendi eius provident rerum animi laboriosam libero ex consectetur
+      minima doloribus dolorem? Eveniet repellat corporis ipsa! Quis eum dicta
+      minus! Ea dignissimos tempore, saepe fugiat qui eaque optio cumque
+      possimus magni sequi quisquam hic labore atque sit sapiente nostrum!
+      Sapiente totam sint molestiae, blanditiis natus similique officia est
+      repellat iure omnis impedit modi doloribus optio nulla architecto adipisci
+      voluptate. Nisi debitis commodi rem tempora vero! Ipsam, temporibus.
+      Consequuntur molestias beatae, quisquam libero eligendi perspiciatis?
+      Similique sequi alias error et deserunt repudiandae est, doloremque in
+      sapiente necessitatibus doloribus molestiae dolor eum velit eveniet a
+      exercitationem officia numquam beatae dolore ab expedita explicabo? Sed
+      nam, quisquam odio soluta ipsam facilis tempora quibusdam voluptates nisi,
+      voluptate dolorum earum, laboriosam porro! Amet consequuntur id quis ab
+      inventore atque, ea dolorum.
     </section>
 
     <!-- All Scripts -->

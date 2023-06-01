@@ -233,6 +233,10 @@ $(document).ready(function () {
 
     var myArrayJoin = myArray.join(", ");
     $("#selected-item-text").val(myArrayJoin);
+
+    $(".checkbox-selected").hasClass("fw-bold")
+      ? $(".clear-all-checkbox").removeClass("d-none")
+      : $(".clear-all-checkbox").addClass("d-none");
   });
 
   $("#search-checkbox").on("input", function () {
@@ -268,6 +272,9 @@ $(document).ready(function () {
 
     var myArrayJoin = myArray.join(", ");
     $("#selected-item-text").val(myArrayJoin);
+
+    $("#search-checkbox").trigger("input"); // re-render the #search-checkbox
+    $(".clear-all-checkbox").removeClass("d-none");
   });
 
   // Clear all checkbox
@@ -276,6 +283,9 @@ $(document).ready(function () {
     $(".checkbox-selected").find("div").addClass("d-none");
     $(".checkbox-selected").removeClass("fw-bold");
     $("#selected-item-text").val("");
+
+    $("#search-checkbox").trigger("input"); // re-render the #search-checkbox
+    $(".clear-all-checkbox").addClass("d-none");
   });
   // ********** Mulit Checkbox With Search [End] **********
 
