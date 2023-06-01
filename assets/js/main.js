@@ -218,6 +218,9 @@ $(document).ready(function () {
     e.preventDefault();
     $(this).find("button").toggleClass("d-none");
     $("#checkbox-container").toggleClass("d-none");
+    if ($(this).find("button").eq("0").hasClass("d-none")) {
+      $("#search-checkbox").val("").trigger("input");
+    }
   });
 
   $(".checkbox-selected").on("click", function (e) {
