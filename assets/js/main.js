@@ -214,12 +214,16 @@ $(document).ready(function () {
   // ********** Live Search [End] **********
 
   // ********** Mulit Checkbox With Search [Start] **********
-  $("#checkbox-toggle-button").on("click", function (e) {
+  $(".checkbox-toggle-button").on("click", function (e) {
     e.preventDefault();
     $(this).find("button").toggleClass("d-none");
-    $("#checkbox-container").toggleClass("d-none");
+    $(this).siblings(".checkbox-container").toggleClass("d-none");
     if ($(this).find("button").eq("0").hasClass("d-none")) {
-      $("#search-checkbox").val("").trigger("input");
+      $(this)
+        .siblings(".checkbox-container")
+        .find(".search-checkbox")
+        .val("")
+        .trigger("input");
     }
   });
 
@@ -229,71 +233,106 @@ $(document).ready(function () {
     $(this).toggleClass("fw-bold");
 
     var myArray = new Array();
-    $(".checkbox-selected.fw-bold").each(function () {
-      var text = $(this).text().trim().toString();
-      myArray.push(text);
-    });
+    $(this)
+      .closest(".list-group")
+      .find(".checkbox-selected.fw-bold")
+      .each(function () {
+        var text = $(this).text().trim().toString();
+        myArray.push(text);
+      });
 
     var myArrayJoin = myArray.join(", ");
-    $("#selected-item-text").val(myArrayJoin);
+    $(this)
+      .closest(".position-relative")
+      .find(".selected-item-text")
+      .val(myArrayJoin);
 
     // $(".checkbox-selected").hasClass("fw-bold")
     //   ? $(".clear-all-checkbox").removeClass("d-none")
     //   : $(".clear-all-checkbox").addClass("d-none");
   });
 
-  $("#search-checkbox").on("input", function () {
+  $(".search-checkbox").on("input", function () {
     var searchQuery = $(this).val().toLowerCase();
 
     // Reset previous highlighting
-    $(".checkbox-selected").addClass("d-none");
-    $(".checkbox-selected.fw-bold").addClass("d-none");
+    $(this)
+      .closest(".position-relative")
+      .siblings(".list-group")
+      .find(".checkbox-selected")
+      .addClass("d-none");
+    $(this)
+      .closest(".position-relative")
+      .siblings(".list-group")
+      .find(".checkbox-selected.fw-bold")
+      .addClass("d-none");
 
     // Perform search
-    $(".checkbox-selected").each(function () {
-      var text = $(this).text().toLowerCase();
-      if (text.indexOf(searchQuery) !== -1) {
-        $(this).removeClass("d-none");
-      } else {
-        $(".checkbox-selected.fw-bold").removeClass("d-none");
-      }
-    });
+    $(this)
+      .closest(".position-relative")
+      .siblings(".list-group")
+      .find(".checkbox-selected")
+      .each(function () {
+        var text = $(this).text().toLowerCase();
+        if (text.indexOf(searchQuery) !== -1) {
+          $(this).removeClass("d-none");
+        } else {
+          $(this)
+            .closest(".position-relative")
+            .siblings(".list-group")
+            .find(".checkbox-selected.fw-bold")
+            .removeClass("d-none");
+        }
+      });
   });
 
   // Select all and clear all same button checkbox
   $(".select-all-checkbox").on("click", function (e) {
     e.preventDefault();
-    if (
-      $(".checkbox-selected.fw-bold").length < $(".checkbox-selected").length
-    ) {
-      $(".checkbox-selected").find("div").removeClass("d-none");
-      $(".checkbox-selected").addClass("fw-bold");
+    var boldCheckboxSelect = $(this)
+      .closest(".d-flex")
+      .siblings(".list-group")
+      .find(".checkbox-selected.fw-bold");
+    var checkboxSelect = $(this)
+      .closest(".d-flex")
+      .siblings(".list-group")
+      .find(".checkbox-selected");
+    if (boldCheckboxSelect.length < checkboxSelect.length) {
+      checkboxSelect.find("div").removeClass("d-none");
+      checkboxSelect.addClass("fw-bold");
 
       var myArray = new Array();
-      $(".checkbox-selected.fw-bold").each(function () {
+      checkboxSelect.each(function () {
         var text = $(this).text().trim().toString();
         myArray.push(text);
       });
 
       var myArrayJoin = myArray.join(", ");
-      $("#selected-item-text").val(myArrayJoin);
+      $(this)
+        .closest(".position-relative")
+        .find(".selected-item-text")
+        .val(myArrayJoin);
 
-      $("#search-checkbox").trigger("input"); // re-render the #search-checkbox
+      $(".search-checkbox").trigger("input"); // re-render the #search-checkbox
       // $(".clear-all-checkbox").removeClass("d-none");
     } else {
-      $(".checkbox-selected").find("div").addClass("d-none");
-      $(".checkbox-selected").removeClass("fw-bold");
+      checkboxSelect.find("div").addClass("d-none");
+      checkboxSelect.removeClass("fw-bold");
 
       var myArray = new Array();
-      $(".checkbox-selected.fw-bold").each(function () {
+      boldCheckboxSelect.each(function () {
         var text = $(this).text().trim().toString();
         myArray.push(text);
       });
 
       var myArrayJoin = myArray.join(", ");
-      $("#selected-item-text").val(myArrayJoin);
+      $(this).closest(".position-relative").find(".selected-item-text").val("");
 
-      $("#search-checkbox").trigger("input"); // re-render the #search-checkbox
+      $(this)
+        .siblings(".position-relative")
+        .find(".search-checkbox")
+        .val("")
+        .trigger("input"); // re-render the #search-checkbox
       $(".clear-all-checkbox").addClass("d-none");
     }
   });
@@ -303,9 +342,9 @@ $(document).ready(function () {
     e.preventDefault();
     $(".checkbox-selected").find("div").addClass("d-none");
     $(".checkbox-selected").removeClass("fw-bold");
-    $("#selected-item-text").val("");
+    $(this).closest(".position-relative").find(".selected-item-text").val("");
 
-    $("#search-checkbox").val("").trigger("input"); // re-render the #search-checkbox
+    $(".search-checkbox").val("").trigger("input"); // re-render the #search-checkbox
     $(".clear-all-checkbox").addClass("d-none");
   });
 
@@ -313,12 +352,12 @@ $(document).ready(function () {
   $(document).on("click", function (e) {
     var target = $(e.target);
     if (
-      !target.closest("#checkbox-container").length &&
-      !target.closest("#checkbox-toggle-button").length
+      !target.closest(".checkbox-container").length &&
+      !target.closest(".checkbox-toggle-button").length
     ) {
-      $("#checkbox-toggle-button").find("button").eq(0).removeClass("d-none");
-      $("#checkbox-toggle-button").find("button").eq(1).addClass("d-none");
-      $("#checkbox-container").addClass("d-none");
+      $(".checkbox-toggle-button").find("button").eq(0).removeClass("d-none");
+      $(".checkbox-toggle-button").find("button").eq(1).addClass("d-none");
+      $(".checkbox-container").addClass("d-none");
     }
   });
 
