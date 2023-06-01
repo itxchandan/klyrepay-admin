@@ -287,6 +287,20 @@ $(document).ready(function () {
     $("#search-checkbox").trigger("input"); // re-render the #search-checkbox
     $(".clear-all-checkbox").addClass("d-none");
   });
+
+  // Document click
+  $(document).on("click", function (e) {
+    var target = $(e.target);
+    if (
+      !target.closest(".checkbox-selected").length &&
+      !target.closest("#checkbox-toggle-button").length
+    ) {
+      $("#checkbox-toggle-button").find("button").eq(0).removeClass("d-none");
+      $("#checkbox-toggle-button").find("button").eq(1).addClass("d-none");
+      $("#checkbox-container").addClass("d-none");
+    }
+  });
+
   // ********** Mulit Checkbox With Search [End] **********
 
   // End Document Ready
