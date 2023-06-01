@@ -286,13 +286,14 @@ $(document).ready(function () {
 
     $("#search-checkbox").trigger("input"); // re-render the #search-checkbox
     $(".clear-all-checkbox").addClass("d-none");
+    $("#search-checkbox").val("");
   });
 
   // Document click
   $(document).on("click", function (e) {
     var target = $(e.target);
     if (
-      !target.closest(".checkbox-selected").length &&
+      !target.closest("#checkbox-container").length &&
       !target.closest("#checkbox-toggle-button").length
     ) {
       $("#checkbox-toggle-button").find("button").eq(0).removeClass("d-none");
