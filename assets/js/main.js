@@ -249,7 +249,6 @@ $(document).ready(function () {
     // Perform search
     $(".checkbox-selected").each(function () {
       var text = $(this).text().toLowerCase();
-      console.log(text.indexOf(searchQuery));
       if (text.indexOf(searchQuery) !== -1) {
         $(this).removeClass("d-none");
       } else {
@@ -284,9 +283,9 @@ $(document).ready(function () {
     $(".checkbox-selected").removeClass("fw-bold");
     $("#selected-item-text").val("");
 
-    $("#search-checkbox").trigger("input"); // re-render the #search-checkbox
+    $("#search-checkbox").val("").trigger("input"); // re-render the #search-checkbox
     $(".clear-all-checkbox").addClass("d-none");
-    $("#search-checkbox").val("");
+    // $("#search-checkbox").val("");
   });
 
   // Document click
