@@ -899,9 +899,10 @@
           <div class="position-relative">
             <!-- toggle button -->
             <input
+              id="selected-item-text"
               type="text"
               class="pe-5 form-control position-absolute z-1"
-              value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus et officia molestiae corporis. Et, modi magni fuga nostrum vel impedit molestiae exercitationem, accusantium, repellendus dolor dolore voluptatum similique temporibus esse necessitatibus qui libero laborum ea amet voluptas debitis pariatur unde! Iste veniam accusantium eligendi inventore sint nostrum dolor incidunt necessitatibus."
+              value=""
             />
 
             <div
@@ -922,6 +923,18 @@
               id="checkbox-container"
               class="d-none position-absolute mt-5 form-control"
             >
+              <!-- Select All & Clear All -->
+              <div class="d-flex">
+                <div class="select-all-checkbox mx-3 my-2 cursor-pointer">
+                  Select All
+                </div>
+                <div
+                  class="clear-all-checkbox mx-3 my-2 cursor-pointer text-danger"
+                >
+                  Clear All
+                </div>
+              </div>
+
               <div class="position-relative">
                 <div class="border-0 position-absolute btn end-0">
                   <i class="fa-solid fa-magnifying-glass"></i>

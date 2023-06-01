@@ -223,6 +223,15 @@ $(document).ready(function () {
     e.preventDefault();
     $(this).find("div").toggleClass("d-none");
     $(this).toggleClass("fw-bold");
+
+    var myArray = new Array();
+    $(".checkbox-selected.fw-bold").each(function () {
+      var text = $(this).text().trim().toString();
+      myArray.push(text);
+    });
+
+    var myArrayJoin = myArray.join(", ");
+    $("#selected-item-text").val(myArrayJoin);
   });
 
   $("#search-checkbox").on("input", function () {
@@ -230,6 +239,7 @@ $(document).ready(function () {
     console.log(searchQuery);
     // Reset previous highlighting
     $(".checkbox-selected").addClass("d-none");
+    $(".checkbox-selected.fw-bold").addClass("d-none");
 
     // Perform search
     $(".checkbox-selected").each(function () {
@@ -237,9 +247,34 @@ $(document).ready(function () {
       console.log(text.indexOf(searchQuery));
       if (text.indexOf(searchQuery) !== -1) {
         $(this).removeClass("d-none");
+      } else {
         $(".checkbox-selected.fw-bold").removeClass("d-none");
       }
     });
+  });
+
+  // Select all checkbox
+  $(".select-all-checkbox").on("click", function (e) {
+    e.preventDefault();
+    $(".checkbox-selected").find("div").removeClass("d-none");
+    $(".checkbox-selected").addClass("fw-bold");
+
+    var myArray = new Array();
+    $(".checkbox-selected.fw-bold").each(function () {
+      var text = $(this).text().trim().toString();
+      myArray.push(text);
+    });
+
+    var myArrayJoin = myArray.join(", ");
+    $("#selected-item-text").val(myArrayJoin);
+  });
+
+  // Clear all checkbox
+  $(".clear-all-checkbox").on("click", function (e) {
+    e.preventDefault();
+    $(".checkbox-selected").find("div").addClass("d-none");
+    $(".checkbox-selected").removeClass("fw-bold");
+    $("#selected-item-text").val("");
   });
 
   // End Document Ready
