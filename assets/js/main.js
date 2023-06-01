@@ -266,7 +266,6 @@ $(document).ready(function () {
     if (
       $(".checkbox-selected.fw-bold").length < $(".checkbox-selected").length
     ) {
-      console.log($(".checkbox-selected.fw-bold").length);
       $(".checkbox-selected").find("div").removeClass("d-none");
       $(".checkbox-selected").addClass("fw-bold");
 
@@ -282,7 +281,6 @@ $(document).ready(function () {
       $("#search-checkbox").trigger("input"); // re-render the #search-checkbox
       // $(".clear-all-checkbox").removeClass("d-none");
     } else {
-      console.log($(".checkbox-selected.fw-bold").length);
       $(".checkbox-selected").find("div").addClass("d-none");
       $(".checkbox-selected").removeClass("fw-bold");
 
@@ -352,5 +350,9 @@ $(document).ready(function () {
 // });
 
 // Tooltips
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+const tooltipTriggerList = document.querySelectorAll(
+  '[data-bs-toggle="tooltip"]'
+);
+const tooltipList = [...tooltipTriggerList].map(
+  (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+);
