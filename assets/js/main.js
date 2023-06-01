@@ -288,7 +288,6 @@ $(document).ready(function () {
 
     $("#search-checkbox").val("").trigger("input"); // re-render the #search-checkbox
     $(".clear-all-checkbox").addClass("d-none");
-    // $("#search-checkbox").val("");
   });
 
   // Document click
