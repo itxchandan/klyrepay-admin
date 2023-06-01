@@ -187,7 +187,7 @@ $(document).ready(function () {
       $(".multi-selected").removeClass("active");
     });
 
-  // ******* Live Search *******
+  // ********** Live Search [Start] **********
   $("#search").on("input", function () {
     var searchText = $(this).val();
 
@@ -211,8 +211,9 @@ $(document).ready(function () {
       });
     }
   });
+  // ********** Live Search [End] **********
 
-  // ******* Mulit Checkbox With Search *******
+  // ********** Mulit Checkbox With Search [Start] **********
   $("#checkbox-toggle-button").on("click", function (e) {
     e.preventDefault();
     $(this).find("button").toggleClass("d-none");
@@ -236,7 +237,7 @@ $(document).ready(function () {
 
   $("#search-checkbox").on("input", function () {
     var searchQuery = $(this).val().toLowerCase();
-    console.log(searchQuery);
+
     // Reset previous highlighting
     $(".checkbox-selected").addClass("d-none");
     $(".checkbox-selected.fw-bold").addClass("d-none");
@@ -276,6 +277,7 @@ $(document).ready(function () {
     $(".checkbox-selected").removeClass("fw-bold");
     $("#selected-item-text").val("");
   });
+  // ********** Mulit Checkbox With Search [End] **********
 
   // End Document Ready
 });
