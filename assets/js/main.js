@@ -356,8 +356,10 @@ $(document).ready(function () {
       !target.closest(".checkbox-container").length &&
       !target.closest(".checkbox-toggle-button").length
     ) {
-      $(".checkbox-toggle-button").find("button").eq(0).removeClass("d-none");
-      $(".checkbox-toggle-button").find("button").eq(1).addClass("d-none");
+      $(".checkbox-toggle-button").each(function (index, element) {
+        $(element).find("button").eq(0).removeClass("d-none");
+        $(element).find("button").eq(1).addClass("d-none");
+      });
       $(".checkbox-container").addClass("d-none");
     }
   });
