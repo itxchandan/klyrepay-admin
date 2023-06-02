@@ -218,13 +218,18 @@ $(document).ready(function () {
     e.preventDefault();
     $(this).find("button").toggleClass("d-none");
     $(this).siblings(".checkbox-container").toggleClass("d-none");
-    if ($(this).find("button").eq("0").hasClass("d-none")) {
-      $(this)
-        .siblings(".checkbox-container")
-        .find(".search-checkbox")
-        .val("")
-        .trigger("input");
-    }
+    // if ($(this).find("button").eq("0").hasClass("d-none")) {
+    //   $(this)
+    //     .siblings(".checkbox-container")
+    //     .find(".search-checkbox")
+    //     .val("")
+    //     .trigger("input");
+    // }
+    $(this)
+      .siblings(".checkbox-container")
+      .find(".search-checkbox")
+      .val("")
+      .trigger("input");
   });
 
   $(".checkbox-selected").on("click", function (e) {
@@ -273,15 +278,12 @@ $(document).ready(function () {
       .siblings(".list-group")
       .find(".checkbox-selected")
       .each(function () {
-        var text = $(this).text().toLowerCase();
+        var text = $(this).text().trim().toLowerCase();
         if (text.indexOf(searchQuery) !== -1) {
           $(this).removeClass("d-none");
         } else {
-          $(this)
-            .closest(".position-relative")
-            .siblings(".list-group")
-            .find(".checkbox-selected.fw-bold")
-            .removeClass("d-none");
+          console.log($(this).closest(".list-group").children());
+          $(this).closest(".list-group").find(".fw-bold").removeClass("d-none");
         }
       });
   });
