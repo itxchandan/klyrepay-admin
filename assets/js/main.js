@@ -282,7 +282,6 @@ $(document).ready(function () {
         if (text.indexOf(searchQuery) !== -1) {
           $(this).removeClass("d-none");
         } else {
-          console.log($(this).closest(".list-group").children());
           $(this).closest(".list-group").find(".fw-bold").removeClass("d-none");
         }
       });
