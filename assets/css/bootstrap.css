@@ -21,6 +21,7 @@
   --bs-white: #fff;
   --bs-gray: #6c757d;
   --bs-gray-dark: #343a40;
+  --bs-bgg: #24695c;
   --bs-gray-100: #f8f9fa;
   --bs-gray-200: #e9ecef;
   --bs-gray-300: #dee2e6;
@@ -2105,7 +2106,7 @@ progress {
 .form-control {
   display: block;
   width: 100%;
-  padding: 0.375rem 0.75rem;
+  padding: 0.375rem 1rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -2153,9 +2154,9 @@ progress {
   opacity: 1;
 }
 .form-control::file-selector-button {
-  padding: 0.375rem 0.75rem;
-  margin: -0.375rem -0.75rem;
-  margin-inline-end: 0.75rem;
+  padding: 0.375rem 1rem;
+  margin: -0.375rem -1rem;
+  margin-inline-end: 1rem;
   color: var(--bs-body-color);
   background-color: var(--bs-tertiary-bg);
   pointer-events: none;
@@ -2255,7 +2256,7 @@ textarea.form-control-lg {
   --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
   display: block;
   width: 100%;
-  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+  padding: 0.375rem 3rem 0.375rem 1rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -2263,7 +2264,7 @@ textarea.form-control-lg {
   background-color: var(--bs-body-bg);
   background-image: var(--bs-form-select-bg-img), var(--bs-form-select-bg-icon, none);
   background-repeat: no-repeat;
-  background-position: right 0.75rem center;
+  background-position: right 1rem center;
   background-size: 16px 12px;
   border: var(--bs-border-width) solid var(--bs-border-color);
   border-radius: var(--bs-border-radius);
@@ -2281,7 +2282,7 @@ textarea.form-control-lg {
   box-shadow: 0 0 0 0.25rem rgba(31, 41, 55, 0.25);
 }
 .form-select[multiple], .form-select[size]:not([size="1"]) {
-  padding-right: 0.75rem;
+  padding-right: 1rem;
   background-image: none;
 }
 .form-select:disabled {
@@ -2539,7 +2540,7 @@ textarea.form-control-lg {
   left: 0;
   z-index: 2;
   height: 100%;
-  padding: 1rem 0.75rem;
+  padding: 1rem 1rem;
   overflow: hidden;
   text-align: start;
   text-overflow: ellipsis;
@@ -2556,7 +2557,7 @@ textarea.form-control-lg {
 }
 .form-floating > .form-control,
 .form-floating > .form-control-plaintext {
-  padding: 1rem 0.75rem;
+  padding: 1rem 1rem;
 }
 .form-floating > .form-control::placeholder,
 .form-floating > .form-control-plaintext::placeholder {
@@ -2589,7 +2590,7 @@ textarea.form-control-lg {
 .form-floating > .form-control-plaintext ~ label::after,
 .form-floating > .form-select ~ label::after {
   position: absolute;
-  inset: 1rem 0.375rem;
+  inset: 1rem 0.5rem;
   z-index: -1;
   height: 1.5em;
   content: "";
@@ -2641,7 +2642,7 @@ textarea.form-control-lg {
 .input-group-text {
   display: flex;
   align-items: center;
-  padding: 0.375rem 0.75rem;
+  padding: 0.375rem 1rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -2673,7 +2674,7 @@ textarea.form-control-lg {
 
 .input-group-lg > .form-select,
 .input-group-sm > .form-select {
-  padding-right: 3rem;
+  padding-right: 4rem;
 }
 
 .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
@@ -2753,8 +2754,8 @@ textarea.form-control-lg {
 }
 .was-validated .form-select:valid:not([multiple]):not([size]), .was-validated .form-select:valid:not([multiple])[size="1"], .form-select.is-valid:not([multiple]):not([size]), .form-select.is-valid:not([multiple])[size="1"] {
   --bs-form-select-bg-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
-  padding-right: 4.125rem;
-  background-position: right 0.75rem center, center right 2.25rem;
+  padding-right: 5.5rem;
+  background-position: right 1rem center, center right 3rem;
   background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 .was-validated .form-select:valid:focus, .form-select.is-valid:focus {
@@ -2843,8 +2844,8 @@ textarea.form-control-lg {
 }
 .was-validated .form-select:invalid:not([multiple]):not([size]), .was-validated .form-select:invalid:not([multiple])[size="1"], .form-select.is-invalid:not([multiple]):not([size]), .form-select.is-invalid:not([multiple])[size="1"] {
   --bs-form-select-bg-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
-  padding-right: 4.125rem;
-  background-position: right 0.75rem center, center right 2.25rem;
+  padding-right: 5.5rem;
+  background-position: right 1rem center, center right 3rem;
   background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 .was-validated .form-select:invalid:focus, .form-select.is-invalid:focus {
@@ -2882,7 +2883,7 @@ textarea.form-control-lg {
 }
 
 .btn {
-  --bs-btn-padding-x: 0.75rem;
+  --bs-btn-padding-x: 1rem;
   --bs-btn-padding-y: 0.375rem;
   --bs-btn-font-family: ;
   --bs-btn-font-size: 1rem;
@@ -3675,8 +3676,8 @@ textarea.form-control-lg {
 }
 
 .dropdown-toggle-split {
-  padding-right: 0.5625rem;
-  padding-left: 0.5625rem;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
 }
 .dropdown-toggle-split::after, .dropup .dropdown-toggle-split::after, .dropend .dropdown-toggle-split::after {
   margin-left: 0;
@@ -11859,15 +11860,32 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+@font-face {
+  font-family: Inter var;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/fonts/inter-roman.woff2) format("woff2");
+  font-named-instance: Regular;
+}
+@font-face {
+  font-family: Inter var;
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/fonts/inter-italic.woff2) format("woff2");
+  font-named-instance: Italic;
+}
 :root {
-  --header-bg: #1f2937;
+  --header-bg: #111727;
   --nav: #9ca3af;
   --nav-active: #f3f4f6;
-  --nav-bg: #374151;
+  --nav-bg: #24695c;
 }
 
 body {
   font-family: Inter var, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  background: #f1f5f9;
 }
 
 /*
@@ -11879,7 +11897,7 @@ body {
 */
 /* Header */
 header {
-  background-color: #1f2937;
+  background-color: var(--header-bg);
   padding: 6px 0;
   color: #fff;
 }
@@ -11908,12 +11926,14 @@ header .header-right-area {
 }
 /* Nav */
 .nav .nav-link {
-  color: var(--nav);
-  border-radius: 4px;
-  padding: 5px 12px;
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-weight: 500;
+  font-size: 14px;
 }
 .nav .nav-link:not(:last-child) {
-  margin-right: 4px;
+  margin-right: 6px;
 }
 .nav .nav-link.active {
   background-color: var(--nav-bg);
@@ -11971,12 +11991,12 @@ header .header-right-area {
 .text-logo {
   color: #fff;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 26px;
 }
 
 /* Page Title Section */
 .page-title-section {
-  background-color: #1f2937;
+  background-color: var(--header-bg);
   color: var(--nav);
   padding: 40px 0 60px;
 }
@@ -12095,17 +12115,17 @@ header .theme-icon {
   display: none;
 }
 
-.filter-area .container {
+.filter-area .filter-wrapper {
   background-color: var(--bs-body-bg);
-  border: 1px solid var(--bs-border-color);
   border-radius: 6px;
   padding: 10px 20px 20px 20px;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
 }
 
 .form-label {
   font-weight: 500;
   font-size: 14px;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .table {
@@ -12119,6 +12139,32 @@ header .theme-icon {
 
 .table > :not(caption) > * > * {
   padding: 1rem;
+}
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
+  border: 0;
+}
+
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
+  background-color: #1f2937;
+}
+
+.daterangepicker td.in-range {
+  background-color: rgba(31, 41, 55, 0.1);
+}
+
+.input-group-symbol {
+  max-width: 70px;
+  padding-right: 20px;
+  padding-left: 0;
+}
+
+.list-group-item-action:hover,
+.list-group-item-action:focus {
+  background-color: #1f2937;
+  color: #fff;
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
