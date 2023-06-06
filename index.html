@@ -1809,15 +1809,13 @@
                     <div class="position-relative">
                       <!-- toggle button -->
                       <input
-                        id="selected-item-text"
                         type="text"
-                        class="pe-5 form-control position-absolute z-2"
+                        class="selected-item-text pe-5 form-control position-absolute z-1"
                         value=""
                       />
-      
+    
                       <div
-                        id="checkbox-toggle-button"
-                        class="d-block position-absolute z-2"
+                        class="checkbox-toggle-button d-block position-absolute z-2"
                         style="width: 100%"
                       >
                         <button class="btn text-end" style="width: 100%">
@@ -1827,11 +1825,11 @@
                           <i class="fa-solid fa-angle-up"></i>
                         </button>
                       </div>
-      
+    
                       <!-- Checkbox Result -->
                       <div
-                        id="checkbox-container"
-                        class="d-none position-absolute mt-5 form-control z-1"
+                        style="max-height: 500px"
+                        class="multiselect-dropdown z-3 overflow-y-auto checkbox-container position-absolute mt-5 form-control d-none"
                       >
                         <!-- Select All & Clear All -->
                         <div class="d-flex">
@@ -1844,15 +1842,14 @@
                             Clear All
                           </div>
                         </div>
-      
+    
                         <div class="position-relative">
                           <div class="border-0 position-absolute btn end-0">
                             <i class="fa-solid fa-magnifying-glass"></i>
                           </div>
                           <input
-                            id="search-checkbox"
                             type="text"
-                            class="form-control pe-5"
+                            class="search-checkbox form-control pe-5"
                             placeholder="Search ..."
                           />
                         </div>
