@@ -23,7 +23,7 @@
   --header-bg: #111727;
   --nav: #9ca3af;
   --nav-active: #f3f4f6;
-  --nav-bg: #24695c;
+  --nav-bg: #6366f1;
 }
 
 body {
@@ -363,6 +363,24 @@ header .theme-icon {
 	padding-left: 0;
 }
 
+.vertical-input-group {
+  .form-control {
+    border-radius: 0;
+    margin-bottom: -1px;
+    &:first-child {
+      border-radius: var(--bs-border-radius) var(--bs-border-radius) 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 var(--bs-border-radius) var(--bs-border-radius);
+    }
+    &:focus {
+      z-index: 9;
+      position: relative;
+    }
+  }
+
+}
+
 .list-group-item-action:hover,
 .list-group-item-action:focus {
 	background-color: $primary;
@@ -411,4 +429,31 @@ header .theme-icon {
 
 .custom-accordion-button:not(.collapsed) + svg {
   transform: rotate(180deg);
+}
+
+// Tab
+.tab-button-wrapper {
+  background-color: #fff;
+  border-radius: 4px;
+  display: inline-flex;
+  margin-bottom: 20px;
+  margin-top: -10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
+}
+
+.tab-button-link {
+  padding: 11px 35px;
+  border-bottom: 4px solid #ddd;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+
+  &:not(:last-child) {
+    border-right: 1px solid #ddd;
+  }
+
+  &.active {
+    border-bottom-color: #6366f1;
+  }
 }

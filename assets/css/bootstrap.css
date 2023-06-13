@@ -231,29 +231,24 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: calc(1.3rem + 0.6vw);
-}
-@media (min-width: 1200px) {
-  h2, .h2 {
-    font-size: 1.75rem;
-  }
-}
-
-h3, .h3 {
   font-size: calc(1.275rem + 0.3vw);
 }
 @media (min-width: 1200px) {
-  h3, .h3 {
+  h2, .h2 {
     font-size: 1.5rem;
   }
 }
 
-h4, .h4 {
+h3, .h3 {
   font-size: 1.25rem;
 }
 
-h5, .h5 {
+h4, .h4 {
   font-size: 1.15rem;
+}
+
+h5, .h5 {
+  font-size: 1.13rem;
 }
 
 h6, .h6 {
@@ -8249,19 +8244,19 @@ textarea.form-control-lg {
 }
 
 .fs-2 {
-  font-size: calc(1.3rem + 0.6vw) !important;
-}
-
-.fs-3 {
   font-size: calc(1.275rem + 0.3vw) !important;
 }
 
-.fs-4 {
+.fs-3 {
   font-size: 1.25rem !important;
 }
 
-.fs-5 {
+.fs-4 {
   font-size: 1.15rem !important;
+}
+
+.fs-5 {
+  font-size: 1.13rem !important;
 }
 
 .fs-6 {
@@ -11811,9 +11806,6 @@ textarea.form-control-lg {
     font-size: 2rem !important;
   }
   .fs-2 {
-    font-size: 1.75rem !important;
-  }
-  .fs-3 {
     font-size: 1.5rem !important;
   }
 }
@@ -11872,7 +11864,7 @@ textarea.form-control-lg {
   --header-bg: #111727;
   --nav: #9ca3af;
   --nav-active: #f3f4f6;
-  --nav-bg: #24695c;
+  --nav-bg: #6366f1;
 }
 
 body {
@@ -12185,6 +12177,21 @@ header .theme-icon {
   padding-left: 0;
 }
 
+.vertical-input-group .form-control {
+  border-radius: 0;
+  margin-bottom: -1px;
+}
+.vertical-input-group .form-control:first-child {
+  border-radius: var(--bs-border-radius) var(--bs-border-radius) 0 0;
+}
+.vertical-input-group .form-control:last-child {
+  border-radius: 0 0 var(--bs-border-radius) var(--bs-border-radius);
+}
+.vertical-input-group .form-control:focus {
+  z-index: 9;
+  position: relative;
+}
+
 .list-group-item-action:hover,
 .list-group-item-action:focus {
   background-color: #1f2937;
@@ -12215,6 +12222,30 @@ header .theme-icon {
 
 .custom-accordion-button:not(.collapsed) + svg {
   transform: rotate(180deg);
+}
+
+.tab-button-wrapper {
+  background-color: #fff;
+  border-radius: 4px;
+  display: inline-flex;
+  margin-bottom: 20px;
+  margin-top: -10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
+}
+
+.tab-button-link {
+  padding: 11px 35px;
+  border-bottom: 4px solid #ddd;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+.tab-button-link:not(:last-child) {
+  border-right: 1px solid #ddd;
+}
+.tab-button-link.active {
+  border-bottom-color: #6366f1;
 }
 
 /*# sourceMappingURL=bootstrap.css.map */

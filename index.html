@@ -92,13 +92,7 @@
         <div class="row">
           <div class="col-6">
             <div class="d-flex align-items-center column-gap-4">
-              <h1 class="page-title">Transactions</h1>
-
-              <svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
-                <path fill="none" d="M24.3,30C11.4,30,5,43.3,5,50s6.4,20,19.3,20c19.3,0,32.1-40,51.4-40 C88.6,30,95,43.3,95,50s-6.4,20-19.3,20C56.4,70,43.6,30,24.3,30z" stroke="#00bcd4" stroke-width="5" stroke-dasharray="202.70525329589844 53.883674926757806">
-                   <animate attributeName="stroke-dashoffset" calcMode="linear" values="0;256.58892822265625" keyTimes="0;1" dur="1.2" begin="0s" repeatCount="indefinite"></animate>
-                </path>
-             </svg>
+              <h1 class="page-title">Program Report</h1>
             </div>
           </div>
           <div class="col-6"></div>
@@ -114,442 +108,385 @@
                     <div class="filter-wrapper">
                         <div class="row row-cols-1 gy-2">
 
-                            <div class="col">
-                                <div>
-                                    <label for="daterange" class="form-label">Search</label>
-                                    <input type="text" class="form-control" placeholder="Search" />
-                                </div>
-                            </div>
-
-									 <div class="col">
-										<label for="CustomerID" class="form-label">Customer ID</label>
-										<input type="text" id="CustomerID" class="form-control" placeholder="Customer ID" />
-									</div>
-
-									<div class="col">
-										<label for="daterange" class="form-label">VRXID</label>
-										<input type="text" class="form-control" placeholder="VRXID" />
-									</div>
-
-									<div class="col">
-										<label for="amount" class="form-label">Amount</label>
-
-										<div class="d-flex input-group">
-											<select class="form-select input-group-text input-group-symbol" id="PatientsCustomerStatus">
-											  <option selected="">=</option>
-											  <option value="verified">&gt;=</option>
-											  <option value="NotVerified">&gt;</option>
-											  <option value="NotVerified">&lt;=</option>
-											  <option value="NotVerified">&lt;</option>
-											</select>
-											<input type="text" class="form-control" id="InactivityAmount" placeholder="$">
-										 </div>
-								  </div>
-
+							<div class="col">
+								<div class="d-flex justify-content-between">
+									<span class="fw-bold">FILTERS</span>
+									<a href="#!" class="text-decoration-none fw-bold text-danger">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                                            <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                                        </svg>
+										<span>Clear All</span>
+									</a>
+								</div>
+							</div>
                            <div class="col">
-										<label for="datefilter" class="form-label">Date Range</label>
-										<input type="text" class="form-control" name="datefilter" placeholder="Enter Date" />
-								 	</div>
+								<label for="datefilter" class="form-label">Date Range</label>
+								<input type="text" class="form-control" name="datefilter" placeholder="Enter Date" />
+							</div>
 
-									<div class="col">
-										<label for="daterange" class="form-label">Transaction Status</label>
-										<select class="form-select" id="daterange">
-											<option selected="">All</option>
-											<option value="0">Declined</option>
-											<option value="1">Approved</option>
-											<option value="2">Payment</option>
-											<option value="3">VoidPayment</option>
-											<option value="4">Authorization</option>
-											<option value="5">Reversal</option>
-										</select>
-								 	</div>
+							<div class="col border-top pt-3 mt-3">
+								<div class="d-flex">
+									<button type="button" class="accordion-button custom-accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne">Program</button>
+									<svg viewBox="0 0 200 200" width="1.25em" height="1.25em" xmlns="http://www.w3.org/2000/svg" class="Qk4D-chevron Qk4D-mod-size-medium" role="img"><path d="M100 132.5c-3.873 0 .136 2.376-64.801-51.738l9.603-11.523L100 115.237l55.199-45.999l9.603 11.523C99.806 134.924 103.855 132.5 100 132.5z"></path></svg>
+								</div>
 
-									<div class="col">
-										<label for="DeclineReason" class="form-label">Decline Reason</label>
-										<select class="form-select" id="DeclineReason">
-											<option selected="">All</option>
-											<option value="0">None</option>
-											<option value="1">Card not loaded</option>
-											<option value="2">Transaction more than balance</option>
-											<option value="3">MCC Mismatch</option>
-											<option value="4">Invalid Expiration</option>
-											<option value="5">Amount less than Balance</option>
-										</select>
-								 	</div>
-
-									<div class="col border-top pt-3 mt-3">
-										<div class="d-flex">
-											<button type="button" class="accordion-button custom-accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne">Program</button>
-											<svg viewBox="0 0 200 200" width="1.25em" height="1.25em" xmlns="http://www.w3.org/2000/svg" class="Qk4D-chevron Qk4D-mod-size-medium" role="img"><path d="M100 132.5c-3.873 0 .136 2.376-64.801-51.738l9.603-11.523L100 115.237l55.199-45.999l9.603 11.523C99.806 134.924 103.855 132.5 100 132.5z"></path></svg>
-										</div>
-
-										<div id="collapseOne" class="accordion-collapse collapse programs-checkbox">
-											<div>
-												<a class="text-decoration-none" href="#!">Select All</a>
-											</div>
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="Xtandi">
-												<label class="form-check-label" for="Xtandi">Xtandi</label>
-											</div>
-	
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="Xospata">
-												<label class="form-check-label" for="Xospata">Xospata</label>
-											</div>
-	
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="Pegcetacoplan">
-												<label class="form-check-label" for="Pegcetacoplan">Pegcetacoplan</label>
-											</div>
-	
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="BMSVirtualCopay">
-												<label class="form-check-label" for="BMSVirtualCopay">BMS Virtual Copay</label>
-											</div>
-	
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="Zeposia">
-												<label class="form-check-label" for="Zeposia">Zeposia</label>
-											</div>										
-	
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="Sprycel">
-												<label class="form-check-label" for="Sprycel">Sprycel</label>
-											</div>
-	
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="Orencia">
-												<label class="form-check-label" for="Orencia">Orencia</label>
-											</div>
-	
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="ActharGel">
-												<label class="form-check-label" for="ActharGel">Acthar Gel</label>
-											</div>
-	
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="Aubagio">
-												<label class="form-check-label" for="Aubagio">Aubagio</label>
-											</div>
-	
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="Dupixent">
-												<label class="form-check-label" for="Dupixent">Dupixent</label>
-											</div>
-	
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="Kevzara">
-												<label class="form-check-label" for="Kevzara">Kevzara</label>
-											</div>
-	
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="Vertex">
-												<label class="form-check-label" for="Vertex">Vertex</label>
-											</div>
-	
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="Mavacamten">
-												<label class="form-check-label" for="Mavacamten">Mavacamten</label>
-											</div>
-	
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="Nintedanib">
-												<label class="form-check-label" for="Nintedanib">Nintedanib</label>
-											</div>
-	
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="Exelixis">
-												<label class="form-check-label" for="Exelixis">Exelixis</label>
-											</div>
-	
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="EMDSerono">
-												<label class="form-check-label" for="EMDSerono">EMD Serono</label>
-											</div>
-										</div>
+								<div id="collapseOne" class="accordion-collapse collapse programs-checkbox">
+									<div>
+										<a class="text-decoration-none" href="#!">Select All</a>
 									</div>
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="Xtandi">
+										<label class="form-check-label" for="Xtandi">Xtandi</label>
+									</div>
+
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="Xospata">
+										<label class="form-check-label" for="Xospata">Xospata</label>
+									</div>
+
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="Pegcetacoplan">
+										<label class="form-check-label" for="Pegcetacoplan">Pegcetacoplan</label>
+									</div>
+
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="BMSVirtualCopay">
+										<label class="form-check-label" for="BMSVirtualCopay">BMS Virtual Copay</label>
+									</div>
+
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="Zeposia">
+										<label class="form-check-label" for="Zeposia">Zeposia</label>
+									</div>										
+
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="Sprycel">
+										<label class="form-check-label" for="Sprycel">Sprycel</label>
+									</div>
+
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="Orencia">
+										<label class="form-check-label" for="Orencia">Orencia</label>
+									</div>
+
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="ActharGel">
+										<label class="form-check-label" for="ActharGel">Acthar Gel</label>
+									</div>
+
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="Aubagio">
+										<label class="form-check-label" for="Aubagio">Aubagio</label>
+									</div>
+
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="Dupixent">
+										<label class="form-check-label" for="Dupixent">Dupixent</label>
+									</div>
+
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="Kevzara">
+										<label class="form-check-label" for="Kevzara">Kevzara</label>
+									</div>
+
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="Vertex">
+										<label class="form-check-label" for="Vertex">Vertex</label>
+									</div>
+
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="Mavacamten">
+										<label class="form-check-label" for="Mavacamten">Mavacamten</label>
+									</div>
+
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="Nintedanib">
+										<label class="form-check-label" for="Nintedanib">Nintedanib</label>
+									</div>
+
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="Exelixis">
+										<label class="form-check-label" for="Exelixis">Exelixis</label>
+									</div>
+
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="EMDSerono">
+										<label class="form-check-label" for="EMDSerono">EMD Serono</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="col mt-4">
+								<a href="#!" class="btn btn-primary w-100">Submit</a>
+							</div>
 
                         </div>
                     </div>
                 </div>
                 <div class="col-10">
 
+					<h2 class="text-white">Program Summary (All Time)</h2>
+					<div class="card p-4 mb-4">
+						<div class="row row-cols-5">
+							<div>
+								<span>Enrolled Patients</span>
+								<div class="h3 mb-0 mt-2">119,988</div>
+							</div>
+							<div>
+								<span>Verified Patients</span>
+								<div class="d-flex align-items-center mt-2">
+									<div class="h3 mb-0">103,586</div>
+									<div class="d-flex align-items-center text-success ms-2">
+										<svg viewBox="0 0 20 20" height="20px" fill="currentColor" aria-hidden="true">
+											<path fill-rule="evenodd" d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z" clip-rule="evenodd"></path>
+										</svg>
+										<span>86.33%</span>
+									</div>
+								</div>
+							</div>
+							<div>
+								<span>Activated Patients</span>
+								<div class="d-flex align-items-center mt-2">
+									<div class="h3 mb-0">97,167</div>
+									<div class="d-flex align-items-center text-success ms-2">
+										<svg viewBox="0 0 20 20" height="20px" fill="currentColor" aria-hidden="true">
+											<path fill-rule="evenodd" d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z" clip-rule="evenodd"></path>
+										</svg>
+										<span>80.98%</span>
+									</div>
+								</div>
+							</div>
+							<div>
+								<span>Awaiting Verification</span>
+								<div class="d-flex align-items-center mt-2">
+									<div class="h3 mb-0">16,402</div>
+									<div class="d-flex align-items-center text-danger ms-2">
+										<svg viewBox="0 0 20 20" height="20px" fill="currentColor" aria-hidden="true">
+											<path fill-rule="evenodd" d="M10 3a.75.75 0 01.75.75v10.638l3.96-4.158a.75.75 0 111.08 1.04l-5.25 5.5a.75.75 0 01-1.08 0l-5.25-5.5a.75.75 0 111.08-1.04l3.96 4.158V3.75A.75.75 0 0110 3z" clip-rule="evenodd"></path>
+										</svg>
+										<span>13.67%</span>
+									</div>
+								</div>
+							</div>
+							<div>
+								<span>Funding Account Balance</span>
+								<div class="h3 mb-0 mt-2 text-success">$63,583,933.64</div>
+							</div>
+						</div>
+					</div>
+
+					<h2>Patient Enrollment Summary</h2>
+					<div class="card p-4 mb-4">
+						<div class="row row-cols-3">
+							<div>
+								<span>Enrollments</span>
+								<div class="h3 mb-0 mt-2">50</div>
+							</div>
+							<div>
+								<span>Verifications</span>
+								<div class="h3 mb-0 mt-2">38</div>
+							</div>
+							<div>
+								<span>Activations</span>
+								<div class="h3 mb-0 mt-2">142</div>
+							</div>
+						</div>
+					</div>
+
+					<h2>Payments Summary</h2>
+					<div class="bg-light px-3 py-1 border-3">
+						<div class="row row-cols-4">
+							<div>
+								<div class="card p-4 my-2">
+									<span>Net Payments</span>
+									<div class="h3 mb-0 mt-2">1,420</div>
+								</div>
+							</div>
+							<div>
+								<div class="card p-4 my-2">
+									<span>Authorizations</span>
+									<div class="h3 mb-0 mt-2">863</div>
+								</div>
+							</div>
+							<div>
+								<div class="card p-4 my-2">
+									<span>Approvals</span>
+									<div class="h3 mb-0 mt-2">75</div>
+								</div>
+							</div>
+							<div>
+								<div class="card p-4 my-2">
+									<span>Declined</span>
+									<div class="h3 mb-0 mt-2">534</div>
+								</div>
+							</div>
+
+							<div>
+								<div class="card p-4 my-2">
+									<span>Net Payments</span>
+									<div class="h3 mb-0 mt-2">1,420</div>
+								</div>
+							</div>
+
+							<div>
+								<div class="card p-4 my-2">
+									<span>Authorizations</span>
+									<div class="h3 mb-0 mt-2">863</div>
+								</div>
+							</div>
+
+							<div>
+								<div class="card p-4 my-2">
+									<span>Approvals</span>
+									<div class="h3 mb-0 mt-2">75</div>
+								</div>
+							</div>
+
+							<div>
+								<div class="card p-4 my-2">
+									<span>Declined</span>
+									<div class="h3 mb-0 mt-2">534</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<h2 class="mt-4">Payments Summary</h2>
+					<div>
+						<div class="row row-cols-4">
+							<div>
+								<div class="card p-4 my-2">
+									<span>Net Payments</span>
+									<div class="h3 mb-0 mt-2">1,420</div>
+								</div>
+							</div>
+							<div>
+								<div class="card p-4 my-2">
+									<span>Authorizations</span>
+									<div class="h3 mb-0 mt-2">863</div>
+								</div>
+							</div>
+							<div>
+								<div class="card p-4 my-2">
+									<span>Approvals</span>
+									<div class="h3 mb-0 mt-2">75</div>
+								</div>
+							</div>
+							<div>
+								<div class="card p-4 my-2">
+									<span>Declined</span>
+									<div class="h3 mb-0 mt-2">534</div>
+								</div>
+							</div>
+
+							<div>
+								<div class="card p-4 my-2">
+									<span>Net Payments</span>
+									<div class="h3 mb-0 mt-2">1,420</div>
+								</div>
+							</div>
+
+							<div>
+								<div class="card p-4 my-2">
+									<span>Authorizations</span>
+									<div class="h3 mb-0 mt-2">863</div>
+								</div>
+							</div>
+
+							<div>
+								<div class="card p-4 my-2">
+									<span>Approvals</span>
+									<div class="h3 mb-0 mt-2">75</div>
+								</div>
+							</div>
+
+							<div>
+								<div class="card p-4 my-2">
+									<span>Declined</span>
+									<div class="h3 mb-0 mt-2">534</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<ul class="nav nav-tabs">
+						<li class="nav-item">
+						  <a class="nav-link active" aria-current="page" href="#">Card Lookup Failures</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link" href="#">One Time Password Validation Failures</a>
+						</li>
+					</ul>
+
+
+					<h2>Card Lookup Failures</h2>
                     <div class="card overflow-auto">
                         <div class="table-responsive">
                           <table class="table table-hover">
                             <thead>
                               <tr>
-                                <th scope="col">DateTime</th>
-                                <th scope="col">Program</th>
-                                <th scope="col">Status</th>
-                                <th scope="col">MerchantName</th>
                                 <th scope="col">Customer ID</th>
-                                <th scope="col">VRXID</th>
-                                <th scope="col">Amount</th>
-                                <th scope="col">Holds</th>
-                                <th scope="col">Balance</th>
+                                <th scope="col">Last Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">DOB</th>
+                                <th scope="col">Timestamp</th>
+                                <th scope="col">Error</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
-                                <td>05/31/2023 07:35:15</td>
-                                <td>Dupixent MyWay® Copay Card Program</td>
-                                <td>Payment</td>
-                                <td>Dupixent</td>
-                                <td>1371256863</td>
-                                <td>2912186</td>
-                                <td>$86.26</td>
-                                <td>$0.00</td>
-                                <td>$86.26</td>
+                                <td>08923778394</td>
+                                <td>Bates</td>
+                                <td>angelabates@belllsouth.net	</td>
+                                <td>08/26/1959</td>
+                                <td>June 12, 2023, 13:35:13</td>
+                                <td>Invalid Email</td>
                               </tr>
-          
-                              <tr>
-                                <td>05/31/2023 07:35:15</td>
-                                <td>Dupixent MyWay® Copay Card Program</td>
-                                <td>Authorization</td>
-                                <td>Dupixent</td>
-                                <td>1371256863</td>
-                                <td>2912186</td>
-                                <td>$86.26</td>
-                                <td>$0.00</td>
-                                <td>$86.26</td>
-                              </tr>
-          
-                              <tr>
-                                <td>05/31/2023 07:35:15</td>
-                                <td>Dupixent MyWay® Copay Card Program</td>
-                                <td>VoidPayment</td>
-                                <td>Dupixent</td>
-                                <td>1371256863</td>
-                                <td>2912186</td>
-                                <td>$86.26</td>
-                                <td>$0.00</td>
-                                <td>$86.26</td>
-                              </tr>
-          
-                              <tr>
-                                <td>05/31/2023 07:35:15</td>
-                                <td>Dupixent MyWay® Copay Card Program</td>
-                                <td>Payment</td>
-                                <td>Dupixent</td>
-                                <td>1371256863</td>
-                                <td>2912186</td>
-                                <td>$86.26</td>
-                                <td>$0.00</td>
-                                <td>$86.26</td>
-                              </tr>
-          
-                              <tr>
-                                <td>05/31/2023 07:35:15</td>
-                                <td>Dupixent MyWay® Copay Card Program</td>
-                                <td>Authorization</td>
-                                <td>Dupixent</td>
-                                <td>1371256863</td>
-                                <td>2912186</td>
-                                <td>$86.26</td>
-                                <td>$0.00</td>
-                                <td>$86.26</td>
-                              </tr>
-          
-                              <tr>
-                                <td>05/31/2023 07:35:15</td>
-                                <td>Dupixent MyWay® Copay Card Program</td>
-                                <td>VoidPayment</td>
-                                <td>Dupixent</td>
-                                <td>1371256863</td>
-                                <td>2912186</td>
-                                <td>$86.26</td>
-                                <td>$0.00</td>
-                                <td>$86.26</td>
-                              </tr>
-
-										<tr>
-											<td>05/31/2023 07:35:15</td>
-											<td>Dupixent MyWay® Copay Card Program</td>
-											<td>VoidPayment</td>
-											<td>Dupixent</td>
-											<td>1371256863</td>
-											<td>2912186</td>
-											<td>$86.26</td>
-											<td>$0.00</td>
-											<td>$86.26</td>
-										 </tr>
-
-										 <tr>
-											<td>05/31/2023 07:35:15</td>
-											<td>Dupixent MyWay® Copay Card Program</td>
-											<td>VoidPayment</td>
-											<td>Dupixent</td>
-											<td>1371256863</td>
-											<td>2912186</td>
-											<td>$86.26</td>
-											<td>$0.00</td>
-											<td>$86.26</td>
-										 </tr>
-
-										 <tr>
-											<td>05/31/2023 07:35:15</td>
-											<td>Dupixent MyWay® Copay Card Program</td>
-											<td>VoidPayment</td>
-											<td>Dupixent</td>
-											<td>1371256863</td>
-											<td>2912186</td>
-											<td>$86.26</td>
-											<td>$0.00</td>
-											<td>$86.26</td>
-										 </tr>
-
-										 <tr>
-											<td>05/31/2023 07:35:15</td>
-											<td>Dupixent MyWay® Copay Card Program</td>
-											<td>VoidPayment</td>
-											<td>Dupixent</td>
-											<td>1371256863</td>
-											<td>2912186</td>
-											<td>$86.26</td>
-											<td>$0.00</td>
-											<td>$86.26</td>
-										 </tr>
-
-										 <tr>
-											<td>05/31/2023 07:35:15</td>
-											<td>Dupixent MyWay® Copay Card Program</td>
-											<td>VoidPayment</td>
-											<td>Dupixent</td>
-											<td>1371256863</td>
-											<td>2912186</td>
-											<td>$86.26</td>
-											<td>$0.00</td>
-											<td>$86.26</td>
-										 </tr>
-
-										 <tr>
-											<td>05/31/2023 07:35:15</td>
-											<td>Dupixent MyWay® Copay Card Program</td>
-											<td>VoidPayment</td>
-											<td>Dupixent</td>
-											<td>1371256863</td>
-											<td>2912186</td>
-											<td>$86.26</td>
-											<td>$0.00</td>
-											<td>$86.26</td>
-										 </tr>
-
-										 <tr>
-											<td>05/31/2023 07:35:15</td>
-											<td>Dupixent MyWay® Copay Card Program</td>
-											<td>VoidPayment</td>
-											<td>Dupixent</td>
-											<td>1371256863</td>
-											<td>2912186</td>
-											<td>$86.26</td>
-											<td>$0.00</td>
-											<td>$86.26</td>
-										 </tr>
-
-										 <tr>
-											<td>05/31/2023 07:35:15</td>
-											<td>Dupixent MyWay® Copay Card Program</td>
-											<td>VoidPayment</td>
-											<td>Dupixent</td>
-											<td>1371256863</td>
-											<td>2912186</td>
-											<td>$86.26</td>
-											<td>$0.00</td>
-											<td>$86.26</td>
-										 </tr>
-
-										 <tr>
-											<td>05/31/2023 07:35:15</td>
-											<td>Dupixent MyWay® Copay Card Program</td>
-											<td>VoidPayment</td>
-											<td>Dupixent</td>
-											<td>1371256863</td>
-											<td>2912186</td>
-											<td>$86.26</td>
-											<td>$0.00</td>
-											<td>$86.26</td>
-										 </tr>
-
-										 <tr>
-											<td>05/31/2023 07:35:15</td>
-											<td>Dupixent MyWay® Copay Card Program</td>
-											<td>VoidPayment</td>
-											<td>Dupixent</td>
-											<td>1371256863</td>
-											<td>2912186</td>
-											<td>$86.26</td>
-											<td>$0.00</td>
-											<td>$86.26</td>
-										 </tr>
-
-										 <tr>
-											<td>05/31/2023 07:35:15</td>
-											<td>Dupixent MyWay® Copay Card Program</td>
-											<td>VoidPayment</td>
-											<td>Dupixent</td>
-											<td>1371256863</td>
-											<td>2912186</td>
-											<td>$86.26</td>
-											<td>$0.00</td>
-											<td>$86.26</td>
-										 </tr>
-
-										 <tr>
-											<td>05/31/2023 07:35:15</td>
-											<td>Dupixent MyWay® Copay Card Program</td>
-											<td>VoidPayment</td>
-											<td>Dupixent</td>
-											<td>1371256863</td>
-											<td>2912186</td>
-											<td>$86.26</td>
-											<td>$0.00</td>
-											<td>$86.26</td>
-										 </tr>
-
-										 <tr>
-											<td>05/31/2023 07:35:15</td>
-											<td>Dupixent MyWay® Copay Card Program</td>
-											<td>VoidPayment</td>
-											<td>Dupixent</td>
-											<td>1371256863</td>
-											<td>2912186</td>
-											<td>$86.26</td>
-											<td>$0.00</td>
-											<td>$86.26</td>
-										 </tr>
-
-										 <tr>
-											<td>05/31/2023 07:35:15</td>
-											<td>Dupixent MyWay® Copay Card Program</td>
-											<td>VoidPayment</td>
-											<td>Dupixent</td>
-											<td>1371256863</td>
-											<td>2912186</td>
-											<td>$86.26</td>
-											<td>$0.00</td>
-											<td>$86.26</td>
-										 </tr>
                             </tbody>
                           </table>
                         </div>  
-                      </div>
+                    </div>
+
+					<h2 class="mt-3">One Time Password Validation Failures</h2>
+					<div class="card overflow-auto">
+                        <div class="table-responsive">
+                          <table class="table table-hover">
+                            <thead>
+                              <tr>
+                                <th scope="col">Customer ID</th>
+                                <th scope="col">Input OTP</th>
+                                <th scope="col">Actual OTP</th>
+                                <th scope="col">Validation Failed</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1378187838</td>
+                                <td>380599</td>
+                                <td>380559</td>
+                                <td>June 12, 2023, 12:21:49</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>  
+                    </div>
           
-                      <div class="pagination-wrapper">
-                        <div class="text-muted small">
-                          Result per page
-                          <p>Showing 1 to 20 of 10000 Enteries</p>
-                        </div>
-                        <nav class="mt-3" aria-label="Page navigation example">
-                          <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                          </ul>
-                        </nav>
-                      </div>
+					<div class="pagination-wrapper">
+						<div class="text-muted small">
+							Result per page
+							<p>Showing 1 to 20 of 10000 Enteries</p>
+						</div>
+						<nav class="mt-3" aria-label="Page navigation example">
+							<ul class="pagination">
+							<li class="page-item"><a class="page-link" href="#">Previous</a></li>
+							<li class="page-item"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item"><a class="page-link" href="#">Next</a></li>
+							</ul>
+						</nav>
+					</div>
 
                 </div>
             </div>
@@ -565,7 +502,7 @@
       </svg>
     </button>
 
-	 <footer>
+	 <footer class="pt-4">
 		<div class="container">
 			<p class="text-center small">© 2023 Klyre Payments. All rights reserved.</p>
 		</div>
@@ -818,17 +755,17 @@
     <script src="assets/js/main.js"></script>
 
     <script>
-      // $(document).ready(function() {
-      //   var elementHeight = $('.filter-area').height();
-      //   var negativeHeight = -0.5 * elementHeight;
-      //   $('.filter-area .container').css('margin-top', negativeHeight);
+      $(document).ready(function() {
+        var elementHeight = $('.filter-area').height();
+        var negativeHeight = -0.5 * elementHeight;
+        $('.filter-area .container').css('margin-top', negativeHeight);
 
-      //   $(window).resize(function() {
-      //     var elementHeight = $('.filter-area').height();
-      //     var negativeHeight = -0.5 * elementHeight;
-      //     $('.filter-area .container').css('margin-top', negativeHeight);
-      //   });
-      // });
+        $(window).resize(function() {
+          var elementHeight = $('.filter-area').height();
+          var negativeHeight = -0.5 * elementHeight;
+          $('.filter-area .container').css('margin-top', negativeHeight);
+        });
+      });
     </script>
   </body>
 </html>

@@ -130,11 +130,9 @@ $(document).ready(function () {
 
     // Click Styling Condition
     $(".tab-button").removeClass(
-      "border-bottom fw-bold border-primary border-3"
+      "active"
     );
-    $(".tab-button").addClass("border border-bottom-0");
-    $(this).removeClass("border border-bottom-0");
-    $(this).addClass("border-bottom fw-bold border-primary border-3");
+    $(this).addClass("active");
 
     // Tab Conditions
     $(".tab-view").addClass("d-none");
