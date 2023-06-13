@@ -12,6 +12,26 @@
 	<link rel="stylesheet" href="assets/css/bootstrap.css" />
 </head>
 
+<style>
+	.settings-dropdown .dropdown-toggle:after {
+		display: none;
+	}
+	.settings-dropdown .dropdown-menu a {
+		padding: 8px 15px;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+	.settings-dropdown .dropdown-menu a:hover,
+	.settings-dropdown .dropdown-menu a:active {
+		color: var(--bs-dropdown-link-color);
+		background-color: var(--bs-table-hover-bg)
+	}
+	.settings-dropdown .dropdown-menu li + li {
+		border-top: 1px solid var(--bs-border-color);
+	}
+</style>
+
 <body>
 	<header>
 		<div class="container">
@@ -168,11 +188,16 @@
 										<td>June 12, 2023, 13:35:13</td>
 										<td>CSR</td>
 										<td>
-											<div class="d-flex gap-1">
-												<a href="#!" class="btn btn-primary">Edit</a>
-												<a href="#!" class="btn btn-primary">Delete</a>
-												<a href="#!" class="btn btn-primary">Reset Password with email</a>
-											</div>
+											<div class="btn-group settings-dropdown">
+												<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-ellipsis"></i>
+												</button>
+												<ul class="dropdown-menu dropdown-menu-end p-0 border-0 shadow">
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-file-pen"></i>Edit</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i>Delete</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-unlock"></i>Reset Password with email</a></li>
+												</ul>
+											 </div>
 										</td>
 									</tr>
 									<tr>
@@ -182,11 +207,16 @@
 										<td>June 12, 2023, 13:35:13</td>
 										<td>CSR</td>
 										<td>
-											<div class="d-flex gap-1">
-												<a href="#!" class="btn btn-primary">Edit</a>
-												<a href="#!" class="btn btn-primary">Delete</a>
-												<a href="#!" class="btn btn-primary">Reset Password with email</a>
-											</div>
+											<div class="btn-group settings-dropdown">
+												<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-ellipsis"></i>
+												</button>
+												<ul class="dropdown-menu dropdown-menu-end p-0 border-0 shadow">
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-file-pen"></i>Edit</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i>Delete</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-unlock"></i>Reset Password with email</a></li>
+												</ul>
+											 </div>
 										</td>
 									</tr>
 									<tr>
@@ -196,11 +226,16 @@
 										<td>June 12, 2023, 13:35:13</td>
 										<td>CSR</td>
 										<td>
-											<div class="d-flex gap-1">
-												<a href="#!" class="btn btn-primary">Edit</a>
-												<a href="#!" class="btn btn-primary">Delete</a>
-												<a href="#!" class="btn btn-primary">Reset Password with email</a>
-											</div>
+											<div class="btn-group settings-dropdown">
+												<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-ellipsis"></i>
+												</button>
+												<ul class="dropdown-menu dropdown-menu-end p-0 border-0 shadow">
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-file-pen"></i>Edit</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i>Delete</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-unlock"></i>Reset Password with email</a></li>
+												</ul>
+											 </div>
 										</td>
 									</tr>
 									<tr>
@@ -210,11 +245,16 @@
 										<td>June 12, 2023, 13:35:13</td>
 										<td>CSR</td>
 										<td>
-											<div class="d-flex gap-1">
-												<a href="#!" class="btn btn-primary">Edit</a>
-												<a href="#!" class="btn btn-primary">Delete</a>
-												<a href="#!" class="btn btn-primary">Reset Password with email</a>
-											</div>
+											<div class="btn-group settings-dropdown">
+												<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-ellipsis"></i>
+												</button>
+												<ul class="dropdown-menu dropdown-menu-end p-0 border-0 shadow">
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-file-pen"></i>Edit</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i>Delete</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-unlock"></i>Reset Password with email</a></li>
+												</ul>
+											 </div>
 										</td>
 									</tr>
 									<tr>
@@ -224,11 +264,16 @@
 										<td>June 12, 2023, 13:35:13</td>
 										<td>CSR</td>
 										<td>
-											<div class="d-flex gap-1">
-												<a href="#!" class="btn btn-primary">Edit</a>
-												<a href="#!" class="btn btn-primary">Delete</a>
-												<a href="#!" class="btn btn-primary">Reset Password with email</a>
-											</div>
+											<div class="btn-group settings-dropdown">
+												<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-ellipsis"></i>
+												</button>
+												<ul class="dropdown-menu dropdown-menu-end p-0 border-0 shadow">
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-file-pen"></i>Edit</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i>Delete</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-unlock"></i>Reset Password with email</a></li>
+												</ul>
+											 </div>
 										</td>
 									</tr>
 									<tr>
@@ -238,11 +283,16 @@
 										<td>June 12, 2023, 13:35:13</td>
 										<td>CSR</td>
 										<td>
-											<div class="d-flex gap-1">
-												<a href="#!" class="btn btn-primary">Edit</a>
-												<a href="#!" class="btn btn-primary">Delete</a>
-												<a href="#!" class="btn btn-primary">Reset Password with email</a>
-											</div>
+											<div class="btn-group settings-dropdown">
+												<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-ellipsis"></i>
+												</button>
+												<ul class="dropdown-menu dropdown-menu-end p-0 border-0 shadow">
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-file-pen"></i>Edit</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i>Delete</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-unlock"></i>Reset Password with email</a></li>
+												</ul>
+											 </div>
 										</td>
 									</tr>
 									<tr>
@@ -252,11 +302,16 @@
 										<td>June 12, 2023, 13:35:13</td>
 										<td>CSR</td>
 										<td>
-											<div class="d-flex gap-1">
-												<a href="#!" class="btn btn-primary">Edit</a>
-												<a href="#!" class="btn btn-primary">Delete</a>
-												<a href="#!" class="btn btn-primary">Reset Password with email</a>
-											</div>
+											<div class="btn-group settings-dropdown">
+												<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-ellipsis"></i>
+												</button>
+												<ul class="dropdown-menu dropdown-menu-end p-0 border-0 shadow">
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-file-pen"></i>Edit</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i>Delete</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-unlock"></i>Reset Password with email</a></li>
+												</ul>
+											 </div>
 										</td>
 									</tr>
 									<tr>
@@ -266,11 +321,16 @@
 										<td>June 12, 2023, 13:35:13</td>
 										<td>CSR</td>
 										<td>
-											<div class="d-flex gap-1">
-												<a href="#!" class="btn btn-primary">Edit</a>
-												<a href="#!" class="btn btn-primary">Delete</a>
-												<a href="#!" class="btn btn-primary">Reset Password with email</a>
-											</div>
+											<div class="btn-group settings-dropdown">
+												<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-ellipsis"></i>
+												</button>
+												<ul class="dropdown-menu dropdown-menu-end p-0 border-0 shadow">
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-file-pen"></i>Edit</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i>Delete</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-unlock"></i>Reset Password with email</a></li>
+												</ul>
+											 </div>
 										</td>
 									</tr>
 									<tr>
@@ -280,11 +340,16 @@
 										<td>June 12, 2023, 13:35:13</td>
 										<td>CSR</td>
 										<td>
-											<div class="d-flex gap-1">
-												<a href="#!" class="btn btn-primary">Edit</a>
-												<a href="#!" class="btn btn-primary">Delete</a>
-												<a href="#!" class="btn btn-primary">Reset Password with email</a>
-											</div>
+											<div class="btn-group settings-dropdown">
+												<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-ellipsis"></i>
+												</button>
+												<ul class="dropdown-menu dropdown-menu-end p-0 border-0 shadow">
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-file-pen"></i>Edit</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i>Delete</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-unlock"></i>Reset Password with email</a></li>
+												</ul>
+											 </div>
 										</td>
 									</tr>
 									<tr>
@@ -294,11 +359,16 @@
 										<td>June 12, 2023, 13:35:13</td>
 										<td>CSR</td>
 										<td>
-											<div class="d-flex gap-1">
-												<a href="#!" class="btn btn-primary">Edit</a>
-												<a href="#!" class="btn btn-primary">Delete</a>
-												<a href="#!" class="btn btn-primary">Reset Password with email</a>
-											</div>
+											<div class="btn-group settings-dropdown">
+												<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-ellipsis"></i>
+												</button>
+												<ul class="dropdown-menu dropdown-menu-end p-0 border-0 shadow">
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-file-pen"></i>Edit</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i>Delete</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-unlock"></i>Reset Password with email</a></li>
+												</ul>
+											 </div>
 										</td>
 									</tr>
 									<tr>
@@ -308,11 +378,16 @@
 										<td>June 12, 2023, 13:35:13</td>
 										<td>CSR</td>
 										<td>
-											<div class="d-flex gap-1">
-												<a href="#!" class="btn btn-primary">Edit</a>
-												<a href="#!" class="btn btn-primary">Delete</a>
-												<a href="#!" class="btn btn-primary">Reset Password with email</a>
-											</div>
+											<div class="btn-group settings-dropdown">
+												<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-ellipsis"></i>
+												</button>
+												<ul class="dropdown-menu dropdown-menu-end p-0 border-0 shadow">
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-file-pen"></i>Edit</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i>Delete</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-unlock"></i>Reset Password with email</a></li>
+												</ul>
+											 </div>
 										</td>
 									</tr>
 									<tr>
@@ -322,11 +397,16 @@
 										<td>June 12, 2023, 13:35:13</td>
 										<td>CSR</td>
 										<td>
-											<div class="d-flex gap-1">
-												<a href="#!" class="btn btn-primary">Edit</a>
-												<a href="#!" class="btn btn-primary">Delete</a>
-												<a href="#!" class="btn btn-primary">Reset Password with email</a>
-											</div>
+											<div class="btn-group settings-dropdown">
+												<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-ellipsis"></i>
+												</button>
+												<ul class="dropdown-menu dropdown-menu-end p-0 border-0 shadow">
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-file-pen"></i>Edit</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i>Delete</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-unlock"></i>Reset Password with email</a></li>
+												</ul>
+											 </div>
 										</td>
 									</tr>
 									<tr>
@@ -336,11 +416,16 @@
 										<td>June 12, 2023, 13:35:13</td>
 										<td>CSR</td>
 										<td>
-											<div class="d-flex gap-1">
-												<a href="#!" class="btn btn-primary">Edit</a>
-												<a href="#!" class="btn btn-primary">Delete</a>
-												<a href="#!" class="btn btn-primary">Reset Password with email</a>
-											</div>
+											<div class="btn-group settings-dropdown">
+												<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-ellipsis"></i>
+												</button>
+												<ul class="dropdown-menu dropdown-menu-end p-0 border-0 shadow">
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-file-pen"></i>Edit</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i>Delete</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-unlock"></i>Reset Password with email</a></li>
+												</ul>
+											 </div>
 										</td>
 									</tr>
 									<tr>
@@ -350,11 +435,16 @@
 										<td>June 12, 2023, 13:35:13</td>
 										<td>CSR</td>
 										<td>
-											<div class="d-flex gap-1">
-												<a href="#!" class="btn btn-primary">Edit</a>
-												<a href="#!" class="btn btn-primary">Delete</a>
-												<a href="#!" class="btn btn-primary">Reset Password with email</a>
-											</div>
+											<div class="btn-group settings-dropdown">
+												<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-ellipsis"></i>
+												</button>
+												<ul class="dropdown-menu dropdown-menu-end p-0 border-0 shadow">
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-file-pen"></i>Edit</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i>Delete</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-unlock"></i>Reset Password with email</a></li>
+												</ul>
+											 </div>
 										</td>
 									</tr>
 									<tr>
@@ -364,11 +454,16 @@
 										<td>June 12, 2023, 13:35:13</td>
 										<td>CSR</td>
 										<td>
-											<div class="d-flex gap-1">
-												<a href="#!" class="btn btn-primary">Edit</a>
-												<a href="#!" class="btn btn-primary">Delete</a>
-												<a href="#!" class="btn btn-primary">Reset Password with email</a>
-											</div>
+											<div class="btn-group settings-dropdown">
+												<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-ellipsis"></i>
+												</button>
+												<ul class="dropdown-menu dropdown-menu-end p-0 border-0 shadow">
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-file-pen"></i>Edit</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i>Delete</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-unlock"></i>Reset Password with email</a></li>
+												</ul>
+											 </div>
 										</td>
 									</tr>
 									<tr>
@@ -378,11 +473,16 @@
 										<td>June 12, 2023, 13:35:13</td>
 										<td>CSR</td>
 										<td>
-											<div class="d-flex gap-1">
-												<a href="#!" class="btn btn-primary">Edit</a>
-												<a href="#!" class="btn btn-primary">Delete</a>
-												<a href="#!" class="btn btn-primary">Reset Password with email</a>
-											</div>
+											<div class="btn-group settings-dropdown">
+												<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-ellipsis"></i>
+												</button>
+												<ul class="dropdown-menu dropdown-menu-end p-0 border-0 shadow">
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-file-pen"></i>Edit</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i>Delete</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-unlock"></i>Reset Password with email</a></li>
+												</ul>
+											 </div>
 										</td>
 									</tr>
 									<tr>
@@ -392,11 +492,16 @@
 										<td>June 12, 2023, 13:35:13</td>
 										<td>CSR</td>
 										<td>
-											<div class="d-flex gap-1">
-												<a href="#!" class="btn btn-primary">Edit</a>
-												<a href="#!" class="btn btn-primary">Delete</a>
-												<a href="#!" class="btn btn-primary">Reset Password with email</a>
-											</div>
+											<div class="btn-group settings-dropdown">
+												<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-ellipsis"></i>
+												</button>
+												<ul class="dropdown-menu dropdown-menu-end p-0 border-0 shadow">
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-file-pen"></i>Edit</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i>Delete</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-unlock"></i>Reset Password with email</a></li>
+												</ul>
+											 </div>
 										</td>
 									</tr>
 									<tr>
@@ -406,11 +511,16 @@
 										<td>June 12, 2023, 13:35:13</td>
 										<td>CSR</td>
 										<td>
-											<div class="d-flex gap-1">
-												<a href="#!" class="btn btn-primary">Edit</a>
-												<a href="#!" class="btn btn-primary">Delete</a>
-												<a href="#!" class="btn btn-primary">Reset Password with email</a>
-											</div>
+											<div class="btn-group settings-dropdown">
+												<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-ellipsis"></i>
+												</button>
+												<ul class="dropdown-menu dropdown-menu-end p-0 border-0 shadow">
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-file-pen"></i>Edit</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i>Delete</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-unlock"></i>Reset Password with email</a></li>
+												</ul>
+											 </div>
 										</td>
 									</tr>
 									<tr>
@@ -420,11 +530,16 @@
 										<td>June 12, 2023, 13:35:13</td>
 										<td>CSR</td>
 										<td>
-											<div class="d-flex gap-1">
-												<a href="#!" class="btn btn-primary">Edit</a>
-												<a href="#!" class="btn btn-primary">Delete</a>
-												<a href="#!" class="btn btn-primary">Reset Password with email</a>
-											</div>
+											<div class="btn-group settings-dropdown">
+												<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-ellipsis"></i>
+												</button>
+												<ul class="dropdown-menu dropdown-menu-end p-0 border-0 shadow">
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-file-pen"></i>Edit</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i>Delete</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-unlock"></i>Reset Password with email</a></li>
+												</ul>
+											 </div>
 										</td>
 									</tr>
 									<tr>
@@ -434,11 +549,16 @@
 										<td>June 12, 2023, 13:35:13</td>
 										<td>CSR</td>
 										<td>
-											<div class="d-flex gap-1">
-												<a href="#!" class="btn btn-primary">Edit</a>
-												<a href="#!" class="btn btn-primary">Delete</a>
-												<a href="#!" class="btn btn-primary">Reset Password with email</a>
-											</div>
+											<div class="btn-group settings-dropdown">
+												<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-ellipsis"></i>
+												</button>
+												<ul class="dropdown-menu dropdown-menu-end p-0 border-0 shadow">
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-file-pen"></i>Edit</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i>Delete</a></li>
+												  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-unlock"></i>Reset Password with email</a></li>
+												</ul>
+											 </div>
 										</td>
 									</tr>
 								</tbody>
