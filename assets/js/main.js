@@ -400,9 +400,7 @@ const tooltipList = [...tooltipTriggerList].map(
   (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
 );
 
-
-// programs-checkbox
-
+// Programs Checkbox
 $(document).ready(function() {
   $('a').click(function(e) {
     e.preventDefault(); // Prevent the default behavior of the anchor tag
