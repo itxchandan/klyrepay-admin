@@ -129,9 +129,7 @@ $(document).ready(function () {
     e.preventDefault();
 
     // Click Styling Condition
-    $(".tab-button").removeClass(
-      "active"
-    );
+    $(".tab-button").removeClass("active");
     $(this).addClass("active");
 
     // Tab Conditions
@@ -211,8 +209,7 @@ $(document).ready(function () {
   });
   // ********** Live Search [End] **********
 
-// z-3 overflow-y-auto checkbox-container position-absolute mt-5 form-control d-none
-
+  // z-3 overflow-y-auto checkbox-container position-absolute mt-5 form-control d-none
 
   // ********** Mulit Checkbox With Search [Start] **********
   $(".checkbox-toggle-button").on("click", function (e) {
@@ -401,13 +398,21 @@ const tooltipList = [...tooltipTriggerList].map(
 );
 
 // Programs Checkbox
-$(document).ready(function() {
-  $('a').click(function(e) {
-    e.preventDefault(); // Prevent the default behavior of the anchor tag
+$(document).ready(function () {
+  $(".select-all").click(function (e) {
+    e.preventDefault();
 
-    // Check all checkboxes
-    $('.programs-checkbox input[type="checkbox"]').each(function() {
-      $(this).prop('checked', !$(this).prop('checked'));
+    var allChecked = true;
+
+    $('.programs-checkbox input[type="checkbox"]').each(function () {
+      if (!$(this).prop("checked")) {
+        allChecked = false;
+        return false;
+      }
+    });
+
+    $('.programs-checkbox input[type="checkbox"]').each(function () {
+      $(this).prop("checked", !allChecked);
     });
   });
 });
