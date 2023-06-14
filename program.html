@@ -23,14 +23,64 @@
 								<a class="text-logo" href="index.html">Klyre<span class="fw-bold">Payments</span></a>
 							</div>
 							<div class="d-none d-md-block ps-4">
-								<nav class="nav">
-									<a class="nav-link active" href="index.html">Dashboard</a>
-									<a class="nav-link" href="transactions.html">Transactions</a>
-									<a class="nav-link" href="users.html">Users</a>
-									<a class="nav-link" href="patients.html">Patients</a>
-									<a class="nav-link" href="#">Reports</a>
-									<a class="nav-link" href="typography.html">Typography</a>
+								<!-- Nav Menu -->
+								<nav id="navmenu" class="navmenu nav">
+									<ul>
+									  <li><a class="nav-link" href="index.html">Dashboard</a></li>
+									  <li><a class="nav-link" href="transactions.html">Transactions</a></li>
+									  <li><a class="nav-link" href="users.html">Users</a></li>
+									  <li><a class="nav-link" href="patients.html">Patients</a></li>
+									  
+									  <li class="dropdown has-dropdown">
+										<a class="nav-link active" href="#">
+										  <span>Reports</span> <i class="bi bi-chevron-down"></i>
+										</a>
+										<ul class="dd-box-shadow">
+				
+										  <li class="dropdown has-dropdown">
+											<a class="nav-link" href="javascript:void();">
+											  <span>SLA</span>
+											  <i class="bi bi-chevron-down"></i>
+											</a>
+											<ul class="dd-box-shadow">
+											  <li><a class="nav-link" href="sla-summary.html">SLA Summary</a></li>
+											  <li><a class="nav-link" href="sla-metrics.html">SLA Metrics</a></li>
+											</ul>
+										  </li>
+				
+										  <li><a class="nav-link active" href="program.html">Program</a></li>
+										  <li><a class="nav-link" href="deposits.html">Deposits</a></li>
+										  <li><a class="nav-link" href="imported-reports.html">Imported Reports</a></li>
+										  <li><a class="nav-link" href="inactivity.html">Inactivity</a></li>
+										  <li><a class="nav-link" href="daily-settlements.html">Daily Settlements</a></li>
+				
+										  <li class="dropdown has-dropdown">
+											<a class="nav-link" href="javascript:void();">
+											  <span>Pivot Reports</span>
+											  <i class="bi bi-chevron-down"></i>
+											</a>
+											<ul class="dd-box-shadow">
+											  <li><a class="nav-link" href="all-transactions.html">Transactions</a></li>
+											  <li><a class="nav-link" href="new-payments.html">Net Payments</a></li>
+											</ul>
+										  </li>
+										  <li class="dropdown has-dropdown">
+											<a class="nav-link" href="javascript:void();">
+											  <span>Communication</span>
+											  <i class="bi bi-chevron-down"></i>
+											</a>
+											<ul class="dd-box-shadow">
+											  <li><a class="nav-link" href="email.html">Emails</a></li>
+											  <li><a class="nav-link" href="summary.html">Summary</a></li>
+											</ul>
+										  </li>
+										</ul>
+									  </li>
+									</ul>
+								
+									<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 								</nav>
+								<!-- End Nav Menu -->
 							</div>
 						</div>
 						<div class="header-right-area">
@@ -116,11 +166,13 @@
 										<td>$1,412,769.36</td>
 										<td>
                                             <a href="#!" class="btn btn-primary">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="25px">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                </svg>                                                  
-                                                <span>View</span>
+												<div class="d-flex align-items-center">
+													<svg class="me-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20px">
+														<path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+														<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+													</svg>
+													<span>View</span>
+												</div>
                                             </a>
                                         </td>
 									</tr>
@@ -129,11 +181,13 @@
 										<td>$800,548.44</td>
 										<td>
                                             <a href="#!" class="btn btn-primary">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="25px">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                </svg>                                                  
-                                                <span>View</span>
+												<div class="d-flex align-items-center">
+													<svg class="me-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20px">
+														<path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+														<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+													</svg>
+													<span>View</span>
+												</div>
                                             </a>
                                         </td>
 									</tr>
@@ -142,11 +196,13 @@
 										<td>$1,412,769.36</td>
 										<td>
                                             <a href="#!" class="btn btn-primary">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="25px">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                </svg>                                                  
-                                                <span>View</span>
+												<div class="d-flex align-items-center">
+													<svg class="me-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20px">
+														<path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+														<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+													</svg>
+													<span>View</span>
+												</div>
                                             </a>
                                         </td>
 									</tr>
@@ -155,11 +211,13 @@
 										<td>$1,412,769.36</td>
 										<td>
                                             <a href="#!" class="btn btn-primary">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="25px">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                </svg>                                                  
-                                                <span>View</span>
+												<div class="d-flex align-items-center">
+													<svg class="me-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20px">
+														<path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+														<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+													</svg>
+													<span>View</span>
+												</div>
                                             </a>
                                         </td>
 									</tr>
@@ -168,11 +226,13 @@
 										<td>$1,412,769.36</td>
 										<td>
                                             <a href="#!" class="btn btn-primary">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="25px">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                </svg>                                                  
-                                                <span>View</span>
+												<div class="d-flex align-items-center">
+													<svg class="me-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20px">
+														<path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+														<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+													</svg>
+													<span>View</span>
+												</div>
                                             </a>
                                         </td>
 									</tr>
@@ -181,11 +241,13 @@
 										<td>$1,412,769.36</td>
 										<td>
                                             <a href="#!" class="btn btn-primary">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="25px">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                </svg>                                                  
-                                                <span>View</span>
+												<div class="d-flex align-items-center">
+													<svg class="me-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20px">
+														<path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+														<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+													</svg>
+													<span>View</span>
+												</div>
                                             </a>
                                         </td>
 									</tr>
@@ -194,11 +256,13 @@
 										<td>$1,412,769.36</td>
 										<td>
                                             <a href="#!" class="btn btn-primary">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="25px">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                </svg>                                                  
-                                                <span>View</span>
+												<div class="d-flex align-items-center">
+													<svg class="me-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20px">
+														<path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+														<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+													</svg>
+													<span>View</span>
+												</div>
                                             </a>
                                         </td>
 									</tr>
@@ -207,11 +271,13 @@
 										<td>$1,412,769.36</td>
 										<td>
                                             <a href="#!" class="btn btn-primary">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="25px">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                </svg>                                                  
-                                                <span>View</span>
+												<div class="d-flex align-items-center">
+													<svg class="me-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20px">
+														<path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+														<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+													</svg>
+													<span>View</span>
+												</div>
                                             </a>
                                         </td>
 									</tr>
@@ -220,11 +286,13 @@
 										<td>$1,412,769.36</td>
 										<td>
                                             <a href="#!" class="btn btn-primary">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="25px">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                </svg>                                                  
-                                                <span>View</span>
+												<div class="d-flex align-items-center">
+													<svg class="me-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20px">
+														<path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+														<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+													</svg>
+													<span>View</span>
+												</div>
                                             </a>
                                         </td>
 									</tr>
@@ -233,11 +301,13 @@
 										<td>$1,412,769.36</td>
 										<td>
                                             <a href="#!" class="btn btn-primary">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="25px">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                </svg>                                                  
-                                                <span>View</span>
+												<div class="d-flex align-items-center">
+													<svg class="me-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20px">
+														<path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+														<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+													</svg>
+													<span>View</span>
+												</div>
                                             </a>
                                         </td>
 									</tr>
@@ -246,11 +316,13 @@
 										<td>$1,412,769.36</td>
 										<td>
                                             <a href="#!" class="btn btn-primary">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="25px">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                </svg>                                                  
-                                                <span>View</span>
+												<div class="d-flex align-items-center">
+													<svg class="me-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20px">
+														<path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+														<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+													</svg>
+													<span>View</span>
+												</div>
                                             </a>
                                         </td>
 									</tr>

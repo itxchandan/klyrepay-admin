@@ -705,6 +705,7 @@ header .theme-icon {
     margin: 10px 20px;
     background-color: var(--color-nav-dropdown-background);
     transition: all 0.5s ease-in-out;
+    overflow: hidden !important;
   }
 
   .navmenu .dropdown ul ul,
