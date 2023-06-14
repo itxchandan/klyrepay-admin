@@ -12309,6 +12309,7 @@ header .theme-icon {
     padding: 10px 20px;
     text-transform: none;
     color: #111727;
+    border-radius: 0;
   }
   .navmenu .dropdown ul a i {
     font-size: 12px;
