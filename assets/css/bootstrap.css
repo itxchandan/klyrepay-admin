@@ -10949,12 +10949,15 @@ header .theme-icon {
       .stat .stat-header .title span {
         flex: none;
         margin-right: 15px; }
+    .stat .stat-header .stat-status {
+      background-color: #02cc99;
+      color: #fff;
+      padding: 3px 15px;
+      border-radius: 20px; }
   .stat .stat-lines {
     max-width: 100%;
     display: flex;
-    margin: 10px 0;
-    overflow-x: auto;
-    overflow-y: clip; }
+    margin: 10px 0; }
     .stat .stat-lines span {
       height: 50px;
       width: 8px;
@@ -10962,7 +10965,24 @@ header .theme-icon {
       display: inline-block;
       margin: 0 3px;
       flex: none;
-      transition: all .1s ease; }
+      transition: all .1s ease;
+      position: relative; }
+      .stat .stat-lines span .custom-tooltip {
+        position: absolute;
+        bottom: 55px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: var(--bs-white);
+        background-color: var(--bs-primary);
+        border-radius: 5px;
+        min-width: 150px;
+        padding: 10px;
+        font-size: 12px;
+        z-index: 1; }
+        .stat .stat-lines span .custom-tooltip p {
+          margin-bottom: 5px; }
+        .stat .stat-lines span .custom-tooltip p:last-child {
+          margin-bottom: 0; }
       .stat .stat-lines span:hover {
         background-color: #04fcbd;
         box-shadow: 0px 0px 5px #04fcbd; }
