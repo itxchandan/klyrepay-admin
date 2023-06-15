@@ -717,7 +717,7 @@ progress {
 
 .container,
 .container-fluid,
-.container-xxl,
+.container,
 .container-xl,
 .container-lg,
 .container-md,
@@ -752,7 +752,7 @@ progress {
   }
 }
 @media (min-width: 1400px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+  .container, .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1500px;
   }
 }
@@ -3889,7 +3889,7 @@ textarea.form-control-lg {
 .navbar > .container-md,
 .navbar > .container-lg,
 .navbar > .container-xl,
-.navbar > .container-xxl {
+.navbar > .container {
   display: flex;
   flex-wrap: inherit;
   align-items: center;
@@ -7235,7 +7235,7 @@ textarea.form-control-lg {
   display: table-cell !important;
 }
 
-.d-flex {
+.d-flex, .page-title-content {
   display: flex !important;
 }
 
@@ -7681,7 +7681,7 @@ textarea.form-control-lg {
   align-items: flex-end !important;
 }
 
-.align-items-center {
+.align-items-center, .page-title-content {
   align-items: center !important;
 }
 
@@ -8223,7 +8223,7 @@ textarea.form-control-lg {
   column-gap: 0.5rem !important;
 }
 
-.column-gap-3 {
+.column-gap-3, .page-title-content {
   column-gap: 1rem !important;
 }
 
@@ -9594,7 +9594,7 @@ textarea.form-control-lg {
   .text-sm-start {
     text-align: left !important;
   }
-  .text-sm-end {
+  .text-sm-end, .page-title-export-button {
     text-align: right !important;
   }
   .text-sm-center {
@@ -11894,9 +11894,21 @@ header .header-wrapper {
   justify-content: space-between;
   padding: 10px 0;
 }
+@media (max-width: 991.98px) {
+  header .header-wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+}
 header .header-left-area {
   display: flex;
   align-items: center;
+}
+@media (max-width: 991.98px) {
+  header .header-left-area {
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 header .header-right-area {
   text-align: right;
@@ -11996,6 +12008,9 @@ header .separator > div:not(:last-child) {
 
 .page-title {
   color: var(--nav-active);
+}
+.page-title .btn {
+  flex: none;
 }
 
 [type=checkbox],
@@ -12216,10 +12231,16 @@ header .theme-icon {
     transform: translate(-50%, -100%) rotate(360deg);
   }
 }
+.pagination {
+  margin-bottom: 0;
+}
+
 .pagination-wrapper {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .custom-accordion-button + svg {
@@ -12485,7 +12506,7 @@ header .theme-icon {
     position: fixed;
     overflow: hidden;
     inset: 0;
-    background: rgba(33, 37, 41, 0.8);
+    background: rgb(33, 37, 41);
     transition: 0.3s;
   }
   .mobile-nav-active .navmenu > ul {

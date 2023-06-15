@@ -53,10 +53,20 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px 0;
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+      width: 100%;
+    }
   }
   .header-left-area {
     display: flex;
     align-items: center;
+    
+    @include media-breakpoint-down(lg) {
+        width: 100%;
+        justify-content: space-between;
+    }
+
   }
   .header-right-area {
     text-align: right;
@@ -166,6 +176,9 @@ header {
 
 .page-title {
   color: var(--nav-active);
+  .btn {
+    flex: none;
+  }
 }
 
 // Checkbox
@@ -421,10 +434,17 @@ header .theme-icon {
 }
 
 // Pagination
+
+.pagination {
+  margin-bottom: 0;
+}
+
 .pagination-wrapper {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 // Custom Accordion
@@ -738,11 +758,21 @@ header .theme-icon {
     position: fixed;
     overflow: hidden;
     inset: 0;
-    background: rgba(33, 37, 41, 0.8);
+    background: rgb(33, 37, 41);
     transition: 0.3s;
   }
 
   .mobile-nav-active .navmenu>ul {
     display: block;
   }
+}
+
+.page-title-content {
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .column-gap-3;
+}
+
+.page-title-export-button {
+  @extend .text-sm-end;
 }
