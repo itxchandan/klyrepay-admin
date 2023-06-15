@@ -717,7 +717,7 @@ progress {
 
 .container,
 .container-fluid,
-.container,
+.container-xxl,
 .container-xl,
 .container-lg,
 .container-md,
@@ -752,7 +752,7 @@ progress {
   }
 }
 @media (min-width: 1400px) {
-  .container, .container-xl, .container-lg, .container-md, .container-sm, .container {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1500px;
   }
 }
@@ -3889,7 +3889,7 @@ textarea.form-control-lg {
 .navbar > .container-md,
 .navbar > .container-lg,
 .navbar > .container-xl,
-.navbar > .container {
+.navbar > .container-xxl {
   display: flex;
   flex-wrap: inherit;
   align-items: center;
@@ -12109,6 +12109,7 @@ header .separator > div:not(:last-child) {
   border-radius: 22px;
   padding: 6px;
   box-shadow: 0px 0px 2px #ddd;
+  background-color: #f1f5f9;
 }
 
 header .theme-icon {
@@ -12512,6 +12513,17 @@ header .theme-icon {
   .mobile-nav-active .navmenu > ul {
     display: block;
   }
+}
+@media (min-width: 768px) {
+  .page-title-section .page-title-left-area {
+    width: 70%;
+  }
+  .page-title-section .page-title-right-area {
+    width: 30%;
+  }
+}
+.page-title-content .page-title + a {
+  flex: none;
 }
 
 /*# sourceMappingURL=bootstrap.css.map */

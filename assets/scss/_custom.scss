@@ -280,6 +280,7 @@ header {
   border-radius: 22px;
   padding: 6px;
   box-shadow: 0px 0px 2px #ddd;
+  background-color: #f1f5f9;
 }
 
 header .theme-icon {
@@ -775,4 +776,16 @@ header .theme-icon {
 
 .page-title-export-button {
   @extend .text-sm-end;
+}
+
+@media (min-width: 768px) {
+  .page-title-section .page-title-left-area {
+    width: 70%;
+  }
+  .page-title-section .page-title-right-area {
+    width: 30%;
+  }
+}
+.page-title-content .page-title + a {
+  flex: none;
 }
