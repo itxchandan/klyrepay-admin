@@ -797,3 +797,94 @@ header .theme-icon {
     padding-left: 12px;
   }
 }
+
+/* Start Stats */
+.stat {
+  border: 2px solid var(--bs-border-color);
+  padding: 30px;
+  &:not(:first-child) {
+    margin-top: -2px;
+  }
+  &:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  &:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  .stat-header {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 5px;
+    justify-content: space-between;
+    align-items: center;
+    .title {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      span {
+        flex: none;
+        margin-right: 15px;
+      }
+    }
+  }
+  .stat-lines {
+    max-width: 100%;
+    display: flex;
+    margin: 10px 0;
+    overflow-x: auto;
+    overflow-y: clip;
+    span {
+      height: 50px;
+      width: 8px;
+      background-color: #02cc99;
+      display: inline-block;
+      margin: 0 3px;
+      flex: none;
+      transition: all .1s ease;
+      &:hover {
+        background-color: #04fcbd;
+        box-shadow: 0px 0px 5px #04fcbd;
+      }
+      &.stat-lite-green {
+        background-color: #b6d870;
+        &:hover {
+          background-color: #d0f782;
+          box-shadow: 0px 0px 5px #d0f782;
+        }
+      }
+      &.stat-yellow {
+        background-color: #f7ce56;
+        &:hover {
+          background-color: #fabc04;
+          box-shadow: 0px 0px 5px #fabc04;
+        }
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .stat-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .divider {
+      height: 2px;
+      display: block;
+      background-color: var(--bs-border-color);
+      flex: none;
+      flex-grow: 1;
+      margin: 0 30px;
+    }
+    .uptime {
+      flex: none;
+    }
+  }
+}
+/* End Stats */
