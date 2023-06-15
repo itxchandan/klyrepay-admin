@@ -10907,6 +10907,23 @@ header .theme-icon {
     padding-right: 12px;
     padding-left: 12px; } }
 /* Start Stats */
+.stats-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .stats-navigation a {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    line-height: 1.4; }
+  .stats-navigation a.previous {
+    text-align: left; }
+  .stats-navigation a.next {
+    text-align: right; }
+  .stats-navigation .report-display {
+    margin: 0 15px;
+    text-align: center; }
+
 .stat {
   border: 2px solid var(--bs-border-color);
   padding: 30px; }
@@ -10977,6 +10994,14 @@ header .theme-icon {
     .stat .stat-footer .uptime {
       flex: none; }
 
+@media (max-width: 991px) {
+  .stats-navigation {
+    flex-direction: column; }
+    .stats-navigation a.previous,
+    .stats-navigation a.next {
+      text-align: center; }
+    .stats-navigation .report-display {
+      margin: 10px 0; } }
 /* End Stats */
 
 /*# sourceMappingURL=bootstrap.css.map */
