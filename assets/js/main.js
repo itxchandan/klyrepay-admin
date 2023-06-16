@@ -457,3 +457,5 @@ document.querySelectorAll('.navmenu .has-dropdown i').forEach(navmenu => {
 		}
 	});
 });
+
+// // Toggle Table
