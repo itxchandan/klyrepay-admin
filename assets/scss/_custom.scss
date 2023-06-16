@@ -878,12 +878,30 @@ header .theme-icon {
         left: 50%;
         transform: translateX(-50%);
         color: var(--bs-white);
-        background-color: var(--bs-primary);
+        background-color: #191919;
         border-radius: 5px;
-        min-width: 150px;
-        padding: 10px;
+        min-width: 200px;
         font-size: 12px;
         z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        --tw-scale-x: .5;
+        --tw-scale-y: .5;
+        transition: all .3s ease;
+        &__inner {
+          padding: 10px;
+          position: relative;
+        }
+        &__inner:after {
+          content: "";
+          border-style: solid;
+          border-width: 6px 6px 6px 6px;
+          border-color: #191919 transparent transparent transparent;
+          bottom: -12px;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+        }
         p {
           margin-bottom: 5px;
         }
@@ -891,9 +909,25 @@ header .theme-icon {
           margin-bottom: 0;
         }
       }
+      .custom-tooltip__bottom {
+        top: 55px;
+        bottom: auto;
+        .custom-tooltip__inner:after {
+          border-width: 6px 6px 6px 6px;
+          border-color: transparent transparent #191919 transparent;
+          top: -12px;
+          bottom: auto;
+        }
+      }
       &:hover {
         background-color: #04fcbd;
         box-shadow: 0px 0px 5px #04fcbd;
+        .custom-tooltip {
+          opacity: 1;
+          visibility: visible;
+          --tw-scale-x: 1;
+          --tw-scale-y: 1;
+        }
       }
       &.stat-lite-green {
         background-color: #b6d870;
