@@ -12444,9 +12444,6 @@ header .theme-icon {
   }
   .navmenu a,
   .navmenu a:focus {
-    color: var(--color-nav-dropdown);
-    padding: 10px 20px;
-    font-family: var(--font-secondary);
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -12459,8 +12456,8 @@ header .theme-icon {
     font-size: 12px;
     line-height: 0;
     margin-left: 5px;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12472,11 +12469,6 @@ header .theme-icon {
   .navmenu a:focus i:hover {
     background-color: var(--color-primary);
     color: var(--color-inverse);
-  }
-  .navmenu a:hover,
-  .navmenu .active,
-  .navmenu .active:focus {
-    color: var(--color-nav-dropdown-hover);
   }
   .navmenu .active i,
   .navmenu .active:focus i {
@@ -12495,20 +12487,14 @@ header .theme-icon {
     transition: all 0.5s ease-in-out;
     overflow: hidden !important;
   }
-  .navmenu .dropdown ul ul,
-  .navmenu .megamenu ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
-  }
   .navmenu .dropdown > .dropdown-active,
   .navmenu .megamenu > .dropdown-active {
     display: block;
-    background-color: rgba(33, 37, 41, 0.03);
   }
   .mobile-nav-active {
     overflow: hidden;
   }
   .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
     position: absolute;
     font-size: 32px;
     top: 15px;
@@ -12520,7 +12506,7 @@ header .theme-icon {
     position: fixed;
     overflow: hidden;
     inset: 0;
-    background: rgb(33, 37, 41);
+    background: var(--bs-body-bg);
     transition: 0.3s;
   }
   .mobile-nav-active .navmenu > ul {
