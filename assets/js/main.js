@@ -418,6 +418,19 @@ $(document).ready(function () {
 			$(this).prop("checked", !allChecked);
 		});
 	});
+
+	$(".sort-th").on("click", function (e) {
+		e.preventDefault();
+		if ($(this).hasClass("sort-dsc")) {
+		  $(this).toggleClass("sort-asc sort-dsc");
+		  $(".sort-th").removeClass("sort-dsc");
+		  $(".sort-th").addClass("sort-asc");
+		} else {
+		  $(".sort-th").addClass("sort-asc");
+		  $(".sort-th").removeClass("sort-dsc");
+		  $(this).toggleClass("sort-asc sort-dsc");
+		}
+	});
 });
 
 /**
