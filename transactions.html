@@ -203,30 +203,158 @@
 								<input type="text" class="form-control" name="datefilter" placeholder="Enter Date" />
 							</div>
 
+							<!-- Transaction Status Multiselect -->
 							<div class="col">
-								<label for="daterange" class="form-label">Transaction Status</label>
-								<select class="form-select" id="daterange">
-									<option selected="">All</option>
-									<option value="0">Declined</option>
-									<option value="1">Approved</option>
-									<option value="2">Payment</option>
-									<option value="3">VoidPayment</option>
-									<option value="4">Authorization</option>
-									<option value="5">Reversal</option>
-								</select>
+								<label for="Program" class="form-label">Transaction Status</label>
+								<div class="position-relative">
+									<!-- toggle button -->
+									<input type="text" class="selected-item-text pe-5 form-control z-1" value="" placeholder="6 Selected"/>
+									<div class="checkbox-toggle-button d-block z-2 position-absolute top-0" style="width: 100%">
+										<button class="btn text-end" style="width: 100%">
+											<i class="fa-solid fa-angle-down"></i>
+										</button>
+										<button class="d-none btn text-end" style="width: 100%">
+											<i class="fa-solid fa-angle-up"></i>
+										</button>
+									</div>
+
+									<!-- Checkbox Result -->
+									<div class="z-3 form-control p-0 overflow-y-auto checkbox-container d-none bg-white multi-select-filter">
+										
+										<!-- Select All & Clear All -->
+										<div class="multi-select-search-wrapper">
+											<div class="select-all-checkbox">Select All</div>
+											<div class="clear-all-checkbox d-none">Clear All</div>
+										</div>
+
+										<div class="multi-select-search">
+											<input type="text" class="form-control search-checkbox" placeholder="Search ..." />
+											<i class="fa-solid fa-magnifying-glass"></i>
+										</div>
+
+										<div class="list-group multi-select-lists">
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												Declined
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												Approved
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												Payment
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												VoidPayment
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												Authorization
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												Reversal
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+										</div>
+									</div>
+								</div>
 							</div>
 
+							<!-- Decline Reason Multiselect -->
 							<div class="col">
-								<label for="DeclineReason" class="form-label">Decline Reason</label>
-								<select class="form-select" id="DeclineReason">
-									<option selected="">All</option>
-									<option value="0">None</option>
-									<option value="1">Card not loaded</option>
-									<option value="2">Transaction more than balance</option>
-									<option value="3">MCC Mismatch</option>
-									<option value="4">Invalid Expiration</option>
-									<option value="5">Amount less than Balance</option>
-								</select>
+								<label for="Program" class="form-label">Decline Reason</label>
+								<div class="position-relative">
+									<!-- toggle button -->
+									<input type="text" class="selected-item-text pe-5 form-control z-1" value="" placeholder="6 Selected"/>
+									<div class="checkbox-toggle-button d-block z-2 position-absolute top-0" style="width: 100%">
+										<button class="btn text-end" style="width: 100%">
+											<i class="fa-solid fa-angle-down"></i>
+										</button>
+										<button class="d-none btn text-end" style="width: 100%">
+											<i class="fa-solid fa-angle-up"></i>
+										</button>
+									</div>
+
+									<!-- Checkbox Result -->
+									<div class="z-3 form-control p-0 overflow-y-auto checkbox-container d-none bg-white multi-select-filter">
+										
+										<!-- Select All & Clear All -->
+										<div class="multi-select-search-wrapper">
+											<div class="select-all-checkbox">Select All</div>
+											<div class="clear-all-checkbox d-none">Clear All</div>
+										</div>
+
+										<div class="multi-select-search">
+											<input type="text" class="form-control search-checkbox" placeholder="Search ..." />
+											<i class="fa-solid fa-magnifying-glass"></i>
+										</div>
+
+										<div class="list-group multi-select-lists">
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												None
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												Card not loaded
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												Transaction more than balance
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												MCC Mismatch
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												Invalid Expiration
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												Amount less than Balance
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+										</div>
+									</div>
+								</div>
 							</div>
 
 							<!-- Program Multiselect -->
@@ -379,7 +507,7 @@
 							<div class="col mt-4">
 								<a href="#!" class="btn btn-primary w-100">Submit</a>
 							</div>
-							
+
 						</div>
 					</div>
 				</div>
