@@ -108,10 +108,8 @@
 							<div class="d-none d-md-block text-end">
 								<div class="d-flex align-items-center separator">
 									<div class="lh-sm">
-										<div class="f6" id="clock">
-											Fri, May 19 2023, 13:48:16
-										</div>
-										<div class="small fw-lighter">New York</div>
+										<div class="f6 clock-time" id="clock">Fri, May 19 2023, 13:48:16</div>
+										<div class="small">New York</div>
 									</div>
 									<div class="dropdown">
 										<button class="btn btn-link dropdown-toggle py-1 px-2" type="button" data-bs-toggle="dropdown"
@@ -181,23 +179,12 @@
 							<div class="col">
 								<div class="d-flex justify-content-between">
 									<span class="fw-bold">FILTERS</span>
-									<a href="#!" class="text-decoration-none text-danger">
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-											class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
-											<path fill-rule="evenodd"
-												d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
-											<path
-												d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
-										</svg>
-										<span>Clear All</span>
-									</a>
 								</div>
 							</div>
 
 							<div class="col">
-								<label for="datefilter" class="form-label">Date Range</label>
-								<input id="datefilter" type="text" class="form-control" name="datefilter"
-									placeholder="Enter Date" />
+								<label for="search" class="form-label">Search</label>
+								<input id="search" type="text" class="form-control" placeholder="search" />
 							</div>
 
 							<div class="col">
@@ -206,8 +193,8 @@
 							</div>
 
 							<div class="col">
-								<label for="search" class="form-label">Search</label>
-								<input id="search" type="text" class="form-control" placeholder="search" />
+								<label for="datefilter" class="form-label">Date Range</label>
+								<input id="datefilter" type="text" class="form-control" name="datefilter" placeholder="Enter Date" />
 							</div>
 
 							<div class="col mt-4">
@@ -231,63 +218,63 @@
 									<ul class="dropdown-menu px-2">
 										<li>
 											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="exampleCheck01">
-												<label class="form-check-label" for="exampleCheck01">Register Date</label>
+												<input type="checkbox" class="form-check-input" id="exampleCheck1">
+												<label class="form-check-label" for="exampleCheck1">Register Date</label>
 											</div>
 										</li>
 										<li>
 											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="exampleCheck02">
-												<label class="form-check-label" for="exampleCheck02">Name</label>
+												<input type="checkbox" class="form-check-input" id="exampleCheck2">
+												<label class="form-check-label" for="exampleCheck2">Name</label>
 											</div>
 										</li>
 										<li>
 											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="exampleCheck03">
-												<label class="form-check-label" for="exampleCheck03">Email</label>
+												<input type="checkbox" class="form-check-input" id="exampleCheck3">
+												<label class="form-check-label" for="exampleCheck3">Email</label>
 											</div>
 										</li>
 										<li>
 											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="exampleCheck04">
-												<label class="form-check-label" for="exampleCheck04">Last Login</label>
+												<input type="checkbox" class="form-check-input" id="exampleCheck4">
+												<label class="form-check-label" for="exampleCheck4">Last Login</label>
 											</div>
 										</li>
 										<li>
 											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="exampleCheck05">
-												<label class="form-check-label" for="exampleCheck05">Access</label>
+												<input type="checkbox" class="form-check-input" id="exampleCheck5">
+												<label class="form-check-label" for="exampleCheck5">Access</label>
 											</div>
 										</li>
 									</ul>
 								</div>
 								<thead>
 									<tr>
-										<th class="sort-th sort-asc">
+										<th class="sort-th sort-asc td check1">
 											<span>Register Date</span>
 											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
 												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
 											</svg>
 										</th>
-										<th class="sort-th sort-asc">
+										<th class="sort-th sort-asc td check2">
 											<span>Name</span>
 											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
 												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
 											</svg>
 										</th>
-										<th class="sort-th sort-asc">
+										<th class="sort-th sort-asc td check3">
 											<span>Email</span>
 											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
 												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
 											</svg>
 										</th>
-										<th class="sort-th sort-asc">
+										<th class="sort-th sort-asc td check4">
 											<span>Last Login</span>
 											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
 												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
 											</svg>
 										</th>
-										<th class="sort-th sort-asc">
+										<th class="sort-th sort-asc td check5">
 											<span>Access</span>
 											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
 												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
@@ -298,11 +285,11 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Alissa MeederMobley</td>
-										<td>angelabates@belllsouth.net</td>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>CSR</td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Alissa MeederMobley</td>
+										<td class="check3">angelabates@belllsouth.net</td>
+										<td class="check4">June 12, 2023, 13:35:13</td>
+										<td class="check5">CSR</td>
 										<td>
 											<div class="btn-group settings-dropdown">
 												<button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -318,11 +305,11 @@
 										</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Alissa MeederMobley</td>
-										<td>angelabates@belllsouth.net</td>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>CSR</td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Alissa MeederMobley</td>
+										<td class="check3">angelabates@belllsouth.net</td>
+										<td class="check4">June 12, 2023, 13:35:13</td>
+										<td class="check5">CSR</td>
 										<td>
 											<div class="btn-group settings-dropdown">
 												<button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -338,11 +325,11 @@
 										</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Alissa MeederMobley</td>
-										<td>angelabates@belllsouth.net</td>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>CSR</td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Alissa MeederMobley</td>
+										<td class="check3">angelabates@belllsouth.net</td>
+										<td class="check4">June 12, 2023, 13:35:13</td>
+										<td class="check5">CSR</td>
 										<td>
 											<div class="btn-group settings-dropdown">
 												<button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -358,11 +345,11 @@
 										</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Alissa MeederMobley</td>
-										<td>angelabates@belllsouth.net</td>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>CSR</td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Alissa MeederMobley</td>
+										<td class="check3">angelabates@belllsouth.net</td>
+										<td class="check4">June 12, 2023, 13:35:13</td>
+										<td class="check5">CSR</td>
 										<td>
 											<div class="btn-group settings-dropdown">
 												<button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -378,11 +365,11 @@
 										</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Alissa MeederMobley</td>
-										<td>angelabates@belllsouth.net</td>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>CSR</td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Alissa MeederMobley</td>
+										<td class="check3">angelabates@belllsouth.net</td>
+										<td class="check4">June 12, 2023, 13:35:13</td>
+										<td class="check5">CSR</td>
 										<td>
 											<div class="btn-group settings-dropdown">
 												<button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -398,11 +385,11 @@
 										</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Alissa MeederMobley</td>
-										<td>angelabates@belllsouth.net</td>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>CSR</td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Alissa MeederMobley</td>
+										<td class="check3">angelabates@belllsouth.net</td>
+										<td class="check4">June 12, 2023, 13:35:13</td>
+										<td class="check5">CSR</td>
 										<td>
 											<div class="btn-group settings-dropdown">
 												<button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -418,11 +405,11 @@
 										</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Alissa MeederMobley</td>
-										<td>angelabates@belllsouth.net</td>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>CSR</td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Alissa MeederMobley</td>
+										<td class="check3">angelabates@belllsouth.net</td>
+										<td class="check4">June 12, 2023, 13:35:13</td>
+										<td class="check5">CSR</td>
 										<td>
 											<div class="btn-group settings-dropdown">
 												<button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -438,11 +425,11 @@
 										</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Alissa MeederMobley</td>
-										<td>angelabates@belllsouth.net</td>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>CSR</td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Alissa MeederMobley</td>
+										<td class="check3">angelabates@belllsouth.net</td>
+										<td class="check4">June 12, 2023, 13:35:13</td>
+										<td class="check5">CSR</td>
 										<td>
 											<div class="btn-group settings-dropdown">
 												<button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -458,11 +445,11 @@
 										</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Alissa MeederMobley</td>
-										<td>angelabates@belllsouth.net</td>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>CSR</td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Alissa MeederMobley</td>
+										<td class="check3">angelabates@belllsouth.net</td>
+										<td class="check4">June 12, 2023, 13:35:13</td>
+										<td class="check5">CSR</td>
 										<td>
 											<div class="btn-group settings-dropdown">
 												<button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -478,11 +465,11 @@
 										</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Alissa MeederMobley</td>
-										<td>angelabates@belllsouth.net</td>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>CSR</td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Alissa MeederMobley</td>
+										<td class="check3">angelabates@belllsouth.net</td>
+										<td class="check4">June 12, 2023, 13:35:13</td>
+										<td class="check5">CSR</td>
 										<td>
 											<div class="btn-group settings-dropdown">
 												<button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -498,11 +485,11 @@
 										</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Alissa MeederMobley</td>
-										<td>angelabates@belllsouth.net</td>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>CSR</td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Alissa MeederMobley</td>
+										<td class="check3">angelabates@belllsouth.net</td>
+										<td class="check4">June 12, 2023, 13:35:13</td>
+										<td class="check5">CSR</td>
 										<td>
 											<div class="btn-group settings-dropdown">
 												<button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -518,11 +505,11 @@
 										</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Alissa MeederMobley</td>
-										<td>angelabates@belllsouth.net</td>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>CSR</td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Alissa MeederMobley</td>
+										<td class="check3">angelabates@belllsouth.net</td>
+										<td class="check4">June 12, 2023, 13:35:13</td>
+										<td class="check5">CSR</td>
 										<td>
 											<div class="btn-group settings-dropdown">
 												<button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -538,11 +525,11 @@
 										</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Alissa MeederMobley</td>
-										<td>angelabates@belllsouth.net</td>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>CSR</td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Alissa MeederMobley</td>
+										<td class="check3">angelabates@belllsouth.net</td>
+										<td class="check4">June 12, 2023, 13:35:13</td>
+										<td class="check5">CSR</td>
 										<td>
 											<div class="btn-group settings-dropdown">
 												<button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -558,11 +545,11 @@
 										</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Alissa MeederMobley</td>
-										<td>angelabates@belllsouth.net</td>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>CSR</td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Alissa MeederMobley</td>
+										<td class="check3">angelabates@belllsouth.net</td>
+										<td class="check4">June 12, 2023, 13:35:13</td>
+										<td class="check5">CSR</td>
 										<td>
 											<div class="btn-group settings-dropdown">
 												<button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -578,11 +565,11 @@
 										</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Alissa MeederMobley</td>
-										<td>angelabates@belllsouth.net</td>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>CSR</td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Alissa MeederMobley</td>
+										<td class="check3">angelabates@belllsouth.net</td>
+										<td class="check4">June 12, 2023, 13:35:13</td>
+										<td class="check5">CSR</td>
 										<td>
 											<div class="btn-group settings-dropdown">
 												<button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -598,11 +585,11 @@
 										</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Alissa MeederMobley</td>
-										<td>angelabates@belllsouth.net</td>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>CSR</td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Alissa MeederMobley</td>
+										<td class="check3">angelabates@belllsouth.net</td>
+										<td class="check4">June 12, 2023, 13:35:13</td>
+										<td class="check5">CSR</td>
 										<td>
 											<div class="btn-group settings-dropdown">
 												<button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -618,11 +605,11 @@
 										</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Alissa MeederMobley</td>
-										<td>angelabates@belllsouth.net</td>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>CSR</td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Alissa MeederMobley</td>
+										<td class="check3">angelabates@belllsouth.net</td>
+										<td class="check4">June 12, 2023, 13:35:13</td>
+										<td class="check5">CSR</td>
 										<td>
 											<div class="btn-group settings-dropdown">
 												<button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -638,11 +625,11 @@
 										</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Alissa MeederMobley</td>
-										<td>angelabates@belllsouth.net</td>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>CSR</td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Alissa MeederMobley</td>
+										<td class="check3">angelabates@belllsouth.net</td>
+										<td class="check4">June 12, 2023, 13:35:13</td>
+										<td class="check5">CSR</td>
 										<td>
 											<div class="btn-group settings-dropdown">
 												<button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -658,11 +645,11 @@
 										</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Alissa MeederMobley</td>
-										<td>angelabates@belllsouth.net</td>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>CSR</td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Alissa MeederMobley</td>
+										<td class="check3">angelabates@belllsouth.net</td>
+										<td class="check4">June 12, 2023, 13:35:13</td>
+										<td class="check5">CSR</td>
 										<td>
 											<div class="btn-group settings-dropdown">
 												<button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -678,11 +665,11 @@
 										</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Alissa MeederMobley</td>
-										<td>angelabates@belllsouth.net</td>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>CSR</td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Alissa MeederMobley</td>
+										<td class="check3">angelabates@belllsouth.net</td>
+										<td class="check4">June 12, 2023, 13:35:13</td>
+										<td class="check5">CSR</td>
 										<td>
 											<div class="btn-group settings-dropdown">
 												<button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -88,10 +88,8 @@
 							<div class="d-none d-md-block text-end">
 								<div class="d-flex align-items-center separator">
 									<div class="lh-sm">
-										<div class="f6" id="clock">
-											Fri, May 19 2023, 13:48:16
-										</div>
-										<div class="small fw-lighter">New York</div>
+										<div class="f6 clock-time" id="clock">Fri, May 19 2023, 13:48:16</div>
+										<div class="small">New York</div>
 									</div>
 									<div class="dropdown">
 										<button class="btn btn-link dropdown-toggle py-1 px-2" type="button" data-bs-toggle="dropdown"
@@ -158,16 +156,6 @@
 							<div class="col">
 								<div class="d-flex justify-content-between">
 									<span class="fw-bold">FILTERS</span>
-									<a href="#!" class="text-decoration-none text-danger">
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-											class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
-											<path fill-rule="evenodd"
-												d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
-											<path
-												d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
-										</svg>
-										<span>Clear All</span>
-									</a>
 								</div>
 							</div>
 
@@ -194,102 +182,149 @@
 								</select>
 							</div>
 
-							<!-- Program Filter -->
+							<!-- Program Multiselect -->
 							<div class="col">
-								<div class="d-flex">
-									<button type="button" class="accordion-button custom-accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-										Program
-									</button>
-									<svg viewBox="0 0 200 200" width="1.25em" height="1.25em" xmlns="http://www.w3.org/2000/svg"
-										class="Qk4D-chevron Qk4D-mod-size-medium" role="img">
-										<path
-											d="M100 132.5c-3.873 0 .136 2.376-64.801-51.738l9.603-11.523L100 115.237l55.199-45.999l9.603 11.523C99.806 134.924 103.855 132.5 100 132.5z">
-										</path>
-									</svg>
-								</div>
-
-								<div id="collapseOne" class="accordion-collapse programs-checkbox collapse show">
-									<div class="py-2">
-										<a class="text-decoration-none select-all fw-semibold" href="#!">Select All</a>
-									</div>
-									<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="Xtandi" />
-										<label class="form-check-label" for="Xtandi">Xtandi</label>
+								<label for="Program" class="form-label">Program</label>
+								<div class="position-relative">
+									<!-- toggle button -->
+									<input type="text" class="selected-item-text pe-5 form-control z-1" value="" placeholder="16 Selected"/>
+									<div class="checkbox-toggle-button d-block z-2 position-absolute top-0" style="width: 100%">
+										<button class="btn text-end" style="width: 100%">
+											<i class="fa-solid fa-angle-down"></i>
+										</button>
+										<button class="d-none btn text-end" style="width: 100%">
+											<i class="fa-solid fa-angle-up"></i>
+										</button>
 									</div>
 
-									<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="Xospata" />
-										<label class="form-check-label" for="Xospata">Xospata</label>
-									</div>
+									<!-- Checkbox Result -->
+									<div class="z-3 form-control p-0 overflow-y-scroll checkbox-container d-none bg-white multi-select-filter">
+										
+										<!-- Select All & Clear All -->
+										<div class="multi-select-search-wrapper">
+											<div class="select-all-checkbox">Select All</div>
+											<div class="clear-all-checkbox d-none">Clear All</div>
+										</div>
 
-									<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="Pegcetacoplan" />
-										<label class="form-check-label" for="Pegcetacoplan">Pegcetacoplan</label>
-									</div>
+										<div class="multi-select-search">
+											<input type="text" class="form-control search-checkbox" placeholder="Search ..." />
+											<i class="fa-solid fa-magnifying-glass"></i>
+										</div>
 
-									<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="BMSVirtualCopay" />
-										<label class="form-check-label" for="BMSVirtualCopay">BMS Virtual Copay</label>
-									</div>
-
-									<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="Zeposia" />
-										<label class="form-check-label" for="Zeposia">Zeposia</label>
-									</div>
-
-									<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="Sprycel" />
-										<label class="form-check-label" for="Sprycel">Sprycel</label>
-									</div>
-
-									<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="Orencia" />
-										<label class="form-check-label" for="Orencia">Orencia</label>
-									</div>
-
-									<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="ActharGel" />
-										<label class="form-check-label" for="ActharGel">Acthar Gel</label>
-									</div>
-
-									<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="Aubagio" />
-										<label class="form-check-label" for="Aubagio">Aubagio</label>
-									</div>
-
-									<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="Dupixent" />
-										<label class="form-check-label" for="Dupixent">Dupixent</label>
-									</div>
-
-									<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="Kevzara" />
-										<label class="form-check-label" for="Kevzara">Kevzara</label>
-									</div>
-
-									<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="Vertex" />
-										<label class="form-check-label" for="Vertex">Vertex</label>
-									</div>
-
-									<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="Mavacamten" />
-										<label class="form-check-label" for="Mavacamten">Mavacamten</label>
-									</div>
-
-									<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="Nintedanib" />
-										<label class="form-check-label" for="Nintedanib">Nintedanib</label>
-									</div>
-
-									<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="Exelixis" />
-										<label class="form-check-label" for="Exelixis">Exelixis</label>
-									</div>
-
-									<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="EMDSerono" />
-										<label class="form-check-label" for="EMDSerono">EMD Serono</label>
+										<div class="list-group multi-select-lists">
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												Xtandi
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												Xospata
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												Pegcetacoplan
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												BMS Virtual Copay
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												Zeposia
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												Sprycel
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												Orencia
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												Acthar Gel
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												Aubagio
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												Dupixent
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												Kevzara
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												Vertex
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												Mavacamten
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												Nintedanib
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												Exelixis
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
+												EMD Serono
+												<input type="hidden" class="checkbox-array" value="1" />
+												<div class="d-none">
+													<i class="fa-solid fa-check"></i>
+												</div>
+											</button>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -311,75 +346,75 @@
 									<ul class="dropdown-menu px-2">
 										<li>
 											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="exampleCheck01">
-												<label class="form-check-label" for="exampleCheck01">Enrolled On</label>
+												<input type="checkbox" class="form-check-input" id="exampleCheck1">
+												<label class="form-check-label" for="exampleCheck1">Enrolled On</label>
 											</div>
 										</li>
 										<li>
 											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="exampleCheck02">
-												<label class="form-check-label" for="exampleCheck02">Program</label>
+												<input type="checkbox" class="form-check-input" id="exampleCheck2">
+												<label class="form-check-label" for="exampleCheck2">Program</label>
 											</div>
 										</li>
 										<li>
 											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="exampleCheck03">
-												<label class="form-check-label" for="exampleCheck03">Customer ID</label>
+												<input type="checkbox" class="form-check-input" id="exampleCheck3">
+												<label class="form-check-label" for="exampleCheck3">Customer ID</label>
 											</div>
 										</li>
 										<li>
 											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="exampleCheck04">
-												<label class="form-check-label" for="exampleCheck04">First Name</label>
+												<input type="checkbox" class="form-check-input" id="exampleCheck4">
+												<label class="form-check-label" for="exampleCheck4">First Name</label>
 											</div>
 										</li>
 										<li>
 											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="exampleCheck05">
-												<label class="form-check-label" for="exampleCheck05">Last Name</label>
+												<input type="checkbox" class="form-check-input" id="exampleCheck5">
+												<label class="form-check-label" for="exampleCheck5">Last Name</label>
 											</div>
 										</li>
 										<li>
 											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="exampleCheck06">
-												<label class="form-check-label" for="exampleCheck06">VRXID</label>
+												<input type="checkbox" class="form-check-input" id="exampleCheck6">
+												<label class="form-check-label" for="exampleCheck6">VRXID</label>
 											</div>
 										</li>
 									</ul>
 								</div>
 								<thead>
 									<tr>
-										<th class="sort-th sort-asc">
+										<th class="sort-th sort-asc check1">
 											<span>Enrolled On</span>
 											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
 												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
 											</svg>
 										</th>
-										<th class="sort-th sort-asc">
+										<th class="sort-th sort-asc check2">
 											<span>Program</span>
 											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
 												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
 											</svg>
 										</th>
-										<th class="sort-th sort-asc">
+										<th class="sort-th sort-asc check3">
 											<span>Customer ID</span>
 											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
 												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
 											</svg>
 										</th>
-										<th class="sort-th sort-asc">
+										<th class="sort-th sort-asc check4">
 											<span>First Name</span>
 											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
 												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
 											</svg>
 										</th>
-										<th class="sort-th sort-asc">
+										<th class="sort-th sort-asc check5">
 											<span>Last Name</span>
 											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
 												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
 											</svg>
 										</th>
-										<th class="sort-th sort-asc">
+										<th class="sort-th sort-asc check6">
 											<span>VRXID</span>
 											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
 												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
@@ -389,204 +424,204 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Dupixent</td>
-										<td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Dupixent</td>
+										<td class="check3">
 											<a href="#!">1384387578</a>
 										</td>
-										<td>Patricia</td>
-										<td>Looney</td>
-										<td>2916271</td>
+										<td class="check4">Patricia</td>
+										<td class="check5">Looney</td>
+										<td class="check6">2916271</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Dupixent</td>
-										<td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Dupixent</td>
+										<td class="check3">
 											<a href="#!">1384387578</a>
 										</td>
-										<td>Patricia</td>
-										<td>Looney</td>
-										<td>2916271</td>
+										<td class="check4">Patricia</td>
+										<td class="check5">Looney</td>
+										<td class="check6">2916271</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Dupixent</td>
-										<td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Dupixent</td>
+										<td class="check3">
 											<a href="#!">1384387578</a>
 										</td>
-										<td>Patricia</td>
-										<td>Looney</td>
-										<td>2916271</td>
+										<td class="check4">Patricia</td>
+										<td class="check5">Looney</td>
+										<td class="check6">2916271</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Dupixent</td>
-										<td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Dupixent</td>
+										<td class="check3">
 											<a href="#!">1384387578</a>
 										</td>
-										<td>Patricia</td>
-										<td>Looney</td>
-										<td>2916271</td>
+										<td class="check4">Patricia</td>
+										<td class="check5">Looney</td>
+										<td class="check6">2916271</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Dupixent</td>
-										<td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Dupixent</td>
+										<td class="check3">
 											<a href="#!">1384387578</a>
 										</td>
-										<td>Patricia</td>
-										<td>Looney</td>
-										<td>2916271</td>
+										<td class="check4">Patricia</td>
+										<td class="check5">Looney</td>
+										<td class="check6">2916271</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Dupixent</td>
-										<td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Dupixent</td>
+										<td class="check3">
 											<a href="#!">1384387578</a>
 										</td>
-										<td>Patricia</td>
-										<td>Looney</td>
-										<td>2916271</td>
+										<td class="check4">Patricia</td>
+										<td class="check5">Looney</td>
+										<td class="check6">2916271</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Dupixent</td>
-										<td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Dupixent</td>
+										<td class="check3">
 											<a href="#!">1384387578</a>
 										</td>
-										<td>Patricia</td>
-										<td>Looney</td>
-										<td>2916271</td>
+										<td class="check4">Patricia</td>
+										<td class="check5">Looney</td>
+										<td class="check6">2916271</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Dupixent</td>
-										<td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Dupixent</td>
+										<td class="check3">
 											<a href="#!">1384387578</a>
 										</td>
-										<td>Patricia</td>
-										<td>Looney</td>
-										<td>2916271</td>
+										<td class="check4">Patricia</td>
+										<td class="check5">Looney</td>
+										<td class="check6">2916271</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Dupixent</td>
-										<td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Dupixent</td>
+										<td class="check3">
 											<a href="#!">1384387578</a>
 										</td>
-										<td>Patricia</td>
-										<td>Looney</td>
-										<td>2916271</td>
+										<td class="check4">Patricia</td>
+										<td class="check5">Looney</td>
+										<td class="check6">2916271</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Dupixent</td>
-										<td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Dupixent</td>
+										<td class="check3">
 											<a href="#!">1384387578</a>
 										</td>
-										<td>Patricia</td>
-										<td>Looney</td>
-										<td>2916271</td>
+										<td class="check4">Patricia</td>
+										<td class="check5">Looney</td>
+										<td class="check6">2916271</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Dupixent</td>
-										<td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Dupixent</td>
+										<td class="check3">
 											<a href="#!">1384387578</a>
 										</td>
-										<td>Patricia</td>
-										<td>Looney</td>
-										<td>2916271</td>
+										<td class="check4">Patricia</td>
+										<td class="check5">Looney</td>
+										<td class="check6">2916271</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Dupixent</td>
-										<td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Dupixent</td>
+										<td class="check3">
 											<a href="#!">1384387578</a>
 										</td>
-										<td>Patricia</td>
-										<td>Looney</td>
-										<td>2916271</td>
+										<td class="check4">Patricia</td>
+										<td class="check5">Looney</td>
+										<td class="check6">2916271</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Dupixent</td>
-										<td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Dupixent</td>
+										<td class="check3">
 											<a href="#!">1384387578</a>
 										</td>
-										<td>Patricia</td>
-										<td>Looney</td>
-										<td>2916271</td>
+										<td class="check4">Patricia</td>
+										<td class="check5">Looney</td>
+										<td class="check6">2916271</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Dupixent</td>
-										<td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Dupixent</td>
+										<td class="check3">
 											<a href="#!">1384387578</a>
 										</td>
-										<td>Patricia</td>
-										<td>Looney</td>
-										<td>2916271</td>
+										<td class="check4">Patricia</td>
+										<td class="check5">Looney</td>
+										<td class="check6">2916271</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Dupixent</td>
-										<td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Dupixent</td>
+										<td class="check3">
 											<a href="#!">1384387578</a>
 										</td>
-										<td>Patricia</td>
-										<td>Looney</td>
-										<td>2916271</td>
+										<td class="check4">Patricia</td>
+										<td class="check5">Looney</td>
+										<td class="check6">2916271</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Dupixent</td>
-										<td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Dupixent</td>
+										<td class="check3">
 											<a href="#!">1384387578</a>
 										</td>
-										<td>Patricia</td>
-										<td>Looney</td>
-										<td>2916271</td>
+										<td class="check4">Patricia</td>
+										<td class="check5">Looney</td>
+										<td class="check6">2916271</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Dupixent</td>
-										<td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Dupixent</td>
+										<td class="check3">
 											<a href="#!">1384387578</a>
 										</td>
-										<td>Patricia</td>
-										<td>Looney</td>
-										<td>2916271</td>
+										<td class="check4">Patricia</td>
+										<td class="check5">Looney</td>
+										<td class="check6">2916271</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Dupixent</td>
-										<td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Dupixent</td>
+										<td class="check3">
 											<a href="#!">1384387578</a>
 										</td>
-										<td>Patricia</td>
-										<td>Looney</td>
-										<td>2916271</td>
+										<td class="check4">Patricia</td>
+										<td class="check5">Looney</td>
+										<td class="check6">2916271</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Dupixent</td>
-										<td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Dupixent</td>
+										<td class="check3">
 											<a href="#!">1384387578</a>
 										</td>
-										<td>Patricia</td>
-										<td>Looney</td>
-										<td>2916271</td>
+										<td class="check4">Patricia</td>
+										<td class="check5">Looney</td>
+										<td class="check6">2916271</td>
 									</tr>
 									<tr>
-										<td>June 12, 2023, 13:35:13</td>
-										<td>Dupixent</td>
-										<td>
+										<td class="check1">June 12, 2023, 13:35:13</td>
+										<td class="check2">Dupixent</td>
+										<td class="check3">
 											<a href="#!">1384387578</a>
 										</td>
-										<td>Patricia</td>
-										<td>Looney</td>
-										<td>2916271</td>
+										<td class="check4">Patricia</td>
+										<td class="check5">Looney</td>
+										<td class="check6">2916271</td>
 									</tr>
 								</tbody>
 							</table>

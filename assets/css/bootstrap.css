@@ -11844,6 +11844,23 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+:root {
+  --header-bg: #fff;
+  --nav: #9ca3af;
+  --nav-active: #fff;
+  --nav-bg: #1f2937;
+  --body-bg: #f1f2f7;
+}
+
+[data-bs-theme=dark] {
+  --body-bg: #09121e;
+  --header-bg: #111827;
+  --nav: #9ca3af;
+  --nav-active: #1f2937;
+  --nav-bg: #fff;
+  --bs-body-color: #ededed;
+}
+
 @font-face {
   font-family: Inter var;
   font-style: normal;
@@ -11860,16 +11877,9 @@ textarea.form-control-lg {
   src: url(/assets/fonts/inter-italic.woff2) format("woff2");
   font-named-instance: Italic;
 }
-:root {
-  --header-bg: #fff;
-  --nav: #9ca3af;
-  --nav-active: #fff;
-  --nav-bg: #1f2937;
-}
-
 body {
   font-family: Inter var, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
-  background: #f1f2f7;
+  background: var(--body-bg);
 }
 
 /*
@@ -11937,7 +11947,7 @@ header .separator > div:not(:last-child) {
 }
 .nav .nav-link.active {
   background-color: var(--nav-bg);
-  color: #fff;
+  color: var(--nav-active);
 }
 .nav .nav-link:hover {
   color: var(--nav-active);
@@ -11989,7 +11999,7 @@ header .separator > div:not(:last-child) {
 
 /* Text Logo */
 .text-logo {
-  color: #323232;
+  color: var(--bs-table-color-state);
   text-decoration: none;
   font-size: 26px;
 }
@@ -12001,6 +12011,9 @@ header .separator > div:not(:last-child) {
   padding: 40px 0 100px;
 }
 
+.page-title {
+  color: var(--nav-bg);
+}
 .page-title .btn {
   flex: none;
 }
@@ -12123,17 +12136,15 @@ header .theme-icon {
   background-color: var(--bs-body-bg);
   border-radius: 6px;
   padding: 10px 20px 20px 20px;
-  box-shadow: 0 0 7px #c7c7c7;
 }
 
 .filter-wrapper {
   background-color: var(--bs-body-bg);
   border-radius: 6px;
   padding: 10px 20px 20px 20px;
-  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
   position: sticky;
   top: 10px;
-  box-shadow: 0 0 7px #c7c7c7;
+  border: 1px solid var(--bs-border-color-translucent);
 }
 
 .form-label {
@@ -12170,12 +12181,6 @@ header .theme-icon {
 .table tbody td {
   font-size: 14px;
   font-weight: 400;
-}
-
-.card {
-  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
-  border: 0;
-  box-shadow: 0 0 7px #c7c7c7;
 }
 
 .daterangepicker td.in-range {
@@ -12247,27 +12252,29 @@ header .theme-icon {
 }
 
 .tab-button-wrapper {
-  background-color: #fff;
+  background-color: var(--bs-card-bg);
   border-radius: 4px;
   display: inline-flex;
   margin-bottom: 20px;
   margin-top: -10px;
   overflow: hidden;
-  box-shadow: 0 0 7px #c7c7c7;
+  border: 1px solid var(--bs-border-color-translucent);
 }
 
 .tab-button-link {
   padding: 11px 35px;
-  border-bottom: 4px solid #ddd;
+  border-bottom: 4px solid var(--bs-border-color-translucent);
   cursor: pointer;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--bs-table-color-state);
 }
 .tab-button-link:not(:last-child) {
-  border-right: 1px solid #ddd;
+  border-right: 1px solid var(--bs-border-color-translucent);
 }
 .tab-button-link.active {
-  border-bottom-color: #6366f1;
+  color: var(--nav-bg);
+  border-bottom-color: var(--nav-bg);
 }
 
 /* Desktop Navigation */
@@ -12291,7 +12298,7 @@ header .theme-icon {
     align-items: center;
     justify-content: space-between;
     white-space: nowrap;
-    transition: 0.3s;
+    transition: none;
   }
   .navmenu a i,
   .navmenu a:focus i {
@@ -12306,13 +12313,13 @@ header .theme-icon {
     display: block;
     position: absolute;
     visibility: hidden;
-    left: 14px;
+    left: 0;
     top: 130%;
     opacity: 0;
     transition: 0.3s;
     border-radius: 4px;
     z-index: 99;
-    background-color: #fff;
+    background-color: var(--bs-body-bg);
     box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
   }
   .navmenu .dropdown ul li + li {
@@ -12324,14 +12331,11 @@ header .theme-icon {
   .navmenu .dropdown ul a {
     padding: 10px 20px;
     text-transform: none;
-    color: #111727;
+    color: var(--bs-body-color);
     border-radius: 0;
   }
   .navmenu .dropdown ul a i {
     font-size: 12px;
-  }
-  .navmenu .dropdown ul .nav-link:hover {
-    border-radius: 0;
   }
   .navmenu .dropdown:hover > ul {
     opacity: 1;
@@ -12388,7 +12392,13 @@ header .theme-icon {
     visibility: visible;
   }
   .navmenu .dd-box-shadow {
-    box-shadow: 0px 0px 30px rgba(var(--color-default-rgb), 0.15);
+    box-shadow: 0 0 30px rgba(var(--color-default-rgb), 0.15);
+  }
+  .navmenu .dd-box-shadow li:first-child > a {
+    border-radius: 4px 4px 0 0;
+  }
+  .navmenu .dd-box-shadow li:last-child > a {
+    border-radius: 0 0 4px 4px;
   }
 }
 /* Mobile Navigation */
@@ -12817,6 +12827,13 @@ header .theme-icon {
   border: none;
   box-shadow: none;
   outline: none;
+}
+
+.btn-link {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0 5px;
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
