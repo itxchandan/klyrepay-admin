@@ -1,995 +1,1394 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transactions - Klyrepay</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Transactions - Klyrepay</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-	<link rel="stylesheet" href="assets/css/style.css" />
-	<link rel="stylesheet" href="assets/css/bootstrap.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-</head>
+  <body>
+    <div class="header-title">
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="header-wrapper">
+                <div class="header-left-area">
+                  <div class="flex-shrink-0 pe-4">
+                    <a class="text-logo" href="index.html"
+                      >Klyre<span class="fw-bold">Payments</span></a
+                    >
+                  </div>
+                  <div class="ps-4">
+                    <!-- Nav Menu -->
+                    <nav id="navmenu" class="navmenu nav">
+                      <ul>
+                        <li>
+                          <a class="nav-link active" href="index.html"
+                            >Dashboard</a
+                          >
+                        </li>
+                        <li>
+                          <a class="nav-link" href="transactions.html"
+                            >Transactions</a
+                          >
+                        </li>
+                        <li><a class="nav-link" href="users.html">Users</a></li>
+                        <li>
+                          <a class="nav-link" href="patients.html">Patients</a>
+                        </li>
 
-<body>
+                        <li class="dropdown has-dropdown">
+                          <a class="nav-link" href="#">
+                            <span>Reports</span>
+                            <i class="bi bi-chevron-down"></i>
+                          </a>
+                          <ul class="dd-box-shadow">
+                            <li class="dropdown has-dropdown">
+                              <a class="nav-link" href="javascript:void();">
+                                <span>SLA</span>
+                                <i class="bi bi-chevron-down"></i>
+                              </a>
+                              <ul class="dd-box-shadow">
+                                <li>
+                                  <a class="nav-link" href="sla-summary.html"
+                                    >SLA Summary</a
+                                  >
+                                </li>
+                                <li>
+                                  <a class="nav-link" href="sla-metrics.html"
+                                    >SLA Metrics</a
+                                  >
+                                </li>
+                              </ul>
+                            </li>
 
-	<div class="header-title">
-		<header>
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<div class="header-wrapper">
-							<div class="header-left-area">
-								<div class="flex-shrink-0 pe-4">
-									<a class="text-logo" href="index.html">Klyre<span class="fw-bold">Payments</span></a>
-								</div>
-								<div class="ps-4">
-									<!-- Nav Menu -->
-									<nav id="navmenu" class="navmenu nav">
-										<ul>
-											<li><a class="nav-link active" href="index.html">Dashboard</a></li>
-											<li><a class="nav-link" href="transactions.html">Transactions</a></li>
-											<li><a class="nav-link" href="users.html">Users</a></li>
-											<li><a class="nav-link" href="patients.html">Patients</a></li>
-	
-											<li class="dropdown has-dropdown">
-												<a class="nav-link" href="#">
-													<span>Reports</span> <i class="bi bi-chevron-down"></i>
-												</a>
-												<ul class="dd-box-shadow">
-	
-													<li class="dropdown has-dropdown">
-														<a class="nav-link" href="javascript:void();">
-															<span>SLA</span>
-															<i class="bi bi-chevron-down"></i>
-														</a>
-														<ul class="dd-box-shadow">
-															<li><a class="nav-link" href="sla-summary.html">SLA Summary</a></li>
-															<li><a class="nav-link" href="sla-metrics.html">SLA Metrics</a></li>
-														</ul>
-													</li>
-	
-													<li><a class="nav-link" href="program.html">Program</a></li>
-													<li><a class="nav-link" href="deposits.html">Deposits</a></li>
-													<li><a class="nav-link" href="imported-reports.html">Imported Reports</a></li>
-													<li><a class="nav-link" href="inactivity.html">Inactivity</a></li>
-													<li><a class="nav-link" href="daily-settlements.html">Daily Settlements</a></li>
-	
-													<li class="dropdown has-dropdown">
-														<a class="nav-link" href="javascript:void();">
-															<span>Pivot Reports</span>
-															<i class="bi bi-chevron-down"></i>
-														</a>
-														<ul class="dd-box-shadow">
-															<li><a class="nav-link" href="all-transactions.html">Transactions</a></li>
-															<li><a class="nav-link" href="new-payments.html">Net Payments</a></li>
-														</ul>
-													</li>
-													<li class="dropdown has-dropdown">
-														<a class="nav-link" href="javascript:void();">
-															<span>Communication</span>
-															<i class="bi bi-chevron-down"></i>
-														</a>
-														<ul class="dd-box-shadow">
-															<li><a class="nav-link" href="email.html">Emails</a></li>
-															<li><a class="nav-link" href="summary.html">Summary</a></li>
-														</ul>
-													</li>
-												</ul>
-											</li>
-										</ul>
-	
-										<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-									</nav>
-									<!-- End Nav Menu -->
-	
-								</div>
-							</div>
-							<div class="header-right-area">
-								<div class="d-none d-md-block text-end">
-									<div class="d-flex align-items-center separator">
-										<div class="lh-sm">
-											<div class="f6 clock-time" id="clock">
-												Fri, May 19 2023, 13:48:16
-											</div>
-											<div class="small">New York</div>
-										</div>
-										<div class="dropdown">
-											<button class="btn btn-link dropdown-toggle py-1 px-2" type="button"
-												data-bs-toggle="dropdown" aria-expanded="false">
-												<div class="user-profile-setting">
-													<div class="avatar-info">
-														<div class="avatar-name">John Deo</div>
-														<div class="avatar-type">Admin</div>
-													</div>
-												</div>
-											</button>
-											<ul class="dropdown-menu">
-												<div class="user-profile-setting">
-													<div class="avatar-thumb">
-														<img src="https://elstar.themenate.net/img/avatars/thumb-1.jpg" alt="Avatar" />
-													</div>
-													<div class="avatar-info">
-														<div class="avatar-type">Admin User</div>
-														<div class="avatar-email">admin@admin.com</div>
-													</div>
-												</div>
-												<hr />
-												<li><a class="dropdown-item" href="#">Profile</a></li>
-												<li>
-													<a class="dropdown-item" href="editprofile.html">Edit Profile</a>
-												</li>
-												<li>
-													<a class="dropdown-item" href="#">Activity Log</a>
-												</li>
-												<hr />
-												<li><a class="dropdown-item" href="#">Sign Out</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
-	
-		<section class="page-title-section">
-			<div class="container">
-				<div class="row">
-					<div class="page-title-left-area">
-						<div class="page-title-content">
-							<h1 class="page-title">Program Report</h1>
-						</div>
-					</div>
-					<div class="page-title-right-area d-none d-md-block"></div>
-				</div>
-			</div>
-		</section>
-	</div>
+                            <li>
+                              <a class="nav-link" href="program.html"
+                                >Program</a
+                              >
+                            </li>
+                            <li>
+                              <a class="nav-link" href="deposits.html"
+                                >Deposits</a
+                              >
+                            </li>
+                            <li>
+                              <a class="nav-link" href="imported-reports.html"
+                                >Imported Reports</a
+                              >
+                            </li>
+                            <li>
+                              <a class="nav-link" href="inactivity.html"
+                                >Inactivity</a
+                              >
+                            </li>
+                            <li>
+                              <a class="nav-link" href="daily-settlements.html"
+                                >Daily Settlements</a
+                              >
+                            </li>
 
+                            <li class="dropdown has-dropdown">
+                              <a class="nav-link" href="javascript:void();">
+                                <span>Pivot Reports</span>
+                                <i class="bi bi-chevron-down"></i>
+                              </a>
+                              <ul class="dd-box-shadow">
+                                <li>
+                                  <a
+                                    class="nav-link"
+                                    href="all-transactions.html"
+                                    >Transactions</a
+                                  >
+                                </li>
+                                <li>
+                                  <a class="nav-link" href="new-payments.html"
+                                    >Net Payments</a
+                                  >
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="dropdown has-dropdown">
+                              <a class="nav-link" href="javascript:void();">
+                                <span>Communication</span>
+                                <i class="bi bi-chevron-down"></i>
+                              </a>
+                              <ul class="dd-box-shadow">
+                                <li>
+                                  <a class="nav-link" href="email.html"
+                                    >Emails</a
+                                  >
+                                </li>
+                                <li>
+                                  <a class="nav-link" href="summary.html"
+                                    >Summary</a
+                                  >
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
 
-	<section style="margin-top: -60px">
-		<div class="container">
-			<div class="row">
-				<div class="col-xxl-2 col-lg-3 mb-4 mb-xl-0">
-					<!-- Filter -->
-					<div class="filter-wrapper">
-						<div class="row row-cols-1 gy-2">
+                      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                    </nav>
+                    <!-- End Nav Menu -->
+                  </div>
+                </div>
+                <div class="header-right-area">
+                  <div class="d-none d-md-block text-end">
+                    <div class="d-flex align-items-center separator">
+                      <div class="lh-sm">
+                        <div class="f6 clock-time" id="clock">
+                          Fri, May 19 2023, 13:48:16
+                        </div>
+                        <div class="small">New York</div>
+                      </div>
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-link dropdown-toggle py-1 px-2"
+                          type="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <div class="user-profile-setting">
+                            <div class="avatar-info">
+                              <div class="avatar-name">John Deo</div>
+                              <div class="avatar-type">Admin</div>
+                            </div>
+                          </div>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <div class="user-profile-setting">
+                            <div class="avatar-thumb">
+                              <img
+                                src="https://elstar.themenate.net/img/avatars/thumb-1.jpg"
+                                alt="Avatar"
+                              />
+                            </div>
+                            <div class="avatar-info">
+                              <div class="avatar-type">Admin User</div>
+                              <div class="avatar-email">admin@admin.com</div>
+                            </div>
+                          </div>
+                          <hr />
+                          <li><a class="dropdown-item" href="#">Profile</a></li>
+                          <li>
+                            <a class="dropdown-item" href="editprofile.html"
+                              >Edit Profile</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Activity Log</a>
+                          </li>
+                          <hr />
+                          <li>
+                            <a class="dropdown-item" href="#">Sign Out</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
 
-							<div class="col">
-								<div class="d-flex justify-content-between">
-									<span class="fw-bold">FILTERS</span>
-									<a href="#!" class="text-decoration-none text-danger">
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-											class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
-											<path fill-rule="evenodd"
-												d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
-											<path
-												d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
-										</svg>
-										<span>Clear All</span>
-									</a>
-								</div>
-							</div>
+      <section class="page-title-section">
+        <div class="container">
+          <div class="row">
+            <div class="page-title-left-area">
+              <div class="page-title-content">
+                <h1 class="page-title">Program Report</h1>
+              </div>
+            </div>
+            <div class="page-title-right-area d-none d-md-block"></div>
+          </div>
+        </div>
+      </section>
+    </div>
 
-							<!-- Program Multiselect -->
-							<div class="col">
-								<label for="Program" class="form-label">Program</label>
-								<div class="position-relative">
-									<!-- toggle button -->
-									<input type="text" class="selected-item-text pe-5 form-control z-1" value="" placeholder="16 Selected"/>
-									<div class="checkbox-toggle-button d-block z-2 position-absolute top-0" style="width: 100%">
-										<button class="btn text-end" style="width: 100%">
-											<i class="fa-solid fa-angle-down"></i>
-										</button>
-										<button class="d-none btn text-end" style="width: 100%">
-											<i class="fa-solid fa-angle-up"></i>
-										</button>
-									</div>
+    <section style="margin-top: -60px">
+      <div class="container">
+        <div class="row">
+          <div class="col-xxl-2 col-lg-3 mb-4 mb-xl-0">
+            <!-- Filter -->
+            <div class="filter-wrapper">
+              <div class="row row-cols-1 gy-2">
+                <div class="col">
+                  <div class="d-flex justify-content-between">
+                    <span class="fw-bold">FILTERS</span>
+                    <a href="#!" class="text-decoration-none text-danger">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-arrow-clockwise"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
+                        />
+                        <path
+                          d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"
+                        />
+                      </svg>
+                      <span>Clear All</span>
+                    </a>
+                  </div>
+                </div>
 
-									<!-- Checkbox Result -->
-									<div class="z-3 form-control p-0 overflow-y-scroll checkbox-container d-none bg-white multi-select-filter">
-										
-										<!-- Select All & Clear All -->
-										<div class="multi-select-search-wrapper">
-											<div class="select-all-checkbox">Select All</div>
-											<div class="clear-all-checkbox d-none">Clear All</div>
-										</div>
+                <!-- Program Multiselect -->
+                <div class="col">
+                  <label for="Program" class="form-label">Program</label>
+                  <div class="position-relative">
+                    <!-- toggle button -->
+                    <input
+                      type="text"
+                      class="selected-item-text pe-5 form-control z-1"
+                      value=""
+                      placeholder="16 Selected"
+                    />
+                    <div
+                      class="checkbox-toggle-button d-block z-2 position-absolute top-0"
+                      style="width: 100%"
+                    >
+                      <button class="btn text-end" style="width: 100%">
+                        <i class="fa-solid fa-angle-down"></i>
+                      </button>
+                      <button class="d-none btn text-end" style="width: 100%">
+                        <i class="fa-solid fa-angle-up"></i>
+                      </button>
+                    </div>
 
-										<div class="multi-select-search">
-											<input type="text" class="form-control search-checkbox" placeholder="Search ..." />
-											<i class="fa-solid fa-magnifying-glass"></i>
-										</div>
+                    <!-- Checkbox Result -->
+                    <div
+                      class="z-3 form-control p-0 overflow-y-scroll checkbox-container d-none bg-white multi-select-filter"
+                    >
+                      <!-- Select All & Clear All -->
+                      <div class="multi-select-search-wrapper">
+                        <div class="select-all-checkbox">Select All</div>
+                        <div class="clear-all-checkbox d-none">Clear All</div>
+                      </div>
 
-										<div class="multi-select-lists">
-											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
-												Xtandi
-												<input type="hidden" class="checkbox-array" value="1" />
-												<div class="d-none">
-													<i class="fa-solid fa-check"></i>
-												</div>
-											</button>
-											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
-												Xospata
-												<input type="hidden" class="checkbox-array" value="1" />
-												<div class="d-none">
-													<i class="fa-solid fa-check"></i>
-												</div>
-											</button>
-											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
-												Pegcetacoplan
-												<input type="hidden" class="checkbox-array" value="1" />
-												<div class="d-none">
-													<i class="fa-solid fa-check"></i>
-												</div>
-											</button>
-											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
-												BMS Virtual Copay
-												<input type="hidden" class="checkbox-array" value="1" />
-												<div class="d-none">
-													<i class="fa-solid fa-check"></i>
-												</div>
-											</button>
-											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
-												Zeposia
-												<input type="hidden" class="checkbox-array" value="1" />
-												<div class="d-none">
-													<i class="fa-solid fa-check"></i>
-												</div>
-											</button>
-											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
-												Sprycel
-												<input type="hidden" class="checkbox-array" value="1" />
-												<div class="d-none">
-													<i class="fa-solid fa-check"></i>
-												</div>
-											</button>
-											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
-												Orencia
-												<input type="hidden" class="checkbox-array" value="1" />
-												<div class="d-none">
-													<i class="fa-solid fa-check"></i>
-												</div>
-											</button>
-											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
-												Acthar Gel
-												<input type="hidden" class="checkbox-array" value="1" />
-												<div class="d-none">
-													<i class="fa-solid fa-check"></i>
-												</div>
-											</button>
-											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
-												Aubagio
-												<input type="hidden" class="checkbox-array" value="1" />
-												<div class="d-none">
-													<i class="fa-solid fa-check"></i>
-												</div>
-											</button>
-											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
-												Dupixent
-												<input type="hidden" class="checkbox-array" value="1" />
-												<div class="d-none">
-													<i class="fa-solid fa-check"></i>
-												</div>
-											</button>
-											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
-												Kevzara
-												<input type="hidden" class="checkbox-array" value="1" />
-												<div class="d-none">
-													<i class="fa-solid fa-check"></i>
-												</div>
-											</button>
-											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
-												Vertex
-												<input type="hidden" class="checkbox-array" value="1" />
-												<div class="d-none">
-													<i class="fa-solid fa-check"></i>
-												</div>
-											</button>
-											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
-												Mavacamten
-												<input type="hidden" class="checkbox-array" value="1" />
-												<div class="d-none">
-													<i class="fa-solid fa-check"></i>
-												</div>
-											</button>
-											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
-												Nintedanib
-												<input type="hidden" class="checkbox-array" value="1" />
-												<div class="d-none">
-													<i class="fa-solid fa-check"></i>
-												</div>
-											</button>
-											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
-												Exelixis
-												<input type="hidden" class="checkbox-array" value="1" />
-												<div class="d-none">
-													<i class="fa-solid fa-check"></i>
-												</div>
-											</button>
-											<button type="button" class="multi-select-item checkbox-selected" aria-current="true">
-												EMD Serono
-												<input type="hidden" class="checkbox-array" value="1" />
-												<div class="d-none">
-													<i class="fa-solid fa-check"></i>
-												</div>
-											</button>
-										</div>
-									</div>
-								</div>
-							</div>
+                      <div class="position-relative">
+                        <div class="multi-select-search">
+                          <input
+                            type="text"
+                            class="form-control search-checkbox"
+                            placeholder="Search ..."
+                          />
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                      </div>
 
-							<div class="col">
-								<label for="datefilter" class="form-label">Date Range</label>
-								<input type="text" class="form-control" name="datefilter" placeholder="Enter Date" />
-							</div>
+                      <div class="list-group multi-select-lists">
+                        <button
+                          type="button"
+                          class="checkbox-selected list-group-item multi-select-item checkbox-selected"
+                          aria-current="true"
+                        >
+                          Xtandi
+                          <input
+                            type="hidden"
+                            class="checkbox-array"
+                            value="1"
+                          />
+                          <div class="d-none">
+                            <i class="fa-solid fa-check"></i>
+                          </div>
+                        </button>
+                        <button
+                          type="button"
+                          class="checkbox-selected list-group-item multi-select-item checkbox-selected"
+                          aria-current="true"
+                        >
+                          Xospata
+                          <input
+                            type="hidden"
+                            class="checkbox-array"
+                            value="1"
+                          />
+                          <div class="d-none">
+                            <i class="fa-solid fa-check"></i>
+                          </div>
+                        </button>
+                        <button
+                          type="button"
+                          class="checkbox-selected list-group-item multi-select-item checkbox-selected"
+                          aria-current="true"
+                        >
+                          Pegcetacoplan
+                          <input
+                            type="hidden"
+                            class="checkbox-array"
+                            value="1"
+                          />
+                          <div class="d-none">
+                            <i class="fa-solid fa-check"></i>
+                          </div>
+                        </button>
+                        <button
+                          type="button"
+                          class="checkbox-selected list-group-item multi-select-item checkbox-selected"
+                          aria-current="true"
+                        >
+                          BMS Virtual Copay
+                          <input
+                            type="hidden"
+                            class="checkbox-array"
+                            value="1"
+                          />
+                          <div class="d-none">
+                            <i class="fa-solid fa-check"></i>
+                          </div>
+                        </button>
+                        <button
+                          type="button"
+                          class="checkbox-selected list-group-item multi-select-item checkbox-selected"
+                          aria-current="true"
+                        >
+                          Zeposia
+                          <input
+                            type="hidden"
+                            class="checkbox-array"
+                            value="1"
+                          />
+                          <div class="d-none">
+                            <i class="fa-solid fa-check"></i>
+                          </div>
+                        </button>
+                        <button
+                          type="button"
+                          class="checkbox-selected list-group-item multi-select-item checkbox-selected"
+                          aria-current="true"
+                        >
+                          Sprycel
+                          <input
+                            type="hidden"
+                            class="checkbox-array"
+                            value="1"
+                          />
+                          <div class="d-none">
+                            <i class="fa-solid fa-check"></i>
+                          </div>
+                        </button>
+                        <button
+                          type="button"
+                          class="checkbox-selected list-group-item multi-select-item checkbox-selected"
+                          aria-current="true"
+                        >
+                          Orencia
+                          <input
+                            type="hidden"
+                            class="checkbox-array"
+                            value="1"
+                          />
+                          <div class="d-none">
+                            <i class="fa-solid fa-check"></i>
+                          </div>
+                        </button>
+                        <button
+                          type="button"
+                          class="checkbox-selected list-group-item multi-select-item checkbox-selected"
+                          aria-current="true"
+                        >
+                          Acthar Gel
+                          <input
+                            type="hidden"
+                            class="checkbox-array"
+                            value="1"
+                          />
+                          <div class="d-none">
+                            <i class="fa-solid fa-check"></i>
+                          </div>
+                        </button>
+                        <button
+                          type="button"
+                          class="checkbox-selected list-group-item multi-select-item checkbox-selected"
+                          aria-current="true"
+                        >
+                          Aubagio
+                          <input
+                            type="hidden"
+                            class="checkbox-array"
+                            value="1"
+                          />
+                          <div class="d-none">
+                            <i class="fa-solid fa-check"></i>
+                          </div>
+                        </button>
+                        <button
+                          type="button"
+                          class="checkbox-selected list-group-item multi-select-item checkbox-selected"
+                          aria-current="true"
+                        >
+                          Dupixent
+                          <input
+                            type="hidden"
+                            class="checkbox-array"
+                            value="1"
+                          />
+                          <div class="d-none">
+                            <i class="fa-solid fa-check"></i>
+                          </div>
+                        </button>
+                        <button
+                          type="button"
+                          class="checkbox-selected list-group-item multi-select-item checkbox-selected"
+                          aria-current="true"
+                        >
+                          Kevzara
+                          <input
+                            type="hidden"
+                            class="checkbox-array"
+                            value="1"
+                          />
+                          <div class="d-none">
+                            <i class="fa-solid fa-check"></i>
+                          </div>
+                        </button>
+                        <button
+                          type="button"
+                          class="checkbox-selected list-group-item multi-select-item checkbox-selected"
+                          aria-current="true"
+                        >
+                          Vertex
+                          <input
+                            type="hidden"
+                            class="checkbox-array"
+                            value="1"
+                          />
+                          <div class="d-none">
+                            <i class="fa-solid fa-check"></i>
+                          </div>
+                        </button>
+                        <button
+                          type="button"
+                          class="checkbox-selected list-group-item multi-select-item checkbox-selected"
+                          aria-current="true"
+                        >
+                          Mavacamten
+                          <input
+                            type="hidden"
+                            class="checkbox-array"
+                            value="1"
+                          />
+                          <div class="d-none">
+                            <i class="fa-solid fa-check"></i>
+                          </div>
+                        </button>
+                        <button
+                          type="button"
+                          class="checkbox-selected list-group-item multi-select-item checkbox-selected"
+                          aria-current="true"
+                        >
+                          Nintedanib
+                          <input
+                            type="hidden"
+                            class="checkbox-array"
+                            value="1"
+                          />
+                          <div class="d-none">
+                            <i class="fa-solid fa-check"></i>
+                          </div>
+                        </button>
+                        <button
+                          type="button"
+                          class="checkbox-selected list-group-item multi-select-item checkbox-selected"
+                          aria-current="true"
+                        >
+                          Exelixis
+                          <input
+                            type="hidden"
+                            class="checkbox-array"
+                            value="1"
+                          />
+                          <div class="d-none">
+                            <i class="fa-solid fa-check"></i>
+                          </div>
+                        </button>
+                        <button
+                          type="button"
+                          class="checkbox-selected list-group-item multi-select-item checkbox-selected"
+                          aria-current="true"
+                        >
+                          EMD Serono
+                          <input
+                            type="hidden"
+                            class="checkbox-array"
+                            value="1"
+                          />
+                          <div class="d-none">
+                            <i class="fa-solid fa-check"></i>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-							<div class="col mt-4">
-								<a href="#!" class="btn btn-primary w-100">Submit</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-xxl-10 col-lg-9">
-					<h2>Program Summary (All Time)</h2>
-					<div class="card px-4 py-3 mb-4">
-						<div class="row row-cols-xxl-5 row-cols-md-3 row-cols-sm-2">
-							<div class="my-2">
-								<span>Enrolled Patients</span>
-								<div class="h3 mb-0 mt-2">119,988</div>
-							</div>
-							<div class="my-2">
-								<span>Verified Patients</span>
-								<div class="d-flex align-items-center mt-2">
-									<div class="h3 mb-0">103,586</div>
-									<div class="d-flex align-items-center text-success ms-2">
-										<svg viewBox="0 0 20 20" height="20px" fill="currentColor" aria-hidden="true">
-											<path fill-rule="evenodd"
-												d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z"
-												clip-rule="evenodd"></path>
-										</svg>
-										<span>86.33%</span>
-									</div>
-								</div>
-							</div>
-							<div class="my-2">
-								<span>Activated Patients</span>
-								<div class="d-flex align-items-center mt-2">
-									<div class="h3 mb-0">97,167</div>
-									<div class="d-flex align-items-center text-success ms-2">
-										<svg viewBox="0 0 20 20" height="20px" fill="currentColor" aria-hidden="true">
-											<path fill-rule="evenodd"
-												d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z"
-												clip-rule="evenodd"></path>
-										</svg>
-										<span>80.98%</span>
-									</div>
-								</div>
-							</div>
-							<div class="my-2">
-								<span>Awaiting Verification</span>
-								<div class="d-flex align-items-center mt-2">
-									<div class="h3 mb-0">16,402</div>
-									<div class="d-flex align-items-center text-danger ms-2">
-										<svg viewBox="0 0 20 20" height="20px" fill="currentColor" aria-hidden="true">
-											<path fill-rule="evenodd"
-												d="M10 3a.75.75 0 01.75.75v10.638l3.96-4.158a.75.75 0 111.08 1.04l-5.25 5.5a.75.75 0 01-1.08 0l-5.25-5.5a.75.75 0 111.08-1.04l3.96 4.158V3.75A.75.75 0 0110 3z"
-												clip-rule="evenodd"></path>
-										</svg>
-										<span>13.67%</span>
-									</div>
-								</div>
-							</div>
-							<div class="my-2">
-								<span>Funding Account Balance</span>
-								<div class="h3 mb-0 mt-2 text-success">$63,583,933.64</div>
-							</div>
-						</div>
-					</div>
+                <div class="col">
+                  <label for="datefilter" class="form-label">Date Range</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="datefilter"
+                    placeholder="Enter Date"
+                  />
+                </div>
 
-					<h2>Patient Enrollment Summary</h2>
-					<div class="card px-4 py-3 mb-4 patient-enrollment-summary">
-						<div class="row row-cols-md-3 row-cols-sm-3">
-							<div class="my-2">
-								<div>
-									<span>Enrollments</span>
-									<div class="h3 mb-0 mt-2">50</div>
-								</div>
-							</div>
-							<div class="my-2">
-								<div>
-									<span>Verifications</span>
-									<div class="h3 mb-0 mt-2">38</div>
-								</div>
-							</div>
-							<div class="my-2">
-								<div>
-									<span>Activations</span>
-									<div class="h3 mb-0 mt-2">142</div>
-								</div>
-							</div>
-						</div>
-					</div>
+                <div class="col mt-4">
+                  <a href="#!" class="btn btn-primary w-100">Submit</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-10 col-lg-9">
+            <h2>Program Summary (All Time)</h2>
+            <div class="card px-4 py-3 mb-4">
+              <div class="row row-cols-xxl-5 row-cols-md-3 row-cols-sm-2">
+                <div class="my-2">
+                  <span>Enrolled Patients</span>
+                  <div class="h3 mb-0 mt-2">119,988</div>
+                </div>
+                <div class="my-2">
+                  <span>Verified Patients</span>
+                  <div class="d-flex align-items-center mt-2">
+                    <div class="h3 mb-0">103,586</div>
+                    <div class="d-flex align-items-center text-success ms-2">
+                      <svg
+                        viewBox="0 0 20 20"
+                        height="20px"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      <span>86.33%</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="my-2">
+                  <span>Activated Patients</span>
+                  <div class="d-flex align-items-center mt-2">
+                    <div class="h3 mb-0">97,167</div>
+                    <div class="d-flex align-items-center text-success ms-2">
+                      <svg
+                        viewBox="0 0 20 20"
+                        height="20px"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      <span>80.98%</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="my-2">
+                  <span>Awaiting Verification</span>
+                  <div class="d-flex align-items-center mt-2">
+                    <div class="h3 mb-0">16,402</div>
+                    <div class="d-flex align-items-center text-danger ms-2">
+                      <svg
+                        viewBox="0 0 20 20"
+                        height="20px"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 3a.75.75 0 01.75.75v10.638l3.96-4.158a.75.75 0 111.08 1.04l-5.25 5.5a.75.75 0 01-1.08 0l-5.25-5.5a.75.75 0 111.08-1.04l3.96 4.158V3.75A.75.75 0 0110 3z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      <span>13.67%</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="my-2">
+                  <span>Funding Account Balance</span>
+                  <div class="h3 mb-0 mt-2 text-success">$63,583,933.64</div>
+                </div>
+              </div>
+            </div>
 
-					<h2>Payments Summary</h2>
-					<div class="bg-light px-3 py-2 border-3 rounded-3">
-						<div class="row row-cols-xl-4 row-cols-sm-2">
-							<div class="my-2">
-								<div class="card p-4 h-100">
-									<span>Net Payments</span>
-									<div class="h3 mb-0 mt-2">1,420</div>
-								</div>
-							</div>
-							<div class="my-2">
-								<div class="card p-4 h-100">
-									<span>Authorizations</span>
-									<div class="h3 mb-0 mt-2">863</div>
-								</div>
-							</div>
-							<div class="my-2">
-								<div class="card p-4 h-100">
-									<span>Approvals</span>
-									<div class="h3 mb-0 mt-2">75</div>
-								</div>
-							</div>
-							<div class="my-2">
-								<div class="card p-4 h-100">
-									<span>Declined</span>
-									<div class="h3 mb-0 mt-2">534</div>
-								</div>
-							</div>
-							<div class="my-2">
-								<div class="card p-4 h-100">
-									<span>Net Payments</span>
-									<div class="h3 mb-0 mt-2">1,420</div>
-								</div>
-							</div>
-							<div class="my-2">
-								<div class="card p-4 h-100">
-									<span>Authorizations</span>
-									<div class="h3 mb-0 mt-2">863</div>
-								</div>
-							</div>
-							<div class="my-2">
-								<div class="card p-4 h-100">
-									<span>Approvals</span>
-									<div class="h3 mb-0 mt-2">75</div>
-								</div>
-							</div>
-							<div class="my-2">
-								<div class="card p-4 h-100">
-									<span>Declined</span>
-									<div class="h3 mb-0 mt-2">534</div>
-								</div>
-							</div>
-						</div>
-					</div>
+            <h2>Patient Enrollment Summary</h2>
+            <div class="card px-4 py-3 mb-4 patient-enrollment-summary">
+              <div class="row row-cols-md-3 row-cols-sm-3">
+                <div class="my-2">
+                  <div>
+                    <span>Enrollments</span>
+                    <div class="h3 mb-0 mt-2">50</div>
+                  </div>
+                </div>
+                <div class="my-2">
+                  <div>
+                    <span>Verifications</span>
+                    <div class="h3 mb-0 mt-2">38</div>
+                  </div>
+                </div>
+                <div class="my-2">
+                  <div>
+                    <span>Activations</span>
+                    <div class="h3 mb-0 mt-2">142</div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
+            <h2>Payments Summary</h2>
+            <div class="bg-light px-3 py-2 border-3 rounded-3">
+              <div class="row row-cols-xl-4 row-cols-sm-2">
+                <div class="my-2">
+                  <div class="card p-4 h-100">
+                    <span>Net Payments</span>
+                    <div class="h3 mb-0 mt-2">1,420</div>
+                  </div>
+                </div>
+                <div class="my-2">
+                  <div class="card p-4 h-100">
+                    <span>Authorizations</span>
+                    <div class="h3 mb-0 mt-2">863</div>
+                  </div>
+                </div>
+                <div class="my-2">
+                  <div class="card p-4 h-100">
+                    <span>Approvals</span>
+                    <div class="h3 mb-0 mt-2">75</div>
+                  </div>
+                </div>
+                <div class="my-2">
+                  <div class="card p-4 h-100">
+                    <span>Declined</span>
+                    <div class="h3 mb-0 mt-2">534</div>
+                  </div>
+                </div>
+                <div class="my-2">
+                  <div class="card p-4 h-100">
+                    <span>Net Payments</span>
+                    <div class="h3 mb-0 mt-2">1,420</div>
+                  </div>
+                </div>
+                <div class="my-2">
+                  <div class="card p-4 h-100">
+                    <span>Authorizations</span>
+                    <div class="h3 mb-0 mt-2">863</div>
+                  </div>
+                </div>
+                <div class="my-2">
+                  <div class="card p-4 h-100">
+                    <span>Approvals</span>
+                    <div class="h3 mb-0 mt-2">75</div>
+                  </div>
+                </div>
+                <div class="my-2">
+                  <div class="card p-4 h-100">
+                    <span>Declined</span>
+                    <div class="h3 mb-0 mt-2">534</div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-					<!-- Tabs -->
-					<div class="bg-light p-3 border-3 my-4">
-						<div>
-							<div class="tab-button-wrapper mt-0">
-								<div class="tab-button-link tab-button active">Card Lookup Failures</div>
-								<div class="tab-button-link tab-button">One Time Password Validation Failures</div>
-							</div>
-						</div>
-						<!-- Contents -->
-						<!-- Card Lookup Failures -->
-						<div class="tab-view">
-							<a href="javascript:void(0)" id="download-lookup-failures"
-								class="d-flex gap-2 justify-content-end mb-3">
-								<svg xmlns="http://www.w3.org/2000/svg" style="max-width: 20px;" fill="none" viewBox="0 0 24 24"
-									stroke="currentColor" stroke-width="2">
-									<path stroke-linecap="round" stroke-linejoin="round"
-										d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-								</svg>
-								<span>Download CSV</span>
-							</a>
-							<div class="card overflow-auto">
-								<div class="table-responsive">
-									<table class="table table-hover">
-										<thead>
-											<tr>
-												<th class="sort-th sort-asc">
-													<span>Customer Id</span>
-													<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
-														viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-														<path stroke-linecap="round" stroke-linejoin="round"
-															d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-													</svg>
+            <!-- Tabs -->
+            <div class="bg-light p-3 border-3 my-4">
+              <div>
+                <div class="tab-button-wrapper mt-0">
+                  <div class="tab-button-link tab-button active">
+                    Card Lookup Failures
+                  </div>
+                  <div class="tab-button-link tab-button">
+                    One Time Password Validation Failures
+                  </div>
+                </div>
+              </div>
+              <!-- Contents -->
+              <!-- Card Lookup Failures -->
+              <div class="tab-view">
+                <a
+                  href="javascript:void(0)"
+                  id="download-lookup-failures"
+                  class="d-flex gap-2 justify-content-end mb-3"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="max-width: 20px"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                    ></path>
+                  </svg>
+                  <span>Download CSV</span>
+                </a>
+                <div class="card overflow-auto">
+                  <div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th class="sort-th sort-asc">
+                            <span>Customer Id</span>
+                            <svg
+                              class="sort-icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M4.5 15.75l7.5-7.5 7.5 7.5"
+                              />
+                            </svg>
+                          </th>
+                          <th class="sort-th sort-asc">
+                            <span>Last Name</span>
+                            <svg
+                              class="sort-icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M4.5 15.75l7.5-7.5 7.5 7.5"
+                              />
+                            </svg>
+                          </th>
+                          <th class="sort-th sort-asc">
+                            <span>Email</span>
+                            <svg
+                              class="sort-icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M4.5 15.75l7.5-7.5 7.5 7.5"
+                              />
+                            </svg>
+                          </th>
+                          <th class="sort-th sort-asc">
+                            <span>DOB</span>
+                            <svg
+                              class="sort-icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M4.5 15.75l7.5-7.5 7.5 7.5"
+                              />
+                            </svg>
+                          </th>
+                          <th class="sort-th sort-asc">
+                            <span>Timestamp</span>
+                            <svg
+                              class="sort-icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M4.5 15.75l7.5-7.5 7.5 7.5"
+                              />
+                            </svg>
+                          </th>
+                          <th class="sort-th sort-dsc">
+                            <span>Error</span>
+                            <svg
+                              class="sort-icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M4.5 15.75l7.5-7.5 7.5 7.5"
+                              />
+                            </svg>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1384338198</td>
+                          <td>Jackson</td>
+                          <td>delaneyjackson2020@gmail.com</td>
+                          <td>06/19/2000</td>
+                          <td>June 13, 2023, 10:56:39</td>
+                          <td>Invalid Email</td>
+                        </tr>
+                        <tr>
+                          <td>1384338198</td>
+                          <td>Jackson</td>
+                          <td>mjackson@bssd.net</td>
+                          <td>02/03/1972</td>
+                          <td>June 13, 2023, 10:55:56</td>
+                          <td>Invalid DOB</td>
+                        </tr>
+                        <tr>
+                          <td>1377957523</td>
+                          <td>Hayes</td>
+                          <td>brownidgirl75@live.com</td>
+                          <td>12/07/06__</td>
+                          <td>June 13, 2023, 10:54:50</td>
+                          <td>Invalid DOB</td>
+                        </tr>
+                        <tr>
+                          <td>1377957523</td>
+                          <td>Hayes</td>
+                          <td>brownidgirl75@live.com</td>
+                          <td>11/21/1975</td>
+                          <td>June 13, 2023, 10:53:33</td>
+                          <td>Invalid DOB</td>
+                        </tr>
+                        <tr>
+                          <td>08947146546</td>
+                          <td>Stumpf</td>
+                          <td>stumpfkara@hmail.com</td>
+                          <td>01/23/1969</td>
+                          <td>June 13, 2023, 10:30:58</td>
+                          <td>Invalid Email</td>
+                        </tr>
+                        <tr>
+                          <td>08947146546</td>
+                          <td>Stumpf</td>
+                          <td>stumpfkara@hmail.com</td>
+                          <td>01/23/1969</td>
+                          <td>June 13, 2023, 10:30:48</td>
+                          <td>Invalid Email</td>
+                        </tr>
+                        <tr>
+                          <td>1385032666</td>
+                          <td>Freimark</td>
+                          <td>maroneylisa@yahoo.com</td>
+                          <td>04/28/1976</td>
+                          <td>June 13, 2023, 10:09:03</td>
+                          <td>Invalid Email</td>
+                        </tr>
+                        <tr>
+                          <td>1385032666</td>
+                          <td>Freimark</td>
+                          <td>maroneylisa@yahoo.com</td>
+                          <td>04/28/1976</td>
+                          <td>June 13, 2023, 10:08:51</td>
+                          <td>Invalid Email</td>
+                        </tr>
+                        <tr>
+                          <td>049140601</td>
+                          <td>YEE</td>
+                          <td>MONTYAC@GMAIL.COM03</td>
+                          <td>03/06/1950</td>
+                          <td>June 13, 2023, 09:43:01</td>
+                          <td>Invalid Email</td>
+                        </tr>
+                        <tr>
+                          <td>18947132595</td>
+                          <td>Foster-Devoe</td>
+                          <td>sim1lady@hotmail.com</td>
+                          <td>03/14/1966</td>
+                          <td>June 13, 2023, 09:20:37</td>
+                          <td>Invalid Last Name</td>
+                        </tr>
+                        <tr>
+                          <td>18947132595</td>
+                          <td>Foster-Devoe</td>
+                          <td>sim1lady@hotmail.com</td>
+                          <td>03/14/1966</td>
+                          <td>June 13, 2023, 09:20:16</td>
+                          <td>Invalid Last Name</td>
+                        </tr>
+                        <tr>
+                          <td>18947132595</td>
+                          <td>Foster-Devoe</td>
+                          <td>sim1lady@hotmail.com</td>
+                          <td>03/14/1966</td>
+                          <td>June 13, 2023, 08:48:28</td>
+                          <td>Invalid Last Name</td>
+                        </tr>
+                        <tr>
+                          <td>18947132595</td>
+                          <td>Foster-Devoe</td>
+                          <td>sim1lady@hotmail.com</td>
+                          <td>03/14/1966</td>
+                          <td>June 13, 2023, 08:47:58</td>
+                          <td>Invalid Last Name</td>
+                        </tr>
+                        <tr>
+                          <td>18947390895</td>
+                          <td>Landrau</td>
+                          <td>mjlandrau@gmail.com</td>
+                          <td>10/10/1963</td>
+                          <td>June 13, 2023, 01:57:43</td>
+                          <td>Invalid Last Name</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
 
-												</th>
-												<th class="sort-th sort-asc">
-													<span>Last Name</span>
-													<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
-														viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-														<path stroke-linecap="round" stroke-linejoin="round"
-															d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-													</svg>
+              <!-- One Time Password Validation Failures -->
+              <div class="tab-view d-none">
+                <a
+                  href="javascript:void(0)"
+                  class="d-flex gap-2 justify-content-end mb-3"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="max-width: 20px"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                    ></path>
+                  </svg>
+                  <span>Download CSV</span>
+                </a>
+                <div class="card overflow-auto">
+                  <div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Customer Id</th>
+                          <th>Input OTP</th>
+                          <th>Actual OTP</th>
+                          <th>Validation Failed</th>
+                        </tr>
+                      </thead>
+                      <tbody></tbody>
+                    </table>
+                    <div
+                      class="d-flex gap-2 p-4 justify-content-center align-items-center"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        style="max-width: 20px"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="#9ca3af"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
+                        ></path>
+                      </svg>
+                      <p class="mb-0">
+                        There are no historical failures to display.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-												</th>
-												<th class="sort-th sort-asc">
-													<span>Email</span>
-													<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
-														viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-														<path stroke-linecap="round" stroke-linejoin="round"
-															d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-													</svg>
+            <div class="pagination-wrapper">
+              <div class="text-muted small">
+                Result per page
+                <p class="mb-0">Showing 1 to 20 of 10000 Enteries</p>
+              </div>
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#">Previous</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-												</th>
-												<th class="sort-th sort-asc">
-													<span>DOB</span>
-													<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
-														viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-														<path stroke-linecap="round" stroke-linejoin="round"
-															d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-													</svg>
+    <button
+      type="button"
+      class="theme-mode"
+      data-bs-toggle="tooltip"
+      data-bs-title="Dark Theme"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="theme-icon theme-sun"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+        ></path>
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="theme-icon theme-moon d-none"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+        ></path>
+      </svg>
+    </button>
 
-												</th>
-												<th class="sort-th sort-asc">
-													<span>Timestamp</span>
-													<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
-														viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-														<path stroke-linecap="round" stroke-linejoin="round"
-															d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-													</svg>
+    <footer class="pt-4">
+      <div class="container">
+        <p class="text-center small">
+          © 2023 Klyre Payments. All rights reserved.
+        </p>
+      </div>
+    </footer>
 
-												</th>
-												<th class="sort-th sort-dsc">
-													<span>Error</span>
-													<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
-														viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-														<path stroke-linecap="round" stroke-linejoin="round"
-															d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-													</svg>
+    <!-- Mobile Menu -->
+    <section class="mx-auto my-5 d-none">
+      <div>
+        <h3 class="text-center my-5">Mobile Menu</h3>
+        <!-- Mobile Menu -->
+        <header>
+          <div class="container-fluid">
+            <!-- <div class="d-flex justify-content-between align-items-center"> -->
+            <div class="header-wrapper">
+              <div class="header-left-area">
+                <a class="text-logo" href="index.html"
+                  >Klyre<span class="fw-bold">Payments</span></a
+                >
+                <div class="d-none d-lg-block">
+                  <nav class="nav" hidden>
+                    <a class="nav-link active" href="index.html">Dashboard</a>
+                    <a class="nav-link" href="transactions.html"
+                      >Transactions</a
+                    >
+                    <a class="nav-link" href="users.html">Users</a>
+                    <a class="nav-link" href="patients.html">Patients</a>
 
-												</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>1384338198</td>
-												<td>Jackson</td>
-												<td>delaneyjackson2020@gmail.com</td>
-												<td>06/19/2000</td>
-												<td>June 13, 2023, 10:56:39</td>
-												<td>Invalid Email</td>
-											</tr>
-											<tr>
-												<td>1384338198</td>
-												<td>Jackson</td>
-												<td>mjackson@bssd.net</td>
-												<td>02/03/1972</td>
-												<td>June 13, 2023, 10:55:56</td>
-												<td>Invalid DOB</td>
-											</tr>
-											<tr>
-												<td>1377957523</td>
-												<td>Hayes</td>
-												<td>brownidgirl75@live.com</td>
-												<td>12/07/06__</td>
-												<td>June 13, 2023, 10:54:50</td>
-												<td>Invalid DOB</td>
-											</tr>
-											<tr>
-												<td>1377957523</td>
-												<td>Hayes</td>
-												<td>brownidgirl75@live.com</td>
-												<td>11/21/1975</td>
-												<td>June 13, 2023, 10:53:33</td>
-												<td>Invalid DOB</td>
-											</tr>
-											<tr>
-												<td>08947146546</td>
-												<td>Stumpf</td>
-												<td>stumpfkara@hmail.com</td>
-												<td>01/23/1969</td>
-												<td>June 13, 2023, 10:30:58</td>
-												<td>Invalid Email</td>
-											</tr>
-											<tr>
-												<td>08947146546</td>
-												<td>Stumpf</td>
-												<td>stumpfkara@hmail.com</td>
-												<td>01/23/1969</td>
-												<td>June 13, 2023, 10:30:48</td>
-												<td>Invalid Email</td>
-											</tr>
-											<tr>
-												<td>1385032666</td>
-												<td>Freimark</td>
-												<td>maroneylisa@yahoo.com</td>
-												<td>04/28/1976</td>
-												<td>June 13, 2023, 10:09:03</td>
-												<td>Invalid Email</td>
-											</tr>
-											<tr>
-												<td>1385032666</td>
-												<td>Freimark</td>
-												<td>maroneylisa@yahoo.com</td>
-												<td>04/28/1976</td>
-												<td>June 13, 2023, 10:08:51</td>
-												<td>Invalid Email</td>
-											</tr>
-											<tr>
-												<td>049140601</td>
-												<td>YEE</td>
-												<td>MONTYAC@GMAIL.COM03</td>
-												<td>03/06/1950</td>
-												<td>June 13, 2023, 09:43:01</td>
-												<td>Invalid Email</td>
-											</tr>
-											<tr>
-												<td>18947132595</td>
-												<td>Foster-Devoe</td>
-												<td>sim1lady@hotmail.com</td>
-												<td>03/14/1966</td>
-												<td>June 13, 2023, 09:20:37</td>
-												<td>Invalid Last Name</td>
-											</tr>
-											<tr>
-												<td>18947132595</td>
-												<td>Foster-Devoe</td>
-												<td>sim1lady@hotmail.com</td>
-												<td>03/14/1966</td>
-												<td>June 13, 2023, 09:20:16</td>
-												<td>Invalid Last Name</td>
-											</tr>
-											<tr>
-												<td>18947132595</td>
-												<td>Foster-Devoe</td>
-												<td>sim1lady@hotmail.com</td>
-												<td>03/14/1966</td>
-												<td>June 13, 2023, 08:48:28</td>
-												<td>Invalid Last Name</td>
-											</tr>
-											<tr>
-												<td>18947132595</td>
-												<td>Foster-Devoe</td>
-												<td>sim1lady@hotmail.com</td>
-												<td>03/14/1966</td>
-												<td>June 13, 2023, 08:47:58</td>
-												<td>Invalid Last Name</td>
-											</tr>
-											<tr>
-												<td>18947390895</td>
-												<td>Landrau</td>
-												<td>mjlandrau@gmail.com</td>
-												<td>10/10/1963</td>
-												<td>June 13, 2023, 01:57:43</td>
-												<td>Invalid Last Name</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
+                    <a class="nav-link" href="patients.html">Patients</a>
+                    <a class="nav-link" href="patients.html">Patients</a>
+                    <a class="nav-link" href="patients.html">Patients</a>
+                    <a class="nav-link" href="patients.html">Patients</a>
+                    <a class="nav-link" href="patients.html">Patients</a>
+                    <a class="nav-link" href="patients.html">Patients</a>
+                    <a class="nav-link" href="patients.html">Patients</a>
+                    <a class="nav-link" href="patients.html">Patients</a>
+                    <a class="nav-link" href="patients.html">Patients</a>
+                    <a class="nav-link" href="patients.html">Patients</a>
 
-						<!-- One Time Password Validation Failures -->
-						<div class="tab-view d-none">
-							<a href="javascript:void(0)" class="d-flex gap-2 justify-content-end mb-3">
-								<svg xmlns="http://www.w3.org/2000/svg" style="max-width: 20px;" fill="none" viewBox="0 0 24 24"
-									stroke="currentColor" stroke-width="2">
-									<path stroke-linecap="round" stroke-linejoin="round"
-										d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-								</svg>
-								<span>Download CSV</span>
-							</a>
-							<div class="card overflow-auto">
-								<div class="table-responsive">
-									<table class="table table-hover">
-										<thead>
-											<tr>
-												<th>Customer Id</th>
-												<th>Input OTP</th>
-												<th>Actual OTP</th>
-												<th>Validation Failed</th>
-											</tr>
-										</thead>
-										<tbody></tbody>
-									</table>
-									<div class="d-flex gap-2 p-4 justify-content-center align-items-center">
-										<svg xmlns="http://www.w3.org/2000/svg" style="max-width: 20px;" fill="none"
-											viewBox="0 0 24 24" stroke="#9ca3af">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-												d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4">
-											</path>
-										</svg>
-										<p class="mb-0">There are no historical failures to display.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+                    <a class="nav-link" href="reports.html">Reports</a>
+                    <a class="nav-link" href="typography.html">Typography</a>
+                  </nav>
+                </div>
+              </div>
+              <div class="header-right-area">
+                <div class="d-none d-lg-block text-end">
+                  <div class="d-flex align-items-center">
+                    <div class="lh-sm">
+                      <div class="f6" id="clock">
+                        Fri, May 19 2023, 13:48:16
+                      </div>
+                      <div class="small fw-lighter">New York</div>
+                    </div>
+                    <div class="mx-2">|</div>
+                    <div class="dropdown">
+                      <button
+                        class="btn btn-link dropdown-toggle py-1 px-2"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <div class="user-profile-setting">
+                          <div class="avatar-thumb">
+                            <img
+                              src="https://elstar.themenate.net/img/avatars/thumb-1.jpg"
+                              alt="Avatar"
+                            />
+                          </div>
+                          <div class="avatar-info">
+                            <div class="avatar-type">Admin</div>
+                            <div class="avatar-name">John Deo</div>
+                          </div>
+                        </div>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <div class="user-profile-setting">
+                          <div class="avatar-thumb">
+                            <img
+                              src="https://elstar.themenate.net/img/avatars/thumb-1.jpg"
+                              alt="Avatar"
+                            />
+                          </div>
+                          <div class="avatar-info">
+                            <div class="avatar-type">Admin User</div>
+                            <div class="avatar-email">admin@admin.com</div>
+                          </div>
+                        </div>
+                        <hr />
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li>
+                          <a class="dropdown-item" href="editprofile.html"
+                            >Edit Profile</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Activity Log</a>
+                        </li>
+                        <hr />
+                        <li><a class="dropdown-item" href="#">Sign Out</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="text-light mobile-menu-toggle btn fs-5 d-block d-lg-none"
+              >
+                <i class="fa-solid fa-bars-staggered"></i>
+                <i class="d-none fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div class="level-one-menu d-none d-flex flex-column">
+              <div>
+                <!-- Level 1 -->
+                <div class="nav">
+                  <a class="nav-link" href="index.html">Dashboard</a>
+                </div>
+                <div class="nav">
+                  <a class="nav-link active" href="typography.html"
+                    >Typography</a
+                  >
+                </div>
+                <div class="mb-2">
+                  <div class="nav">
+                    <a class="nav-link" href="#">Transactions</a>
+                  </div>
+                </div>
+                <div class="mb-2">
+                  <div class="nav">
+                    <a class="nav-link" href="#">Users</a>
+                  </div>
+                </div>
+                <div>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="nav">
+                      <a class="nav-link" href="#">Report</a>
+                    </div>
+                    <button class="text-light level-one-toggle btn fs-5">
+                      <i class="fa-solid fa-angle-down"></i>
+                      <i class="d-none fa-solid fa-angle-up"></i>
+                    </button>
+                  </div>
+                  <!-- Level 2 -->
+                  <div class="level-two-menu d-none ms-2">
+                    <div class="d-flex flex-column">
+                      <div class="nav">
+                        <a class="nav-link" href="#">Level 2 Item 1</a>
+                      </div>
+                      <div>
+                        <div
+                          class="d-flex justify-content-between align-items-center"
+                        >
+                          <div class="nav">
+                            <a class="nav-link" href="#">Level 2 Item 2</a>
+                          </div>
+                          <button class="text-light level-two-toggle btn fs-5">
+                            <i class="fa-solid fa-angle-down"></i>
+                            <i class="d-none fa-solid fa-angle-up"></i>
+                          </button>
+                        </div>
+                        <!-- Level 3 -->
+                        <div
+                          class="level-three-menu d-none d-flex flex-column ms-4"
+                        >
+                          <div class="mb-2">
+                            <div class="nav">
+                              <a class="nav-link" href="#">Level 3 Item 1</a>
+                            </div>
+                          </div>
+                          <div class="mb-2">
+                            <div class="nav">
+                              <a class="nav-link" href="#">Level 3 Item 3</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mb-2">
+                        <div class="nav">
+                          <a class="nav-link" href="#">Level 2 Item 3</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="text-end">
+                  <div class="d-flex align-items-center">
+                    <div class="lh-sm">
+                      <div class="f6" id="clock">
+                        Fri, May 19 2023, 13:48:16
+                      </div>
+                      <div class="small fw-lighter">New York</div>
+                    </div>
+                    <div class="mx-2">|</div>
+                    <div class="dropdown">
+                      <button
+                        class="btn btn-link dropdown-toggle py-1 px-2"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <div class="user-profile-setting">
+                          <div class="avatar-thumb">
+                            <img
+                              src="https://elstar.themenate.net/img/avatars/thumb-1.jpg"
+                              alt="Avatar"
+                            />
+                          </div>
+                          <div class="avatar-info">
+                            <div class="avatar-type">Admin</div>
+                            <div class="avatar-name">John Deo</div>
+                          </div>
+                        </div>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <div class="user-profile-setting">
+                          <div class="avatar-thumb">
+                            <img
+                              src="https://elstar.themenate.net/img/avatars/thumb-1.jpg"
+                              alt="Avatar"
+                            />
+                          </div>
+                          <div class="avatar-info">
+                            <div class="avatar-type">Admin User</div>
+                            <div class="avatar-email">admin@admin.com</div>
+                          </div>
+                        </div>
+                        <hr />
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li>
+                          <a class="dropdown-item" href="editprofile.html"
+                            >Edit Profile</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Activity Log</a>
+                        </li>
+                        <hr />
+                        <li><a class="dropdown-item" href="#">Sign Out</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+    </section>
 
-					<div class="pagination-wrapper">
-						<div class="text-muted small">
-							Result per page
-							<p class="mb-0">Showing 1 to 20 of 10000 Enteries</p>
-						</div>
-						<nav aria-label="Page navigation example">
-							<ul class="pagination">
-								<li class="page-item">
-									<a class="page-link" href="#">Previous</a>
-								</li>
-								<li class="page-item"><a class="page-link" href="#">1</a></li>
-								<li class="page-item"><a class="page-link" href="#">2</a></li>
-								<li class="page-item"><a class="page-link" href="#">3</a></li>
-								<li class="page-item">
-									<a class="page-link" href="#">Next</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 
-	<button type="button" class="theme-mode" data-bs-toggle="tooltip" data-bs-title="Dark Theme">
-		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-			class="theme-icon theme-sun">
-			<path stroke-linecap="round" stroke-linejoin="round"
-				d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z">
-			</path>
-		</svg>
-		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-			class="theme-icon theme-moon d-none">
-			<path stroke-linecap="round" stroke-linejoin="round"
-				d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z">
-			</path>
-		</svg>
-	</button>
+    <!-- All Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
-	<footer class="pt-4">
-		<div class="container">
-			<p class="text-center small">
-				© 2023 Klyre Payments. All rights reserved.
-			</p>
-		</div>
-	</footer>
+    <!-- Data Tables -->
+    <script src="//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 
-	<!-- Mobile Menu -->
-	<section class="mx-auto my-5 d-none">
-		<div>
-			<h3 class="text-center my-5">Mobile Menu</h3>
-			<!-- Mobile Menu -->
-			<header>
-				<div class="container-fluid">
-					<!-- <div class="d-flex justify-content-between align-items-center"> -->
-					<div class="header-wrapper">
-						<div class="header-left-area">
-							<a class="text-logo" href="index.html">Klyre<span class="fw-bold">Payments</span></a>
-							<div class="d-none d-lg-block">
-								<nav class="nav" hidden>
-									<a class="nav-link active" href="index.html">Dashboard</a>
-									<a class="nav-link" href="transactions.html">Transactions</a>
-									<a class="nav-link" href="users.html">Users</a>
-									<a class="nav-link" href="patients.html">Patients</a>
+    <!-- Required All Three Libraries Below -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <script src="assets/js/main.js"></script>
 
-									<a class="nav-link" href="patients.html">Patients</a>
-									<a class="nav-link" href="patients.html">Patients</a>
-									<a class="nav-link" href="patients.html">Patients</a>
-									<a class="nav-link" href="patients.html">Patients</a>
-									<a class="nav-link" href="patients.html">Patients</a>
-									<a class="nav-link" href="patients.html">Patients</a>
-									<a class="nav-link" href="patients.html">Patients</a>
-									<a class="nav-link" href="patients.html">Patients</a>
-									<a class="nav-link" href="patients.html">Patients</a>
-									<a class="nav-link" href="patients.html">Patients</a>
+    <script>
+      $(document).ready(function () {
+        var elementHeight = $(".filter-area").height();
+        var negativeHeight = -0.5 * elementHeight;
+        $(".filter-area .container").css("margin-top", negativeHeight);
 
-
-									<a class="nav-link" href="reports.html">Reports</a>
-									<a class="nav-link" href="typography.html">Typography</a>
-								</nav>
-							</div>
-						</div>
-						<div class="header-right-area">
-							<div class="d-none d-lg-block text-end">
-								<div class="d-flex align-items-center">
-									<div class="lh-sm">
-										<div class="f6" id="clock">
-											Fri, May 19 2023, 13:48:16
-										</div>
-										<div class="small fw-lighter">New York</div>
-									</div>
-									<div class="mx-2">|</div>
-									<div class="dropdown">
-										<button class="btn btn-link dropdown-toggle py-1 px-2" type="button"
-											data-bs-toggle="dropdown" aria-expanded="false">
-											<div class="user-profile-setting">
-												<div class="avatar-thumb">
-													<img src="https://elstar.themenate.net/img/avatars/thumb-1.jpg" alt="Avatar" />
-												</div>
-												<div class="avatar-info">
-													<div class="avatar-type">Admin</div>
-													<div class="avatar-name">John Deo</div>
-												</div>
-											</div>
-										</button>
-										<ul class="dropdown-menu">
-											<div class="user-profile-setting">
-												<div class="avatar-thumb">
-													<img src="https://elstar.themenate.net/img/avatars/thumb-1.jpg" alt="Avatar" />
-												</div>
-												<div class="avatar-info">
-													<div class="avatar-type">Admin User</div>
-													<div class="avatar-email">admin@admin.com</div>
-												</div>
-											</div>
-											<hr />
-											<li><a class="dropdown-item" href="#">Profile</a></li>
-											<li>
-												<a class="dropdown-item" href="editprofile.html">Edit Profile</a>
-											</li>
-											<li>
-												<a class="dropdown-item" href="#">Activity Log</a>
-											</li>
-											<hr />
-											<li><a class="dropdown-item" href="#">Sign Out</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-						<button class="text-light mobile-menu-toggle btn fs-5 d-block d-lg-none">
-							<i class="fa-solid fa-bars-staggered"></i>
-							<i class="d-none fa-solid fa-xmark"></i>
-						</button>
-					</div>
-					<div class="level-one-menu d-none d-flex flex-column">
-						<div>
-							<!-- Level 1 -->
-							<div class="nav">
-								<a class="nav-link" href="index.html">Dashboard</a>
-							</div>
-							<div class="nav">
-								<a class="nav-link active" href="typography.html">Typography</a>
-							</div>
-							<div class="mb-2">
-								<div class="nav">
-									<a class="nav-link" href="#">Transactions</a>
-								</div>
-							</div>
-							<div class="mb-2">
-								<div class="nav">
-									<a class="nav-link" href="#">Users</a>
-								</div>
-							</div>
-							<div>
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="nav">
-										<a class="nav-link" href="#">Report</a>
-									</div>
-									<button class="text-light level-one-toggle btn fs-5">
-										<i class="fa-solid fa-angle-down"></i>
-										<i class="d-none fa-solid fa-angle-up"></i>
-									</button>
-								</div>
-								<!-- Level 2 -->
-								<div class="level-two-menu d-none ms-2">
-									<div class="d-flex flex-column">
-										<div class="nav">
-											<a class="nav-link" href="#">Level 2 Item 1</a>
-										</div>
-										<div>
-											<div class="d-flex justify-content-between align-items-center">
-												<div class="nav">
-													<a class="nav-link" href="#">Level 2 Item 2</a>
-												</div>
-												<button class="text-light level-two-toggle btn fs-5">
-													<i class="fa-solid fa-angle-down"></i>
-													<i class="d-none fa-solid fa-angle-up"></i>
-												</button>
-											</div>
-											<!-- Level 3 -->
-											<div class="level-three-menu d-none d-flex flex-column ms-4">
-												<div class="mb-2">
-													<div class="nav">
-														<a class="nav-link" href="#">Level 3 Item 1</a>
-													</div>
-												</div>
-												<div class="mb-2">
-													<div class="nav">
-														<a class="nav-link" href="#">Level 3 Item 3</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="mb-2">
-											<div class="nav">
-												<a class="nav-link" href="#">Level 2 Item 3</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="text-end">
-								<div class="d-flex align-items-center">
-									<div class="lh-sm">
-										<div class="f6" id="clock">
-											Fri, May 19 2023, 13:48:16
-										</div>
-										<div class="small fw-lighter">New York</div>
-									</div>
-									<div class="mx-2">|</div>
-									<div class="dropdown">
-										<button class="btn btn-link dropdown-toggle py-1 px-2" type="button"
-											data-bs-toggle="dropdown" aria-expanded="false">
-											<div class="user-profile-setting">
-												<div class="avatar-thumb">
-													<img src="https://elstar.themenate.net/img/avatars/thumb-1.jpg" alt="Avatar" />
-												</div>
-												<div class="avatar-info">
-													<div class="avatar-type">Admin</div>
-													<div class="avatar-name">John Deo</div>
-												</div>
-											</div>
-										</button>
-										<ul class="dropdown-menu">
-											<div class="user-profile-setting">
-												<div class="avatar-thumb">
-													<img src="https://elstar.themenate.net/img/avatars/thumb-1.jpg" alt="Avatar" />
-												</div>
-												<div class="avatar-info">
-													<div class="avatar-type">Admin User</div>
-													<div class="avatar-email">admin@admin.com</div>
-												</div>
-											</div>
-											<hr />
-											<li><a class="dropdown-item" href="#">Profile</a></li>
-											<li>
-												<a class="dropdown-item" href="editprofile.html">Edit Profile</a>
-											</li>
-											<li>
-												<a class="dropdown-item" href="#">Activity Log</a>
-											</li>
-											<hr />
-											<li><a class="dropdown-item" href="#">Sign Out</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</header>
-		</div>
-	</section>
-
-	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-
-	<!-- All Scripts -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-
-	<!-- Data Tables -->
-	<script src="//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-
-	<!-- Required All Three Libraries Below -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-	<script src="assets/js/main.js"></script>
-
-	<script>
-		$(document).ready(function () {
-			var elementHeight = $(".filter-area").height();
-			var negativeHeight = -0.5 * elementHeight;
-			$(".filter-area .container").css("margin-top", negativeHeight);
-
-			$(window).resize(function () {
-				var elementHeight = $(".filter-area").height();
-				var negativeHeight = -0.5 * elementHeight;
-				$(".filter-area .container").css("margin-top", negativeHeight);
-			});
-		});
-	</script>
-</body>
-
+        $(window).resize(function () {
+          var elementHeight = $(".filter-area").height();
+          var negativeHeight = -0.5 * elementHeight;
+          $(".filter-area .container").css("margin-top", negativeHeight);
+        });
+      });
+    </script>
+  </body>
 </html>
