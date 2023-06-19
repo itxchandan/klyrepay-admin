@@ -155,7 +155,7 @@
 				<div class="page-title-left-area">
 					<div class="page-title-content">
 						<h1 class="page-title">Users</h1>
-						<a href="#!" class="btn btn-primary">
+						<a href="#!" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#adduser">
 							<span>Add User</span>
 						</a>
 					</div>
@@ -722,11 +722,91 @@
 		</svg>
 	</button>
 
+
+
 	<footer class="pt-4">
 		<div class="container">
 			<p class="text-center small">© 2023 Klyre Payments. All rights reserved.</p>
 		</div>
 	</footer>
+
+	<!-- Add User Modal -->
+	<div class="modal fade" id="adduser" tabindex="-1" aria-labelledby="adduserLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h1 class="modal-title fs-5" id="adduserLabel">Add New User</h1>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="row row-cols-2">
+					<div class="mb-2">
+						<label for="FirstName" class="form-label">First Name</label>
+						<input id="FirstName" type="text" class="form-control" placeholder="First Name">
+					</div>
+					<div class="mb-2">
+						<label for="LastName" class="form-label">Last Name</label>
+						<input id="LastName" type="text" class="form-control" placeholder="Last Name">
+					</div>
+					<div class="w-100 mb-2">
+						<label for="Email" class="form-label">Email</label>
+						<input id="Email" type="email" class="form-control" placeholder="Email">
+					</div>
+					<div class="mb-2">
+						<label for="Password" class="form-label">Password</label>
+						<input id="Password" type="password" class="form-control" placeholder="Password">
+					</div>
+					<div class="mb-2">
+						<label for="VerifyPassword" class="form-label">Verify Password</label>
+						<input id="VerifyPassword" type="password" class="form-control" placeholder="Verify Password">
+					</div>
+				</div>
+				<div>
+					<div class="mb-2">
+						<input type="checkbox" id="Autogenerate" class="form-check-input">
+						<label for="Autogenerate">Autogenerate User password?</label>
+					</div>
+					<div class="mb-2">
+						<input type="checkbox" id="welcomeemail" class="form-check-input">
+						<label for="welcomeemail">Send user the welcome email?</label>
+					</div>
+				</div>
+				<div class="row row-cols-2">
+					<div>
+						<h3>Access</h3>
+						<div class="mb-2">
+							<input type="checkbox" id="administrator" class="form-check-input">
+							<label for="administrator">Administrator</label>
+						</div>
+						<div class="mb-2">
+							<input type="checkbox" id="programadministrator" class="form-check-input">
+							<label for="programadministrator">Program Administrator</label>
+						</div>
+						<div class="mb-2">
+							<input type="checkbox" id="manager" class="form-check-input">
+							<label for="manager">Manager</label>
+						</div>
+						<div class="mb-2">
+							<input type="checkbox" id="csr" class="form-check-input">
+							<label for="csr">CSR</label>
+						</div>
+						<div class="mb-2">
+							<input type="checkbox" id="manageflooralert" class="form-check-input">
+							<label for="manageflooralert">Manage Floor Alert</label>
+						</div>
+					</div>
+					<div>
+						<h3>Select Program</h3>
+						
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+			<button type="button" class="btn btn-primary">Submit</button>
+			</div>
+		</div>
+		</div>
+	</div>
 
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 
