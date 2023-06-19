@@ -11849,7 +11849,7 @@ textarea.form-control-lg {
   --nav: #9ca3af;
   --nav-active: #fff;
   --nav-bg: #1f2937;
-  --body-bg: #f1f2f7;
+  --body-bg: #f8f8f8;
 }
 
 [data-bs-theme=dark] {
@@ -12738,17 +12738,14 @@ header .theme-icon {
   cursor: pointer;
 }
 
-.sort-th:hover .sort-icon {
-  opacity: 1;
-}
-
 .sort-dsc .sort-icon {
   transform: rotate(180deg);
+  color: #000;
 }
 
 .sort-icon {
-  opacity: 0;
   height: 15px;
+  color: #898989;
 }
 
 .multi-select-filter {
