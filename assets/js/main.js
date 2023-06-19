@@ -549,4 +549,32 @@ $(document).ready(function () {
       $(".check9").removeClass("hidden");
     }
   });
+
+
+  $('#InactivityAmount').on('input', function() {
+	let inputValue = $(this).val();
+	
+	// Remove any existing dollar symbols
+	inputValue = inputValue.replace(/\$/g, "");
+	
+	// Add a dollar symbol at the beginning
+	inputValue = "$" + inputValue;
+	
+	// Update the input field value
+	$(this).val(inputValue);
+  });
+
+  $('#amount').on('input', function() {
+	let inputValue = $(this).val();
+	
+	// Remove any existing dollar symbols
+	inputValue = inputValue.replace(/\$/g, "");
+	
+	// Add a dollar symbol at the beginning
+	inputValue = "$" + inputValue;
+	
+	// Update the input field value
+	$(this).val(inputValue);
+  });
+
 });
