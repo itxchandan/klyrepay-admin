@@ -11845,7 +11845,7 @@ textarea.form-control-lg {
   }
 }
 :root {
-  --header-bg: #fff;
+  --header-bg: #f8f8f8;
   --nav: #9ca3af;
   --nav-active: #fff;
   --nav-bg: #1f2937;
@@ -11853,11 +11853,11 @@ textarea.form-control-lg {
 }
 
 [data-bs-theme=dark] {
-  --body-bg: #09121e;
   --header-bg: #111827;
   --nav: #9ca3af;
   --nav-active: #1f2937;
   --nav-bg: #fff;
+  --body-bg: #111827;
   --bs-body-color: #ededed;
 }
 
