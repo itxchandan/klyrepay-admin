@@ -301,14 +301,90 @@
 					<div class="card overflow-auto">
 						<div class="table-responsive">
 							<table class="table table-hover">
+								<div class="table-header">
+									<a href="#!" class="btn add-filters dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="false">
+										<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M9 4.5v15m6-15v15m-10.875 0h15.75c.621 0 1.125-.504 1.125-1.125V5.625c0-.621-.504-1.125-1.125-1.125H4.125C3.504 4.5 3 5.004 3 5.625v12.75c0 .621.504 1.125 1.125 1.125z" />
+										</svg>
+										<span>Columns</span>
+									</a>
+									<ul class="dropdown-menu px-2">
+										<li>
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="exampleCheck01">
+												<label class="form-check-label" for="exampleCheck01">Enrolled On</label>
+											</div>
+										</li>
+										<li>
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="exampleCheck02">
+												<label class="form-check-label" for="exampleCheck02">Program</label>
+											</div>
+										</li>
+										<li>
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="exampleCheck03">
+												<label class="form-check-label" for="exampleCheck03">Customer ID</label>
+											</div>
+										</li>
+										<li>
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="exampleCheck04">
+												<label class="form-check-label" for="exampleCheck04">First Name</label>
+											</div>
+										</li>
+										<li>
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="exampleCheck05">
+												<label class="form-check-label" for="exampleCheck05">Last Name</label>
+											</div>
+										</li>
+										<li>
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="exampleCheck06">
+												<label class="form-check-label" for="exampleCheck06">VRXID</label>
+											</div>
+										</li>
+									</ul>
+								</div>
 								<thead>
 									<tr>
-										<th scope="col">Enrolled On</th>
-										<th scope="col">Program</th>
-										<th scope="col">Customer ID</th>
-										<th scope="col">First Name</th>
-										<th scope="col">Last Name</th>
-										<th scope="col">VRXID</th>
+										<th class="sort-th sort-asc">
+											<span>Enrolled On</span>
+											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+											</svg>
+										</th>
+										<th class="sort-th sort-asc">
+											<span>Program</span>
+											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+											</svg>
+										</th>
+										<th class="sort-th sort-asc">
+											<span>Customer ID</span>
+											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+											</svg>
+										</th>
+										<th class="sort-th sort-asc">
+											<span>First Name</span>
+											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+											</svg>
+										</th>
+										<th class="sort-th sort-asc">
+											<span>Last Name</span>
+											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+											</svg>
+										</th>
+										<th class="sort-th sort-asc">
+											<span>VRXID</span>
+											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+											</svg>
+										</th>
 									</tr>
 								</thead>
 								<tbody>

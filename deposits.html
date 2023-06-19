@@ -318,12 +318,72 @@
 					<div class="card overflow-auto">
 						<div class="table-responsive">
 							<table class="table table-hover">
+								<div class="table-header">
+									<a href="#!" class="btn download-report">
+										<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+										</svg>
+										<span>Download CSV</span>
+									</a>
+									<a href="#!" class="btn add-filters dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="false">
+										<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M9 4.5v15m6-15v15m-10.875 0h15.75c.621 0 1.125-.504 1.125-1.125V5.625c0-.621-.504-1.125-1.125-1.125H4.125C3.504 4.5 3 5.004 3 5.625v12.75c0 .621.504 1.125 1.125 1.125z" />
+										</svg>
+										<span>Columns</span>
+									</a>
+									<ul class="dropdown-menu px-2">
+										<li>
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="exampleCheck01">
+												<label class="form-check-label" for="exampleCheck01">Timestamp</label>
+											</div>
+										</li>
+										<li>
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="exampleCheck02">
+												<label class="form-check-label" for="exampleCheck02">Program</label>
+											</div>
+										</li>
+										<li>
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="exampleCheck03">
+												<label class="form-check-label" for="exampleCheck03">Amount</label>
+											</div>
+										</li>
+										<li>
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="exampleCheck04">
+												<label class="form-check-label" for="exampleCheck04">Action</label>
+											</div>
+										</li>
+									</ul>
+								</div>
 								<thead>
 									<tr>
-										<th>Timestamp</th>
-										<th>Program</th>
-										<th>Amount</th>
-										<th>Action</th>
+										<th class="sort-th sort-asc">
+											<span>Timestamp</span>
+											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+											</svg>
+										</th>
+										<th class="sort-th sort-asc">
+											<span>Program</span>
+											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+											</svg>
+										</th>
+										<th class="sort-th sort-asc">
+											<span>Amount</span>
+											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+											</svg>
+										</th>
+										<th class="sort-th sort-asc">
+											<span>Action</span>
+											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+											</svg>
+										</th>
 									</tr>
 								</thead>
 								<tbody>

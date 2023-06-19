@@ -145,20 +145,7 @@
 						<h1 class="page-title">Inactivity Report</h1>
 					</div>
 				</div>
-				<div class="page-title-right-area d-none d-md-block">
-					<div class="page-title-export-button">
-						<a class="btn btn-primary" href="#!">
-							<div class="d-flex">
-								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-									stroke="currentColor" width="20px" class="me-1">
-									<path stroke-linecap="round" stroke-linejoin="round"
-										d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
-								</svg>
-								<span>Export</span>
-							</div>
-						</a>
-					</div>
-				</div>
+				<div class="page-title-right-area d-none d-md-block"></div>
 			</div>
 		</div>
 	</section>
@@ -348,17 +335,132 @@
 					<div class="card overflow-auto">
 						<div class="table-responsive">
 							<table class="table table-hover">
+								<div class="table-header">
+									<a href="#!" class="btn download-report">
+										<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+										</svg>
+										<span>Download CSV</span>
+									</a>
+									<a href="#!" class="btn add-filters dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="false">
+										<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M9 4.5v15m6-15v15m-10.875 0h15.75c.621 0 1.125-.504 1.125-1.125V5.625c0-.621-.504-1.125-1.125-1.125H4.125C3.504 4.5 3 5.004 3 5.625v12.75c0 .621.504 1.125 1.125 1.125z" />
+										</svg>
+										<span>Columns</span>
+									</a>
+									<ul class="dropdown-menu px-2">
+										<li>
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="exampleCheck01">
+												<label class="form-check-label" for="exampleCheck01">Program</label>
+											</div>
+										</li>
+										<li>
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="exampleCheck02">
+												<label class="form-check-label" for="exampleCheck02">VRXID</label>
+											</div>
+										</li>
+										<li>
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="exampleCheck03">
+												<label class="form-check-label" for="exampleCheck03">Customer ID</label>
+											</div>
+										</li>
+										<li>
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="exampleCheck04">
+												<label class="form-check-label" for="exampleCheck04">Amount</label>
+											</div>
+										</li>
+										<li>
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="exampleCheck01">
+												<label class="form-check-label" for="exampleCheck01">Load Timestamp</label>
+											</div>
+										</li>
+										<li>
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="exampleCheck01">
+												<label class="form-check-label" for="exampleCheck01">Inactive Days</label>
+											</div>
+										</li>
+										<li>
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="exampleCheck02">
+												<label class="form-check-label" for="exampleCheck02">Balance(At the time)</label>
+											</div>
+										</li>
+										<li>
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="exampleCheck03">
+												<label class="form-check-label" for="exampleCheck03">Holds(At the time)</label>
+											</div>
+										</li>
+										<li>
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="exampleCheck04">
+												<label class="form-check-label" for="exampleCheck04">Balance Now</label>
+											</div>
+										</li>
+									</ul>
+								</div>
 								<thead>
 									<tr>
-										<th>Program</th>
-										<th>VRXID</th>
-										<th>Customer ID</th>
-										<th>Amount</th>
-										<th>Load Timestamp</th>
-										<th>Inactive Days</th>
-										<th>Balance(At the time)</th>
-										<th>Holds(At the time)</th>
-										<th>Balance Now</th>
+										<th class="sort-th sort-asc">
+											<span>Program</span>
+											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+											</svg>
+										</th>
+										<th class="sort-th sort-asc">
+											<span>VRXID</span>
+											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+											</svg>
+										</th>
+										<th class="sort-th sort-asc">
+											<span>Customer ID</span>
+											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+											</svg>
+										</th>
+										<th class="sort-th sort-asc">
+											<span>Amount</span>
+											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+											</svg>
+										</th>
+										<th class="sort-th sort-asc">
+											<span>Load Timestamp</span>
+											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+											</svg>
+										</th>
+										<th class="sort-th sort-asc">
+											<span>Inactive Days</span>
+											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+											</svg>
+										</th>
+										<th class="sort-th sort-asc">
+											<span>Balance(At the time)</span>
+											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+											</svg>
+										</th>
+										<th class="sort-th sort-asc">
+											<span>Holds(At the time)</span>
+											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+											</svg>
+										</th>
+										<th class="sort-th sort-asc">
+											<span>Balance Now</span>
+											<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+											</svg>
+										</th>
 									</tr>
 								</thead>
 								<tbody>

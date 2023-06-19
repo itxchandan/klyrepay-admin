@@ -22,14 +22,14 @@
 :root {
 	--header-bg: #fff;
 	--nav: #9ca3af;
-	--nav-active: #323232;
-	--nav-bg: #6366f1;
+	--nav-active: #fff;
+	--nav-bg: #1f2937;
 }
 
 body {
 	// font-family: 'Inter', sans-serif;
 	font-family: Inter var, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
-	background: #f0f1f6;
+	background: #f1f2f7;
 }
 
 /*
@@ -94,7 +94,7 @@ header {
 /* Nav */
 .nav {
 	.nav-link {
-		color: #323232;
+		color: var(--nav-bg);
 		border-radius: 6px;
 		padding: 8px 18px;
 		font-weight: 500;
@@ -106,7 +106,7 @@ header {
 	}
 
 	.nav-link.active {
-		background-color: #323232;
+		background-color: var(--nav-bg);
 		color: #fff;
 	}
 
@@ -190,8 +190,6 @@ header {
 }
 
 .page-title {
-	color: var(--nav-active);
-
 	.btn {
 		flex: none;
 	}
@@ -323,7 +321,8 @@ header .theme-icon {
 		// border: 1px solid var(--bs-border-color);
 		border-radius: 6px;
 		padding: 10px 20px 20px 20px;
-		box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
+		// box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
+		box-shadow: 0 0 7px #c7c7c7;
 	}
 }
 
@@ -335,6 +334,7 @@ header .theme-icon {
 	box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
 	position: sticky;
 	top: 10px;
+	box-shadow: 0 0 7px #c7c7c7;
 }
 
 
@@ -473,7 +473,8 @@ header .theme-icon {
 	margin-bottom: 20px;
 	margin-top: -10px;
 	overflow: hidden;
-	box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
+	// box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
+	box-shadow: 0 0 7px #c7c7c7;
 }
 
 .tab-button-link {
@@ -572,12 +573,6 @@ header .theme-icon {
 
 	.navmenu .dropdown ul .nav-link:hover {
 		border-radius: 0;
-	}
-
-	.navmenu .dropdown ul a:hover,
-	.navmenu .dropdown ul .active:hover,
-	.navmenu .dropdown ul li:hover>a {
-		color: var(--color-nav-dropdown-hover);
 	}
 
 	.navmenu .dropdown:hover>ul {
@@ -1079,6 +1074,7 @@ header .theme-icon {
 		.select-all-checkbox {
 			font-size: 14px;
 			font-weight: bold;
+			cursor: pointer;
 		}
 	}
 
@@ -1114,4 +1110,35 @@ header .theme-icon {
 .clock-time {
 	font-size: 14px;
 	font-weight: 500;
+}
+
+.table-header {
+	background-color: var(--bs-card-cap-bg);
+	padding: 10px;
+	text-align: right;
+	border-bottom: 1px solid var(--bs-border-color);
+}
+
+.add-filters {
+	border: none;
+	box-shadow: none;
+	padding: 0 5px;
+	svg {
+		width: 25px;
+	}
+}
+
+.download-report {
+	border: none;
+	box-shadow: none;
+	padding: 0 5px;
+	svg {
+		width: 25px;
+	}
+}
+
+.checkbox-toggle-button .btn {
+	border: none;
+	box-shadow: none;
+	outline: none;
 }

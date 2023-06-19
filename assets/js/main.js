@@ -236,12 +236,12 @@ $(document).ready(function () {
 	$(".checkbox-selected").on("click", function (e) {
 		e.preventDefault();
 		$(this).find("div").toggleClass("d-none");
-		$(this).toggleClass("fw-bold");
+		$(this).toggleClass("fw-semibold");
 
 		var myArray = new Array();
 		$(this)
 			.closest(".list-group")
-			.find(".checkbox-selected.fw-bold")
+			.find(".checkbox-selected.fw-semibold")
 			.each(function () {
 				var text = $(this).text().trim().toString();
 				myArray.push(text);
@@ -253,7 +253,7 @@ $(document).ready(function () {
 			.find(".selected-item-text")
 			.val(myArrayJoin);
 
-		// $(".checkbox-selected").hasClass("fw-bold")
+		// $(".checkbox-selected").hasClass("fw-semibold")
 		//   ? $(".clear-all-checkbox").removeClass("d-none")
 		//   : $(".clear-all-checkbox").addClass("d-none");
 	});
@@ -270,7 +270,7 @@ $(document).ready(function () {
 		$(this)
 			.closest(".position-relative")
 			.siblings(".list-group")
-			.find(".checkbox-selected.fw-bold")
+			.find(".checkbox-selected.fw-semibold")
 			.addClass("d-none");
 
 		// Perform search
@@ -283,7 +283,7 @@ $(document).ready(function () {
 				if (text.indexOf(searchQuery) !== -1) {
 					$(this).removeClass("d-none");
 				} else {
-					$(this).closest(".list-group").find(".fw-bold").removeClass("d-none");
+					$(this).closest(".list-group").find(".fw-semibold").removeClass("d-none");
 				}
 			});
 	});
@@ -292,16 +292,16 @@ $(document).ready(function () {
 	$(".select-all-checkbox").on("click", function (e) {
 		e.preventDefault();
 		var boldCheckboxSelect = $(this)
-			.closest(".d-flex")
+			.closest(".multi-select-search-wrapper")
 			.siblings(".list-group")
-			.find(".checkbox-selected.fw-bold");
+			.find(".checkbox-selected.fw-semibold");
 		var checkboxSelect = $(this)
-			.closest(".d-flex")
+			.closest(".multi-select-search-wrapper")
 			.siblings(".list-group")
 			.find(".checkbox-selected");
 		if (boldCheckboxSelect.length < checkboxSelect.length) {
 			checkboxSelect.find("div").removeClass("d-none");
-			checkboxSelect.addClass("fw-bold");
+			checkboxSelect.addClass("fw-semibold");
 
 			var myArray = new Array();
 			checkboxSelect.each(function () {
@@ -319,7 +319,7 @@ $(document).ready(function () {
 			// $(".clear-all-checkbox").removeClass("d-none");
 		} else {
 			checkboxSelect.find("div").addClass("d-none");
-			checkboxSelect.removeClass("fw-bold");
+			checkboxSelect.removeClass("fw-semibold");
 
 			var myArray = new Array();
 			boldCheckboxSelect.each(function () {
@@ -343,7 +343,7 @@ $(document).ready(function () {
 	$(".clear-all-checkbox").on("click", function (e) {
 		e.preventDefault();
 		$(".checkbox-selected").find("div").addClass("d-none");
-		$(".checkbox-selected").removeClass("fw-bold");
+		$(".checkbox-selected").removeClass("fw-semibold");
 		$(this).closest(".position-relative").find(".selected-item-text").val("");
 
 		$(".search-checkbox").val("").trigger("input"); // re-render the #search-checkbox
@@ -472,3 +472,16 @@ document.querySelectorAll('.navmenu .has-dropdown i').forEach(navmenu => {
 });
 
 // // Toggle Table
+
+
+// Slide 12 Gray Scale
+
+$(document).ready(function() {
+	$('#exampleCheck1').change(function() {
+		if ($(this).is(':checked')) {
+			$('.check1').addClass('hidden');
+		} else {
+			$('.check1').removeClass('hidden');
+		}
+	});
+});
