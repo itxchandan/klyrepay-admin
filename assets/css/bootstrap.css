@@ -12292,6 +12292,10 @@ header .theme-icon {
   .navmenu li {
     position: relative;
   }
+  .navmenu li.has-dropdown:hover > .nav-link {
+    color: var(--nav-active);
+    background-color: var(--nav-bg);
+  }
   .navmenu a,
   .navmenu a:focus {
     display: flex;
@@ -12339,7 +12343,7 @@ header .theme-icon {
   }
   .navmenu .dropdown:hover > ul {
     opacity: 1;
-    top: calc(100% + 10px);
+    top: calc(100% + 5px);
     visibility: visible;
   }
   .navmenu .dropdown .dropdown ul {
@@ -12844,6 +12848,11 @@ header .theme-icon {
   font-size: 14px;
   font-weight: 600;
   padding: 0 5px;
+}
+
+.btn-link.dropdown-toggle:hover,
+.btn-link.dropdown-toggle.show {
+  color: inherit;
 }
 
 /*# sourceMappingURL=bootstrap.css.map */

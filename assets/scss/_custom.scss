@@ -511,18 +511,20 @@ header .theme-icon {
 @media (min-width: 1200px) {
 	.navmenu {
 		padding: 0;
-	}
-
-	.navmenu ul {
-		margin: 0;
-		padding: 0;
-		display: flex;
-		list-style: none;
-		align-items: center;
-	}
-
-	.navmenu li {
-		position: relative;
+		ul {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			list-style: none;
+			align-items: center;
+		}
+		li {
+			position: relative;
+		}
+		li.has-dropdown:hover > .nav-link {
+			color: var(--nav-active);
+			background-color: var(--nav-bg);
+		}
 	}
 
 	.navmenu a,
@@ -579,7 +581,7 @@ header .theme-icon {
 
 	.navmenu .dropdown:hover>ul {
 		opacity: 1;
-		top: calc(100% + 10px);
+		top: calc(100% + 5px);
 		visibility: visible;
 	}
 
@@ -1169,4 +1171,9 @@ header .theme-icon {
 	font-size: 14px;
 	font-weight: 600;
 	padding: 0 5px;
+}
+
+.btn-link.dropdown-toggle:hover,
+.btn-link.dropdown-toggle.show {
+	color: inherit;
 }
