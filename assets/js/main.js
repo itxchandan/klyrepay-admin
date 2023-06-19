@@ -484,4 +484,68 @@ $(document).ready(function() {
 			$('.check1').removeClass('hidden');
 		}
 	});
+
+	$('#exampleCheck2').change(function() {
+		if ($(this).is(':checked')) {
+			$('.check2').addClass('hidden');
+		} else {
+			$('.check2').removeClass('hidden');
+		}
+	});
+
+	$('#exampleCheck3').change(function() {
+		if ($(this).is(':checked')) {
+			$('.check3').addClass('hidden');
+		} else {
+			$('.check3').removeClass('hidden');
+		}
+	});
+
+	$('#exampleCheck4').change(function() {
+		if ($(this).is(':checked')) {
+			$('.check4').addClass('hidden');
+		} else {
+			$('.check4').removeClass('hidden');
+		}
+	});
+
+	$('#exampleCheck5').change(function() {
+		if ($(this).is(':checked')) {
+			$('.check5').addClass('hidden');
+		} else {
+			$('.check5').removeClass('hidden');
+		}
+	});
+
+	$('#exampleCheck6').change(function() {
+		if ($(this).is(':checked')) {
+			$('.check6').addClass('hidden');
+		} else {
+			$('.check6').removeClass('hidden');
+		}
+	});
+
+	$('#exampleCheck7').change(function() {
+		if ($(this).is(':checked')) {
+			$('.check7').addClass('hidden');
+		} else {
+			$('.check7').removeClass('hidden');
+		}
+	});
+
+	$('#exampleCheck8').change(function() {
+		if ($(this).is(':checked')) {
+			$('.check8').addClass('hidden');
+		} else {
+			$('.check8').removeClass('hidden');
+		}
+	});
+
+	$('#exampleCheck9').change(function() {
+		if ($(this).is(':checked')) {
+			$('.check9').addClass('hidden');
+		} else {
+			$('.check9').removeClass('hidden');
+		}
+	});
 });
