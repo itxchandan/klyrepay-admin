@@ -1165,3 +1165,18 @@ header .theme-icon {
 .adduser-modal-card {
 	background-color: var(--adduser-modal-card);
 }
+
+/* Start Customer Details & Transactions */
+[class*="badge-"] {
+	border-radius: 20px;
+	letter-spacing: .3px;
+	padding: 5px 10px;
+}
+.badge-success {
+	background-color: #02cc99;
+}
+.badge-warning {
+	--bs-text-opacity: 1;
+	background-color: rgba(var(--bs-danger-rgb), var(--bs-text-opacity));
+}
+/* End Customer Details & Transactions */
