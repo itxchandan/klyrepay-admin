@@ -577,4 +577,24 @@ $(document).ready(function () {
 	$(this).val(inputValue);
   });
 
+	$("#selectedprograms").change(function () {
+		if ($(this).is(":checked")) {
+		  $(".selectprogram").removeClass("d-none");
+		} else {
+		  $(".selectprogram").addClass("d-none");
+		}
+	});
+
+	$("#allprograms").change(function () {
+		if ($(this).is(":checked")) {
+		  $(".selectprogram").addClass("d-none");
+		} else {
+		  $(".selectprogram").removeClass("d-none");
+		}
+	});
+
 });
+
+
+
+// .selectprogram

@@ -11850,6 +11850,7 @@ textarea.form-control-lg {
   --nav-active: #fff;
   --nav-bg: #1f2937;
   --body-bg: #f8f8f8;
+  --adduser-modal-card: #f8f9fa;
 }
 
 [data-bs-theme=dark] {
@@ -11859,6 +11860,7 @@ textarea.form-control-lg {
   --nav-bg: #fff;
   --body-bg: #111827;
   --bs-body-color: #ededed;
+  --adduser-modal-card: #39414c;
 }
 
 @font-face {
@@ -12837,6 +12839,14 @@ header .theme-icon {
 .btn-link.dropdown-toggle:hover,
 .btn-link.dropdown-toggle.show {
   color: inherit;
+}
+
+.form-check-input {
+  margin-top: 0;
+}
+
+.adduser-modal-card {
+  background-color: var(--adduser-modal-card);
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
