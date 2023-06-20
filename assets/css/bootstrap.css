@@ -12841,10 +12841,6 @@ header .theme-icon {
   color: inherit;
 }
 
-.form-check-input {
-  margin-top: 0;
-}
-
 .adduser-modal-card {
   background-color: var(--adduser-modal-card);
 }
