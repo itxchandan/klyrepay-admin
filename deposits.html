@@ -137,7 +137,9 @@
 				<div class="page-title-left-area">
 					<div class="page-title-content">
 						<h1 class="page-title">Deposits Report</h1>
-						<a href="#!" class="btn btn-primary">Add Deposits</a>
+						<a href="#!" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#adddeposits">
+							<span>Add Deposits</span>
+						</a>
 					</div>
 				</div>
 				<div class="page-title-right-area d-none d-md-block">
@@ -592,6 +594,60 @@
 			</p>
 		</div>
 	</footer>
+
+	<!-- Add User Modal -->
+	<div class="modal fade" id="adddeposits" tabindex="-1" aria-labelledby="adddepositsLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title fs-5" id="adddepositsLabel">Add Deposits</h2>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="mb-2">
+						<label for="areyousure" class="form-label">Are you sure?</label>
+						<select class="form-select" id="areyousure">
+							<option selected>No</option>
+							<option value="1">Yes</option>
+						</select>
+					</div>
+					<div class="mb-2">
+						<label for="timestamp" class="form-label">Timestamp</label>
+						<input id="timestamp" type="datetime-local" class="form-control">
+					</div>
+					<div class="w-100 mb-2">
+						<label for="Email" class="form-label">Program</label>
+						<select id="Email" class="form-select">
+							<option selected>Select Program</option>
+							<option value="1">Xtandi</option>
+							<option value="2">Xospata</option>
+							<option value="3">Pegcetacoplan</option>
+							<option value="4">BMS Virtual Copay</option>
+							<option value="5">Zeposia</option>
+							<option value="6">Sprycel</option>
+							<option value="7">Orencia</option>
+							<option value="8">Acthar Gel</option>
+							<option value="9">Aubagio</option>
+							<option value="10">Dupixent</option>
+							<option value="11">Kevzara</option>
+							<option value="12">Vertex</option>
+							<option value="13">Mavacamten</option>
+							<option value="14">Nintedanib</option>
+							<option value="15">Exelixis</option>
+							<option value="16">EMD Serono</option>
+						</select>
+					</div>
+					<div class="mb-2">
+						<label for="enteramount" class="form-label">Enter amount</label>
+						<input id="enteramount" type="text" class="form-control" placeholder="Amount">
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary">Submit</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 
