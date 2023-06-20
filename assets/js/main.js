@@ -1,4 +1,4 @@
-// New York Time
+// New York Time START
 window.onload = displayClock();
 
 function displayClock() {
@@ -22,6 +22,8 @@ function displayClock() {
   $("#clock").text(final_string);
   setTimeout(displayClock, 1000);
 }
+
+// New York Time END
 
 $(document).ready(function () {
   // Theme Mode
@@ -594,7 +596,3 @@ $(document).ready(function () {
 	});
 
 });
-
-
-
-// .selectprogram
