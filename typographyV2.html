@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klyrepay - Typography</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  <!-- Pivot Table -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.23.0/pivot.min.css" />
+  <!-- Data Tables -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" />
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <!-- Mulit Checkbox With Search -->
+  <div class="d-flex container justify-content-between">
+    <section class="my-5">
+      <h3 class="text-center">Mulit Checkbox With Search</h3>
+      <div class="container base-container">
+        <div class="w-full base-container">
+          <div class="position-relative base-container">
+            <!-- toggle button -->
+            <input type="text" class="selected-item-text pe-5 form-control position-absolute z-1" value=""
+              placeholder="16 Selected" />
+
+            <div class="checkbox-toggle-button d-block position-absolute z-2" style="width: 100%">
+              <button class="btn text-end" style="width: 100%">
+                <i class="fa-solid fa-angle-down"></i>
+              </button>
+              <button class="d-none btn text-end" style="width: 100%">
+                <i class="fa-solid fa-angle-up"></i>
+              </button>
+            </div>
+
+            <!-- Checkbox Result -->
+            <div style="max-height: 500px"
+              class="checkbox-container z-3 overflow-y-scroll d-none position-absolute mt-5 form-control">
+              <!-- Select All & Clear All -->
+              <div class="d-flex">
+                <div class="select-all-checkbox mx-3 my-2 cursor-pointer">
+                  Select All
+                </div>
+              </div>
+
+              <div class="position-relative">
+                <div class="border-0 position-absolute btn end-0">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <input type="text" class="search-checkbox form-control pe-5" placeholder="Search ..." />
+              </div>
+              <div class="available-items list-group mt-2">
+                <button type="button"
+                  class="checkbox-selected list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                  aria-current="true">
+                  Alpine
+                  <input type="hidden" name="checkbox_array[]" class="checkbox-array" value="1" />
+                  <div class="d-none">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </button>
+                <button type="button"
+                  class="checkbox-selected list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                  aria-current="true">
+                  Laravel
+                  <input type="hidden" name="checkbox_array[]" class="checkbox-array" value="1" />
+                  <div class="d-none">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </button>
+                <button type="button"
+                  class="checkbox-selected list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                  aria-current="true">
+                  Result 1
+                  <input type="hidden" name="checkbox_array[]" class="checkbox-array" value="1" />
+                  <div class="d-none">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </button>
+                <button type="button"
+                  class="checkbox-selected list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                  aria-current="true">
+                  Result 2
+                  <input type="hidden" name="checkbox_array[]" class="checkbox-array" value="1" />
+                  <div class="d-none">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="my-5">
+      <h3 class="text-center">Mulit Checkbox With Search</h3>
+      <div class="container base-container">
+        <div class="w-full base-container">
+          <div class="position-relative base-container">
+            <!-- toggle button -->
+            <input type="text" class="selected-item-text pe-5 form-control position-absolute z-1" value=""
+              placeholder="16 Selected" />
+
+            <div class="checkbox-toggle-button d-block position-absolute z-2" style="width: 100%">
+              <button class="btn text-end" style="width: 100%">
+                <i class="fa-solid fa-angle-down"></i>
+              </button>
+              <button class="d-none btn text-end" style="width: 100%">
+                <i class="fa-solid fa-angle-up"></i>
+              </button>
+            </div>
+
+            <!-- Checkbox Result -->
+            <div style="max-height: 500px"
+              class="checkbox-container z-3 overflow-y-scroll d-none position-absolute mt-5 form-control">
+              <!-- Select All & Clear All -->
+              <div class="d-flex">
+                <div class="select-all-checkbox mx-3 my-2 cursor-pointer">
+                  Select All
+                </div>
+              </div>
+
+              <div class="position-relative">
+                <div class="border-0 position-absolute btn end-0">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <input type="text" class="search-checkbox form-control pe-5" placeholder="Search ..." />
+              </div>
+              <div class="available-items list-group mt-2">
+                <button type="button"
+                  class="checkbox-selected list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                  aria-current="true">
+                  Alpine
+                  <input type="hidden" name="checkbox_array[]" class="checkbox-array" value="1" />
+                  <div class="d-none">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </button>
+                <button type="button"
+                  class="checkbox-selected list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                  aria-current="true">
+                  Laravel
+                  <input type="hidden" name="checkbox_array[]" class="checkbox-array" value="1" />
+                  <div class="d-none">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </button>
+                <button type="button"
+                  class="checkbox-selected list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                  aria-current="true">
+                  Result 1
+                  <input type="hidden" name="checkbox_array[]" class="checkbox-array" value="1" />
+                  <div class="d-none">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </button>
+                <button type="button"
+                  class="checkbox-selected list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                  aria-current="true">
+                  Result 2
+                  <input type="hidden" name="checkbox_array[]" class="checkbox-array" value="1" />
+                  <div class="d-none">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="my-5">
+      <h3 class="text-center">Mulit Checkbox With Search</h3>
+      <div class="container base-container">
+        <div class="w-full base-container">
+          <div class="position-relative base-container">
+            <!-- toggle button -->
+            <input type="text" class="selected-item-text pe-5 form-control position-absolute z-1" value=""
+              placeholder="16 Selected" />
+
+            <div class="checkbox-toggle-button d-block position-absolute z-2" style="width: 100%">
+              <button class="btn text-end" style="width: 100%">
+                <i class="fa-solid fa-angle-down"></i>
+              </button>
+              <button class="d-none btn text-end" style="width: 100%">
+                <i class="fa-solid fa-angle-up"></i>
+              </button>
+            </div>
+
+            <!-- Checkbox Result -->
+            <div style="max-height: 500px"
+              class="checkbox-container z-3 overflow-y-scroll d-none position-absolute mt-5 form-control">
+              <!-- Select All & Clear All -->
+              <div class="d-flex">
+                <div class="select-all-checkbox mx-3 my-2 cursor-pointer">
+                  Select All
+                </div>
+              </div>
+
+              <div class="position-relative">
+                <div class="border-0 position-absolute btn end-0">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <input type="text" class="search-checkbox form-control pe-5" placeholder="Search ..." />
+              </div>
+              <div class="available-items list-group mt-2">
+                <button type="button"
+                  class="checkbox-selected list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                  aria-current="true">
+                  Alpine
+                  <input type="hidden" name="checkbox_array[]" class="checkbox-array" value="1" />
+                  <div class="d-none">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </button>
+                <button type="button"
+                  class="checkbox-selected list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                  aria-current="true">
+                  Laravel
+                  <input type="hidden" name="checkbox_array[]" class="checkbox-array" value="1" />
+                  <div class="d-none">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </button>
+                <button type="button"
+                  class="checkbox-selected list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                  aria-current="true">
+                  Result 1
+                  <input type="hidden" name="checkbox_array[]" class="checkbox-array" value="1" />
+                  <div class="d-none">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </button>
+                <button type="button"
+                  class="checkbox-selected list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                  aria-current="true">
+                  Result 2
+                  <input type="hidden" name="checkbox_array[]" class="checkbox-array" value="1" />
+                  <div class="d-none">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- All Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Pivot Table -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.23.0/pivot.min.js"></script>
+
+  <!-- Data Tables -->
+  <script src="//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+  <!-- Required All Three Libraries Below -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <script src="assets/js/mainV2.js"></script>
+</body>
+
+</html>
