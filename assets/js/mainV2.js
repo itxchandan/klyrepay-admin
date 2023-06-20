@@ -109,5 +109,38 @@ $(document).ready(function () {
 
   // ********** Mulit Checkbox With Search [End] **********
 
+  // ********** Table Column Hide And Show [Start] **********
+  var tableAllFilterCheckbox = $('.table-all-filter-checkbox');
+  var tableAllHeads = $('.table-all-heads');
+  var tableAllBody = $('.table-all-body');
+
+  tableAllFilterCheckbox.on('change', 'input[type="checkbox"]', function () {
+    var inputs = tableAllFilterCheckbox.find('input[type="checkbox"]');
+    var checkedIndices = [];
+    var uncheckedIndices = [];
+    inputs.each(function () {
+      if ($(this).prop('checked')) {
+        checkedIndices.push(inputs.index(this));
+      } else {
+        uncheckedIndices.push(inputs.index(this));
+      }
+    });
+
+    checkedIndices.forEach(function (index) {
+      tableAllHeads.children().eq(index).addClass('d-none');
+      tableAllBody.children().each(function () {
+        $(this).children().eq(index).addClass('d-none');
+      });
+    });
+    uncheckedIndices.forEach(function (index) {
+      tableAllHeads.children().eq(index).removeClass('d-none');
+      tableAllBody.children().each(function () {
+        $(this).children().eq(index).removeClass('d-none');
+      });
+    });
+  });
+
+  // ********** Table Column Hide And Show [End] **********
   // End Document Ready
+
 });
