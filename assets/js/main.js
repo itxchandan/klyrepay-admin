@@ -595,4 +595,10 @@ $(document).ready(function () {
 		}
 	});
 
+	$(".custom-hide-info-btn").click(function () {
+    $( ".custom-hide-info" ).toggleClass("blur");
+    $( ".custom-hide-info-btn" ).toggleClass("active");
+	});
+  
+
 });
