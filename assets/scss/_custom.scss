@@ -1252,3 +1252,8 @@ header .theme-icon {
 	background : var(--login-form-bg);
 	width: 320px;
 }
+
+body .container .custom-accordion-button {
+	@extend .cursor-pointer;
+	background: none;
+}
