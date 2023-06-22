@@ -213,7 +213,7 @@ hr {
   opacity: 0.25;
 }
 
-h6, .h6, .customer-label, h5, .h5, .customer-label-value, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+h6, .h6, h5, .h5, .customer-label-value, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -251,7 +251,7 @@ h5, .h5, .customer-label-value {
   font-size: 1.13rem;
 }
 
-h6, .h6, .customer-label {
+h6, .h6 {
   font-size: 1rem;
 }
 
@@ -12870,6 +12870,7 @@ header .theme-icon {
 .customer-label {
   color: #958f8f;
   margin-bottom: 2px;
+  font-size: 14px;
 }
 .customer-label svg {
   width: 25px;
