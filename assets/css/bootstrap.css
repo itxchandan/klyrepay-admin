@@ -213,7 +213,7 @@ hr {
   opacity: 0.25;
 }
 
-h6, .h6, .customer-label, h5, .h5, h4, .h4, .customer-label-value, h3, .h3, h2, .h2, h1, .h1 {
+h6, .h6, .customer-label, h5, .h5, .customer-label-value, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -243,11 +243,11 @@ h3, .h3 {
   font-size: 1.25rem;
 }
 
-h4, .h4, .customer-label-value {
+h4, .h4 {
   font-size: 1.15rem;
 }
 
-h5, .h5 {
+h5, .h5, .customer-label-value {
   font-size: 1.13rem;
 }
 
@@ -7375,7 +7375,7 @@ textarea.form-control-lg {
   transform: translateY(-50%) !important;
 }
 
-.border {
+.border, .login-form {
   border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
 }
 
@@ -7846,12 +7846,12 @@ textarea.form-control-lg {
   margin-bottom: 0.25rem !important;
 }
 
-.my-2, .customer-details {
+.my-2 {
   margin-top: 0.5rem !important;
   margin-bottom: 0.5rem !important;
 }
 
-.my-3 {
+.my-3, .customer-details {
   margin-top: 1rem !important;
   margin-bottom: 1rem !important;
 }
@@ -7999,7 +7999,7 @@ textarea.form-control-lg {
   padding: 1rem !important;
 }
 
-.p-4 {
+.p-4, .login-form {
   padding: 1.5rem !important;
 }
 
@@ -8279,7 +8279,7 @@ textarea.form-control-lg {
   font-weight: 300 !important;
 }
 
-.fw-normal, .customer-label {
+.fw-normal, .badge, .customer-label {
   font-weight: 400 !important;
 }
 
@@ -8823,7 +8823,7 @@ textarea.form-control-lg {
   border-radius: var(--bs-border-radius) !important;
 }
 
-.rounded-3 {
+.rounded-3, .login-form {
   border-radius: var(--bs-border-radius-lg) !important;
 }
 
@@ -11846,21 +11846,27 @@ textarea.form-control-lg {
 }
 :root {
   --header-bg: #fff;
-  --nav: #9ca3af;
-  --nav-active: #fff;
-  --nav-bg: #1f2937;
+  --nav: rgb(17,24,39);
+  --nav-active: rgb(17,24,39);
+  --nav-bg: rgb(243,244,246);
+  --nav-dropdown-bg: #fff;
   --body-bg: #fafafa;
   --adduser-modal-card: #f8f9fa;
+  --dropdown-shaow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px;
+  --login-form-bg: #fff;
 }
 
 [data-bs-theme=dark] {
   --header-bg: #1f2937;
-  --nav: #9ca3af;
-  --nav-active: #1f2937;
-  --nav-bg: #fff;
+  --nav: rgb(156,163,175);
+  --nav-active: rgb(243,244,246);
+  --nav-bg: rgb(55,65,81);
+  --nav-dropdown-bg: rgb(55,65,81);
   --body-bg: #111827;
   --bs-body-color: #ededed;
   --adduser-modal-card: #39414c;
+  --dropdown-shaow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  --login-form-bg: rgb(31,41,55);
 }
 
 @font-face {
@@ -11929,6 +11935,9 @@ header .header-right-area {
   text-align: right;
   display: none;
 }
+header .header-right-area .dropdown-toggle::after {
+  display: none;
+}
 header .separator > div:not(:last-child) {
   border-right: 1px solid #ddd;
   padding-right: 15px;
@@ -11942,10 +11951,10 @@ header .separator > div:not(:last-child) {
 }
 /* Nav */
 .nav .nav-link {
-  color: var(--nav-bg);
+  color: var(--nav);
   border-radius: 6px;
   padding: 8px 18px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 14px;
 }
 .nav > ul > li:not(:last-child) {
@@ -12016,9 +12025,6 @@ header .separator > div:not(:last-child) {
   padding: 40px 0 100px;
 }
 
-.page-title {
-  color: var(--nav-bg);
-}
 .page-title .btn {
   flex: none;
 }
@@ -12328,20 +12334,18 @@ header .theme-icon {
     transition: 0.3s;
     border-radius: 4px;
     z-index: 99;
-    background-color: var(--bs-body-bg);
-    border: 1px solid var(--bs-border-color-translucent);
-  }
-  .navmenu .dropdown ul li + li {
-    border-top: 1px solid var(--bs-border-color-translucent);
+    background-color: var(--nav-dropdown-bg);
+    box-shadow: var(--dropdown-shaow);
   }
   .navmenu .dropdown ul li {
     min-width: 200px;
   }
   .navmenu .dropdown ul a {
-    padding: 10px 20px;
+    padding: 7px 15px;
     text-transform: none;
     color: var(--bs-body-color);
-    border-radius: 0;
+    border-radius: 6px;
+    margin: 5px;
   }
   .navmenu .dropdown ul a i {
     font-size: 12px;
@@ -12412,12 +12416,6 @@ header .theme-icon {
   }
   .navmenu .dd-box-shadow {
     box-shadow: 0 0 30px rgba(var(--color-default-rgb), 0.15);
-  }
-  .navmenu .dd-box-shadow li:first-child > a {
-    border-radius: 4px 4px 0 0;
-  }
-  .navmenu .dd-box-shadow li:last-child > a {
-    border-radius: 0 0 4px 4px;
   }
 }
 /* Mobile Navigation */
@@ -12901,6 +12899,11 @@ header .theme-icon {
 }
 .customer-card .badge {
   flex: none;
+}
+
+.login-form {
+  background: var(--login-form-bg);
+  width: 320px;
 }
 
 /*# sourceMappingURL=bootstrap.css.map */

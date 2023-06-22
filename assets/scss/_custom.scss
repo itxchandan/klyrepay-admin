@@ -1,21 +1,27 @@
 :root {
 	--header-bg: #fff;
-	--nav: #9ca3af;
-	--nav-active: #fff;
-	--nav-bg: #1f2937;
+	--nav: rgb(17,24,39);
+	--nav-active: rgb(17,24,39);
+	--nav-bg: rgb(243,244,246);
+	--nav-dropdown-bg: #fff;
 	--body-bg: #fafafa;
 	--adduser-modal-card: #f8f9fa;
+	--dropdown-shaow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px;
+	--login-form-bg: #fff;
 }
 
 
 [data-bs-theme="dark"] {
 	--header-bg: #1f2937;
-	--nav: #9ca3af;
-	--nav-active: #1f2937;
-	--nav-bg: #fff;
+	--nav: rgb(156,163,175);
+	--nav-active: rgb(243,244,246);
+	--nav-bg: rgb(55,65,81);
+	--nav-dropdown-bg: rgb(55,65,81);
 	--body-bg: #111827;
 	--bs-body-color: #ededed;
 	--adduser-modal-card: #39414c;
+	--dropdown-shaow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+	--login-form-bg: rgb(31,41,55);
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
@@ -93,6 +99,9 @@ header {
 	.header-right-area {
 		text-align: right;
 		display: none;
+		.dropdown-toggle::after {
+			display: none;
+		}
 	}
 
 	.separator>div:not(:last-child) {
@@ -111,10 +120,10 @@ header {
 /* Nav */
 .nav {
 	.nav-link {
-		color: var(--nav-bg);
+		color: var(--nav);
 		border-radius: 6px;
 		padding: 8px 18px;
-		font-weight: 500;
+		font-weight: 600;
 		font-size: 14px;
 	}
 
@@ -207,7 +216,6 @@ header {
 }
 
 .page-title {
-	color: var(--nav-bg);
 	.btn {
 		flex: none;
 	}
@@ -562,12 +570,8 @@ header .theme-icon {
 		transition: 0.3s;
 		border-radius: 4px;
 		z-index: 99;
-		background-color: var(--bs-body-bg);
-		border: 1px solid var(--bs-border-color-translucent);
-	}
-
-	.navmenu .dropdown ul li + li {
-		border-top: 1px solid var(--bs-border-color-translucent);
+		background-color: var(--nav-dropdown-bg);
+		box-shadow: var(--dropdown-shaow);
 	}
 
 	.navmenu .dropdown ul li {
@@ -575,10 +579,11 @@ header .theme-icon {
 	}
 
 	.navmenu .dropdown ul a {
-		padding: 10px 20px;
+		padding: 7px 15px;
 		text-transform: none;
 		color: var(--bs-body-color);
-		border-radius: 0;
+		border-radius: 6px;
+		margin: 5px;
 	}
 
 	.navmenu .dropdown ul a i {
@@ -663,12 +668,6 @@ header .theme-icon {
 
 	.navmenu .dd-box-shadow {
 		box-shadow: 0 0 30px rgba(var(--color-default-rgb), .15);
-		li:first-child > a {
-			border-radius: 4px 4px 0 0;
-		}
-		li:last-child > a {
-			border-radius: 0 0 4px 4px;
-		}
 	}
 }
 
@@ -1191,7 +1190,7 @@ header .theme-icon {
 .customer-details {
 	@extend .d-flex;
 	@extend .align-items-start;
-	@extend .my-2;	  
+	@extend .my-3;
 }
 
 .customer-label-svg svg {
@@ -1210,7 +1209,7 @@ header .theme-icon {
 }
 
 .customer-label-value {
-	@extend .h4;
+	@extend .h5;
 	@extend .m-0;
 }
 
@@ -1238,4 +1237,18 @@ header .theme-icon {
 	.badge {
 		flex: none;
 	}
+}
+
+.badge {
+	@extend .fw-normal;
+}
+
+// Login Form
+
+.login-form {
+	@extend .p-4;
+	@extend .rounded-3;
+	@extend .border;
+	background : var(--login-form-bg);
+	width: 320px;
 }
