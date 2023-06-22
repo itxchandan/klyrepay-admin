@@ -11854,6 +11854,10 @@ textarea.form-control-lg {
   --adduser-modal-card: #f8f9fa;
   --dropdown-shaow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px;
   --login-form-bg: #fff;
+  --tab-wrapper-bg: #fff;
+  --tab-button-active: rgb(107,114,128);
+  --tab-button-active-text: #fff;
+  --tab-button-border-bottom: #323232;
 }
 
 [data-bs-theme=dark] {
@@ -11867,6 +11871,10 @@ textarea.form-control-lg {
   --adduser-modal-card: #39414c;
   --dropdown-shaow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
   --login-form-bg: rgb(31,41,55);
+  --tab-wrapper-bg: rgb(55,65,81);
+  --tab-button-active: rgb(107,114,128);
+  --tab-button-active-text: #fff;
+  --tab-button-border-bottom: #323232;
 }
 
 @font-face {
@@ -12263,8 +12271,8 @@ header .theme-icon {
 }
 
 .tab-button-wrapper {
-  background-color: var(--bs-card-bg);
-  border-radius: 4px;
+  background-color: var(--tab-wrapper-bg);
+  border-radius: 8px;
   display: inline-flex;
   margin-bottom: 20px;
   margin-top: -10px;
@@ -12273,8 +12281,7 @@ header .theme-icon {
 }
 
 .tab-button-link {
-  padding: 11px 35px;
-  border-bottom: 4px solid var(--bs-border-color-translucent);
+  padding: 10px 25px;
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
@@ -12284,8 +12291,8 @@ header .theme-icon {
   border-right: 1px solid var(--bs-border-color-translucent);
 }
 .tab-button-link.active {
-  color: var(--nav-bg);
-  border-bottom-color: var(--nav-bg);
+  color: var(--tab-button-active-text);
+  background-color: var(--tab-button-active);
 }
 
 /* Desktop Navigation */
