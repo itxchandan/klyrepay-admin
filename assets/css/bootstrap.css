@@ -12813,22 +12813,19 @@ header .theme-icon {
   border-bottom: 1px solid var(--bs-border-color);
 }
 
-.add-filters {
-  border: none;
-  box-shadow: none;
-  padding: 0 5px;
-}
-.add-filters svg {
-  width: 25px;
-}
-
+.add-filters,
 .download-report {
   border: none;
   box-shadow: none;
   padding: 0 5px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
 }
+.add-filters svg,
 .download-report svg {
   width: 25px;
+  margin-right: 2px;
 }
 
 .checkbox-toggle-button .btn {
@@ -12871,7 +12868,11 @@ header .theme-icon {
 
 /* End Customer Details & Transactions */
 .customer-label-svg svg {
-  width: 30px;
+  width: 45px;
+  border-radius: 6px;
+  stroke: var(--nav-active);
+  background: var(--nav-bg);
+  padding: 10px;
 }
 
 .customer-label {
@@ -12916,6 +12917,20 @@ header .theme-icon {
 
 body .container .custom-accordion-button {
   background: none;
+}
+
+.blur {
+  filter: blur(4px);
+}
+
+.custom-hide-info-btn .close-eye-svg {
+  display: none;
+}
+.custom-hide-info-btn.active .open-eye-svg {
+  display: none;
+}
+.custom-hide-info-btn.active .close-eye-svg {
+  display: block;
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
