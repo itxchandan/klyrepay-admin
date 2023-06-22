@@ -1,15 +1,15 @@
 :root {
-	--header-bg: #f8f8f8;
+	--header-bg: #fff;
 	--nav: #9ca3af;
 	--nav-active: #fff;
 	--nav-bg: #1f2937;
-	--body-bg: #f8f8f8;
+	--body-bg: #fafafa;
 	--adduser-modal-card: #f8f9fa;
 }
 
 
 [data-bs-theme="dark"] {
-	--header-bg: #111827;
+	--header-bg: #1f2937;
 	--nav: #9ca3af;
 	--nav-active: #1f2937;
 	--nav-bg: #fff;
@@ -57,7 +57,11 @@ body {
 header {
 	background-color: var(--header-bg);
 	padding: 6px 0;
+	box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
 	// color: #fff;
+	position: sticky;
+	top: 0;
+	z-index: 9;
 
 	a {
 		color: var(--nav-link);
@@ -197,7 +201,7 @@ header {
 
 /* Page Title Section */
 .page-title-section {
-	background-color: var(--header-bg);
+	// background-color: var(--header-bg);
 	color: var(--nav);
 	padding: 40px 0 100px;
 }
@@ -347,7 +351,7 @@ header .theme-icon {
 	padding: 10px 20px 20px 20px;
 	// box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
 	position: sticky;
-	top: 10px;
+	top: 110px;
 	// box-shadow: 0 0 7px #c7c7c7;
 	border: 1px solid var(--bs-border-color-translucent);
 }
@@ -1170,7 +1174,7 @@ header .theme-icon {
 [class*="badge-"] {
 	border-radius: 20px;
 	letter-spacing: .3px;
-	padding: 5px 10px;
+	padding: 5px 10px 3px;
 }
 .badge-success {
 	background-color: #02cc99;
@@ -1181,7 +1185,35 @@ header .theme-icon {
 }
 /* End Customer Details & Transactions */
 
-/* Start Customers card */
+
+// Customer Details
+
+.customer-details {
+	@extend .d-flex;
+	@extend .align-items-start;
+	@extend .my-2;	  
+}
+
+.customer-label-svg svg {
+	@extend .me-2;
+	width: 30px;
+}
+
+.customer-label {
+	@extend .h6;
+	@extend .fw-normal;
+	color: #958f8f;
+	margin-bottom: 2px;
+	svg {
+		width: 25px;
+	}	
+}
+
+.customer-label-value {
+	@extend .h4;
+	@extend .m-0;
+}
+
 .customer-card {
 	display: flex;
 	gap: 20px;
@@ -1207,4 +1239,3 @@ header .theme-icon {
 		flex: none;
 	}
 }
-/* End Customers card */
