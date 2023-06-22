@@ -1140,21 +1140,17 @@ header .theme-icon {
 	border-bottom: 1px solid var(--bs-border-color);
 }
 
-.add-filters {
-	border: none;
-	box-shadow: none;
-	padding: 0 5px;
-	svg {
-		width: 25px;
-	}
-}
-
+.add-filters,
 .download-report {
 	border: none;
 	box-shadow: none;
 	padding: 0 5px;
+	font-weight: 500;
+	display: inline-flex;
+	align-items: center;
 	svg {
 		width: 25px;
+		margin-right: 2px;
 	}
 }
 
@@ -1206,7 +1202,11 @@ header .theme-icon {
 
 .customer-label-svg svg {
 	@extend .me-2;
-	width: 30px;
+	width: 45px;
+	border-radius: 6px;
+    stroke: var(--nav-active);
+	background: var(--nav-bg);
+	padding: 10px;
 }
 
 .customer-label {
@@ -1267,4 +1267,25 @@ header .theme-icon {
 body .container .custom-accordion-button {
 	@extend .cursor-pointer;
 	background: none;
+}
+
+.blur {
+	filter: blur(4px);
+}
+
+.custom-hide-info-btn {
+
+	.close-eye-svg {
+		display: none;
+	}
+
+	&.active {
+		.open-eye-svg {
+			display: none;
+		}
+	
+		.close-eye-svg {
+			display: block;
+		}	
+	}
 }
