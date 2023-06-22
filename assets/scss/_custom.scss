@@ -1180,3 +1180,31 @@ header .theme-icon {
 	background-color: rgba(var(--bs-danger-rgb), var(--bs-text-opacity));
 }
 /* End Customer Details & Transactions */
+
+/* Start Customers card */
+.customer-card {
+	display: flex;
+	gap: 20px;
+	justify-content: space-between;
+	align-items: center;
+	> div {
+		display: flex;
+		gap: 15px;
+		align-items: center;
+	}
+	&__icon {
+		font-size: 20px;
+		width: 55px;
+		height: 55px;
+		line-height: 55px;
+		text-align: center;
+		color: var(--bs-body-color);
+		background-color: var(--bs-card-cap-bg);
+		border-radius: 8px;
+		flex: none;
+	}
+	.badge {
+		flex: none;
+	}
+}
+/* End Customers card */
