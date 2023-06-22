@@ -12135,7 +12135,7 @@ header .theme-icon {
   stroke: #fff;
 }
 
-.cursor-pointer {
+.cursor-pointer, body .container .custom-accordion-button {
   cursor: pointer;
 }
 
@@ -12905,6 +12905,10 @@ header .theme-icon {
 .login-form {
   background: var(--login-form-bg);
   width: 320px;
+}
+
+body .container .custom-accordion-button {
+  background: none;
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
