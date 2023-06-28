@@ -10,6 +10,7 @@ $(document).ready(function () {
   checkboxToggleButton.on("click", function (e) {
     e.preventDefault();
     $(this).children().toggleClass('d-none');
+    $(".checkbox-toggle-button").not(this).siblings('.checkbox-container').addClass("d-none");
     $(this).siblings('.checkbox-container').toggleClass("d-none");
     $(this)
       .siblings(".checkbox-container")
