@@ -9,6 +9,10 @@ $(document).ready(function () {
 
   checkboxToggleButton.on("click", function (e) {
     e.preventDefault();
+    $(".checkbox-toggle-button").each(function () {
+      console.log($(this).children().eq(0).removeClass('d-none'));
+      console.log($(this).children().eq(1).addClass('d-none'));
+    });
     $(this).children().toggleClass('d-none');
     $(".checkbox-toggle-button").not(this).siblings('.checkbox-container').addClass("d-none");
     $(this).siblings('.checkbox-container').toggleClass("d-none");
