@@ -368,12 +368,9 @@ header .theme-icon {
 	border-radius: 6px;
 	padding: 10px 20px 20px 20px;
 	// box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
-	position: sticky;
-	top: 110px;
 	// box-shadow: 0 0 7px #c7c7c7;
 	border: 1px solid var(--bs-border-color-translucent);
 }
-
 
 // Input Fields
 .form-label {
@@ -456,6 +453,10 @@ header .theme-icon {
 		}
 	}
 
+}
+
+.horizontal-input-group {
+    display: flex;
 }
 
 .list-group-item-action:hover,
@@ -1084,6 +1085,7 @@ header .theme-icon {
 	max-height: 500px;
 	overflow: auto;
 	margin-top: 5px;
+	position: absolute;
 
 	.multi-select-lists {
 		position: relative;

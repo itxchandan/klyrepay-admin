@@ -155,29 +155,14 @@
 	<section style="margin-top: -60px">
 		<div class="container">
 			<div class="row">
-				<div class="col-xxl-2 col-lg-3 mb-4 mb-xl-0">
+				<div class="col-12 mb-4">
 					<!-- Filter -->
+					<h2 class="fw-bold">FILTERS</h2>
+
 					<div class="filter-wrapper">
-						<div class="row row-cols-1 gy-2">
-
-							<div class="col">
-								<div class="d-flex justify-content-between">
-									<span class="fw-bold">FILTERS</span>
-									<!-- <a href="#!" class="text-decoration-none text-danger">
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-											class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
-											<path fill-rule="evenodd"
-												d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
-											<path
-												d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
-										</svg>
-										<span>Clear All</span>
-									</a> -->
-								</div>
-							</div>
-
+						<div class="row">
 							<!-- Program Multiselect -->
-							<div class="col">
+							<div class="col-5">
 								<label for="Program" class="form-label">Program</label>
 								<div class="position-relative">
 									<!-- toggle button -->
@@ -192,7 +177,7 @@
 									</div>
 
 									<!-- Checkbox Result -->
-									<div class="z-3 form-control p-0 overflow-y-scroll checkbox-container d-none bg-white multi-select-filter">
+									<div class="z-3 form-control p-0 overflow-y-scroll checkbox-container d-none multi-select-filter">
 										
 										<!-- Select All & Clear All -->
 										<div class="multi-select-search-wrapper">
@@ -323,537 +308,542 @@
 								</div>
 							</div>
 
-							<div class="col">
+							<div class="col-5">
 								<label for="datefilter" class="form-label">Date Range</label>
 								<input type="text" class="form-control" name="datefilter" placeholder="Enter Date" />
 							</div>
 
-							<div class="col mt-3">
+							<div class="col-2">
+								<label for="search" class="form-label">&nbsp;</label>
 								<a href="#!" class="btn btn-primary w-100">Submit</a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-xxl-10 col-lg-9">
-					<h2>Program Summary (All Time)</h2>
-					<div class="card px-4 py-3 mb-4">
-						<div class="row row-cols-xxl-5 row-cols-md-3 row-cols-sm-2">
-							<div class="my-2">
-								<span>Enrolled Patients</span>
-								<div class="h3 mb-0 mt-2">119,988</div>
-							</div>
-							<div class="my-2">
-								<span>Verified Patients</span>
-								<div class="d-flex align-items-center mt-2">
-									<div class="h3 mb-0">103,586</div>
-									<div class="d-flex align-items-center text-success ms-2">
-										<svg viewBox="0 0 20 20" height="20px" fill="currentColor" aria-hidden="true">
-											<path fill-rule="evenodd"
-												d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z"
-												clip-rule="evenodd"></path>
-										</svg>
-										<span>86.33%</span>
-									</div>
-								</div>
-							</div>
-							<div class="my-2">
-								<span>Activated Patients</span>
-								<div class="d-flex align-items-center mt-2">
-									<div class="h3 mb-0">97,167</div>
-									<div class="d-flex align-items-center text-success ms-2">
-										<svg viewBox="0 0 20 20" height="20px" fill="currentColor" aria-hidden="true">
-											<path fill-rule="evenodd"
-												d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z"
-												clip-rule="evenodd"></path>
-										</svg>
-										<span>80.98%</span>
-									</div>
-								</div>
-							</div>
-							<div class="my-2">
-								<span>Awaiting Verification</span>
-								<div class="d-flex align-items-center mt-2">
-									<div class="h3 mb-0">16,402</div>
-									<div class="d-flex align-items-center text-danger ms-2">
-										<svg viewBox="0 0 20 20" height="20px" fill="currentColor" aria-hidden="true">
-											<path fill-rule="evenodd"
-												d="M10 3a.75.75 0 01.75.75v10.638l3.96-4.158a.75.75 0 111.08 1.04l-5.25 5.5a.75.75 0 01-1.08 0l-5.25-5.5a.75.75 0 111.08-1.04l3.96 4.158V3.75A.75.75 0 0110 3z"
-												clip-rule="evenodd"></path>
-										</svg>
-										<span>13.67%</span>
-									</div>
-								</div>
-							</div>
-							<div class="my-2">
-								<span>Funding Account Balance</span>
-								<div class="h3 mb-0 mt-2 text-success">$63,583,933.64</div>
-							</div>
-						</div>
-					</div>
-
-					<h2>Patient Enrollment Summary</h2>
-					<div class="card px-4 py-3 mb-4 patient-enrollment-summary">
-						<div class="row row-cols-md-3 row-cols-sm-3">
-							<div class="my-2">
-								<div>
-									<span>Enrollments</span>
-									<div class="h3 mb-0 mt-2">50</div>
-								</div>
-							</div>
-							<div class="my-2">
-								<div>
-									<span>Verifications</span>
-									<div class="h3 mb-0 mt-2">38</div>
-								</div>
-							</div>
-							<div class="my-2">
-								<div>
-									<span>Activations</span>
-									<div class="h3 mb-0 mt-2">142</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<h2>Payments Summary</h2>
-					<div class="py-2 border-3 rounded-3">
-						<div class="row row-cols-xl-4 row-cols-sm-2">
-							<div class="my-2">
-								<div class="card p-4 h-100">
-									<span>Net Payments ($)</span>
-									<div class="h3 mb-0 mt-2">$296,697.80</div>
-								</div>
-							</div>
-							<div class="my-2">
-								<div class="card p-4 h-100">
-									<span>Authorizations ($)</span>
-									<div class="h3 mb-0 mt-2">$297,229.28</div>
-								</div>
-							</div>
-							<div class="my-2">
-								<div class="card p-4 h-100">
-									<span>Approvals ($)</span>
-									<div class="h3 mb-0 mt-2">$85,979.02</div>
-								</div>
-							</div>
-							<div class="my-2">
-								<div class="card p-4 h-100">
-									<span>Declined ($)</span>
-									<div class="h3 mb-0 mt-2">$229,901.19</div>
-								</div>
-							</div>
-							<div class="my-2">
-								<div class="card p-4 h-100">
-									<span>Net Payments</span>
-									<div class="h3 mb-0 mt-2">405</div>
-								</div>
-							</div>
-							<div class="my-2">
-								<div class="card p-4 h-100">
-									<span>Authorizations</span>
-									<div class="h3 mb-0 mt-2">347</div>
-								</div>
-							</div>
-							<div class="my-2">
-								<div class="card p-4 h-100">
-									<span>Approvals</span>
-									<div class="h3 mb-0 mt-2">70</div>
-								</div>
-							</div>
-							<div class="my-2">
-								<div class="card p-4 h-100">
-									<span>Declined</span>
-									<div class="h3 mb-0 mt-2">141</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- <div class="card mt-4">
-						<div class="card-header">
-							<h2 class="card-title mb-0">Declines by Pharmacy</h2>
-						</div>
-						<div class="card-body">
-							<div class="px-5 py-2">
-								<img src="assets/images/graph1.png" alt="graph1">
-							</div>
-						</div>
-					</div>
-
-					<div class="card my-4">
-						<div class="card-header">
-							<h2 class="card-title mb-0">Volume & Reasons for Decline By Pharmacy</h2>
-						</div>
-						<div class="card-body">
-							<div class="px-5 py-2">
-								<img src="assets/images/graph2.png" alt="graph2">
-							</div>
-						</div>
-					</div>
-
+				<div class="col-12">
 					<div class="card">
-						<div class="card-header">
-							<h2 class="card-title mb-0">Volume & Reasons for Decline Monthly Total</h2>
-						</div>
 						<div class="card-body">
-							<div class="px-5 py-2">
-								<img src="assets/images/graph3.png" alt="graph3">
-							</div>
-						</div>
-					</div> -->
 
-
-					<!-- Tabs -->
-					<div class="card p-3 my-3">
-						<div>
-							<div class="tab-button-wrapper mt-0">
-								<div class="tab-button-link tab-button active">Card Lookup Failures</div>
-								<div class="tab-button-link tab-button">One Time Password Validation Failures</div>
-							</div>
-						</div>
-						<!-- Contents -->
-						<!-- Card Lookup Failures -->
-						<div class="tab-view">
-							<div class="card overflow-auto">
-								<div class="table-responsive">
-									<table class="table table-hover">
-										<div class="table-header">
-											<a href="#!" class="btn download-report">
-												<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-													<path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+							<h2>Program Summary (All Time)</h2>
+							<div class="card px-4 py-3 mb-4">
+								<div class="row row-cols-xxl-5 row-cols-md-3 row-cols-sm-2">
+									<div class="my-2">
+										<span>Enrolled Patients</span>
+										<div class="h3 mb-0 mt-2">119,988</div>
+									</div>
+									<div class="my-2">
+										<span>Verified Patients</span>
+										<div class="d-flex align-items-center mt-2">
+											<div class="h3 mb-0">103,586</div>
+											<div class="d-flex align-items-center text-success ms-2">
+												<svg viewBox="0 0 20 20" height="20px" fill="currentColor" aria-hidden="true">
+													<path fill-rule="evenodd"
+														d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z"
+														clip-rule="evenodd"></path>
 												</svg>
-												<span>Download CSV</span>
-											</a>
-											<a href="#!" class="btn add-filters dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-												<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-													<path stroke-linecap="round" stroke-linejoin="round" d="M9 4.5v15m6-15v15m-10.875 0h15.75c.621 0 1.125-.504 1.125-1.125V5.625c0-.621-.504-1.125-1.125-1.125H4.125C3.504 4.5 3 5.004 3 5.625v12.75c0 .621.504 1.125 1.125 1.125z" />
-												</svg>
-												<span>Columns</span>
-											</a>
-											<ul class="dropdown-menu px-2">
-												<li>
-													<div class="form-check">
-														<input type="checkbox" class="form-check-input exampleCheck1" id="exampleCheck1">
-														<label class="form-check-label" for="exampleCheck1">Customer ID</label>
-													</div>
-												</li>
-												<li>
-													<div class="form-check">
-														<input type="checkbox" class="form-check-input exampleCheck2" id="exampleCheck2">
-														<label class="form-check-label" for="exampleCheck2">Last Name</label>
-													</div>
-												</li>
-												<li>
-													<div class="form-check">
-														<input type="checkbox" class="form-check-input exampleCheck3" id="exampleCheck3">
-														<label class="form-check-label" for="exampleCheck3">Email</label>
-													</div>
-												</li>
-												<li>
-													<div class="form-check">
-														<input type="checkbox" class="form-check-input exampleCheck4" id="exampleCheck4">
-														<label class="form-check-label" for="exampleCheck4">DOB</label>
-													</div>
-												</li>
-												<li>
-													<div class="form-check">
-														<input type="checkbox" class="form-check-input exampleCheck5" id="exampleCheck5">
-														<label class="form-check-label" for="exampleCheck5">Timestamp</label>
-													</div>
-												</li>
-												<li>
-													<div class="form-check">
-														<input type="checkbox" class="form-check-input exampleCheck6" id="exampleCheck6">
-														<label class="form-check-label" for="exampleCheck6">Error</label>
-													</div>
-												</li>
-											</ul>
+												<span>86.33%</span>
+											</div>
 										</div>
-										<thead>
-											<tr>
-												<th class="sort-th sort-asc check1">
-													<span>Customer ID</span>
-													<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
-														viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-														<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-													</svg>
-
-												</th>
-												<th class="sort-th sort-asc check2">
-													<span>Last Name</span>
-													<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
-														viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-														<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-													</svg>
-
-												</th>
-												<th class="sort-th sort-asc check3">
-													<span>Email</span>
-													<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
-														viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-														<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-													</svg>
-
-												</th>
-												<th class="sort-th sort-asc check4">
-													<span>DOB</span>
-													<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
-														viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-														<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-													</svg>
-
-												</th>
-												<th class="sort-th sort-asc check5">
-													<span>Timestamp</span>
-													<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
-														viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-														<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-													</svg>
-
-												</th>
-												<th class="sort-th sort-dsc check6">
-													<span>Error</span>
-													<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
-														viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-														<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-													</svg>
-												</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td class="check1">1384338198</td>
-												<td class="check2">Jackson</td>
-												<td class="check3">delaneyjackson2020@gmail.com</td>
-												<td class="check4">06/19/2000</td>
-												<td class="check5">June 13, 2023, 10:56:39</td>
-												<td class="check6">													
-													<span class="text-danger">Invalid Email</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="check1">1384338198</td>
-												<td class="check2">Jackson</td>
-												<td class="check3">mjackson@bssd.net</td>
-												<td class="check4">02/03/1972</td>
-												<td class="check5">June 13, 2023, 10:55:56</td>
-												<td class="check6">
-													<span class="text-danger">Invalid DOB</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="check1">1377957523</td>
-												<td class="check2">Hayes</td>
-												<td class="check3">brownidgirl75@live.com</td>
-												<td class="check4">12/07/1980</td>
-												<td class="check5">June 13, 2023, 10:54:50</td>
-												<td class="check6">
-													<span class="text-danger">Invalid DOB</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="check1">1377957523</td>
-												<td class="check2">Hayes</td>
-												<td class="check3">brownidgirl75@live.com</td>
-												<td class="check4">11/21/1975</td>
-												<td class="check5">June 13, 2023, 10:53:33</td>
-												<td class="check6">
-													<span class="text-danger">Invalid DOB</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="check1">08947146546</td>
-												<td class="check2">Stumpf</td>
-												<td class="check3">stumpfkara@hmail.com</td>
-												<td class="check4">01/23/1969</td>
-												<td class="check5">June 13, 2023, 10:30:58</td>
-												<td class="check6">													
-													<span class="text-danger">Invalid Email</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="check1">08947146546</td>
-												<td class="check2">Stumpf</td>
-												<td class="check3">stumpfkara@hmail.com</td>
-												<td class="check4">01/23/1969</td>
-												<td class="check5">June 13, 2023, 10:30:48</td>
-												<td class="check6">													
-													<span class="text-danger">Invalid Email</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="check1">1385032666</td>
-												<td class="check2">Freimark</td>
-												<td class="check3">maroneylisa@yahoo.com</td>
-												<td class="check4">04/28/1976</td>
-												<td class="check5">June 13, 2023, 10:09:03</td>
-												<td class="check6">													
-													<span class="text-danger">Invalid Email</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="check1">1385032666</td>
-												<td class="check2">Freimark</td>
-												<td class="check3">maroneylisa@yahoo.com</td>
-												<td class="check4">04/28/1976</td>
-												<td class="check5">June 13, 2023, 10:08:51</td>
-												<td class="check6">													
-													<span class="text-danger">Invalid Email</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="check1">049140601</td>
-												<td class="check2">YEE</td>
-												<td class="check3">MONTYAC@GMAIL.COM03</td>
-												<td class="check4">03/06/1950</td>
-												<td class="check5">June 13, 2023, 09:43:01</td>
-												<td class="check6">													
-													<span class="text-danger">Invalid Email</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="check1">18947132595</td>
-												<td class="check2">Foster-Devoe</td>
-												<td class="check3">sim1lady@hotmail.com</td>
-												<td class="check4">03/14/1966</td>
-												<td class="check5">June 13, 2023, 09:20:37</td>
-												<td class="check6">
-													<span class="text-danger">Invalid Last Name</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="check1">18947132595</td>
-												<td class="check2">Foster-Devoe</td>
-												<td class="check3">sim1lady@hotmail.com</td>
-												<td class="check4">03/14/1966</td>
-												<td class="check5">June 13, 2023, 09:20:16</td>
-												<td class="check6">
-													<span class="text-danger">Invalid Last Name</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="check1">18947132595</td>
-												<td class="check2">Foster-Devoe</td>
-												<td class="check3">sim1lady@hotmail.com</td>
-												<td class="check4">03/14/1966</td>
-												<td class="check5">June 13, 2023, 08:48:28</td>
-												<td class="check6">
-													<span class="text-danger">Invalid Last Name</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="check1">18947132595</td>
-												<td class="check2">Foster-Devoe</td>
-												<td class="check3">sim1lady@hotmail.com</td>
-												<td class="check4">03/14/1966</td>
-												<td class="check5">June 13, 2023, 08:47:58</td>
-												<td class="check6">
-													<span class="text-danger">Invalid Last Name</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="check1">18947390895</td>
-												<td class="check2">Landrau</td>
-												<td class="check3">mjlandrau@gmail.com</td>
-												<td class="check4">10/10/1963</td>
-												<td class="check5">June 13, 2023, 01:57:43</td>
-												<td class="check6">
-													<span class="text-danger">Invalid Last Name</span>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
-
-						<!-- One Time Password Validation Failures -->
-						<div class="tab-view d-none">
-							<div class="card overflow-auto">
-								<div class="table-responsive">
-									<table class="table table-hover">
-										<div class="table-header">
-											<a href="#!" class="btn download-report">
-												<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-													<path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+									</div>
+									<div class="my-2">
+										<span>Activated Patients</span>
+										<div class="d-flex align-items-center mt-2">
+											<div class="h3 mb-0">97,167</div>
+											<div class="d-flex align-items-center text-success ms-2">
+												<svg viewBox="0 0 20 20" height="20px" fill="currentColor" aria-hidden="true">
+													<path fill-rule="evenodd"
+														d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z"
+														clip-rule="evenodd"></path>
 												</svg>
-												<span>Download CSV</span>
-											</a>
-											<a href="#!" class="btn add-filters dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-												<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-													<path stroke-linecap="round" stroke-linejoin="round" d="M9 4.5v15m6-15v15m-10.875 0h15.75c.621 0 1.125-.504 1.125-1.125V5.625c0-.621-.504-1.125-1.125-1.125H4.125C3.504 4.5 3 5.004 3 5.625v12.75c0 .621.504 1.125 1.125 1.125z" />
-												</svg>
-												<span>Columns</span>
-											</a>
-											<ul class="dropdown-menu px-2">
-												<li>
-													<div class="form-check">
-														<input type="checkbox" class="form-check-input" id="exampleCheck01">
-														<label class="form-check-label" for="exampleCheck01">Customer ID</label>
-													</div>
-												</li>
-												<li>
-													<div class="form-check">
-														<input type="checkbox" class="form-check-input" id="exampleCheck02">
-														<label class="form-check-label" for="exampleCheck02">Input OTP</label>
-													</div>
-												</li>
-												<li>
-													<div class="form-check">
-														<input type="checkbox" class="form-check-input" id="exampleCheck03">
-														<label class="form-check-label" for="exampleCheck03">Actual OTP</label>
-													</div>
-												</li>
-												<li>
-													<div class="form-check">
-														<input type="checkbox" class="form-check-input" id="exampleCheck04">
-														<label class="form-check-label" for="exampleCheck04">Validation Failed</label>
-													</div>
-												</li>
-											</ul>
+												<span>80.98%</span>
+											</div>
 										</div>
-										<thead>
-											<tr>
-												<th>Customer ID</th>
-												<th>Input OTP</th>
-												<th>Actual OTP</th>
-												<th>Validation Failed</th>
-											</tr>
-										</thead>
-										<tbody></tbody>
-									</table>
-									<div class="d-flex gap-2 p-4 justify-content-center align-items-center">
-										<svg xmlns="http://www.w3.org/2000/svg" style="max-width: 20px;" fill="none"
-											viewBox="0 0 24 24" stroke="#9ca3af">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-												d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4">
-											</path>
-										</svg>
-										<p class="mb-0">There are no historical failures to display.</p>
+									</div>
+									<div class="my-2">
+										<span>Awaiting Verification</span>
+										<div class="d-flex align-items-center mt-2">
+											<div class="h3 mb-0">16,402</div>
+											<div class="d-flex align-items-center text-danger ms-2">
+												<svg viewBox="0 0 20 20" height="20px" fill="currentColor" aria-hidden="true">
+													<path fill-rule="evenodd"
+														d="M10 3a.75.75 0 01.75.75v10.638l3.96-4.158a.75.75 0 111.08 1.04l-5.25 5.5a.75.75 0 01-1.08 0l-5.25-5.5a.75.75 0 111.08-1.04l3.96 4.158V3.75A.75.75 0 0110 3z"
+														clip-rule="evenodd"></path>
+												</svg>
+												<span>13.67%</span>
+											</div>
+										</div>
+									</div>
+									<div class="my-2">
+										<span>Funding Account Balance</span>
+										<div class="h3 mb-0 mt-2 text-success">$63,583,933.64</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="pagination-wrapper">
-						<div class="text-muted small">
-							Result per page
-							<p class="mb-0">Showing 1 to 20 of 10000 Enteries</p>
+							<h2>Patient Enrollment Summary</h2>
+							<div class="card px-4 py-3 mb-4 patient-enrollment-summary">
+								<div class="row row-cols-md-3 row-cols-sm-3">
+									<div class="my-2">
+										<div>
+											<span>Enrollments</span>
+											<div class="h3 mb-0 mt-2">50</div>
+										</div>
+									</div>
+									<div class="my-2">
+										<div>
+											<span>Verifications</span>
+											<div class="h3 mb-0 mt-2">38</div>
+										</div>
+									</div>
+									<div class="my-2">
+										<div>
+											<span>Activations</span>
+											<div class="h3 mb-0 mt-2">142</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<h2>Payments Summary</h2>
+							<div class="py-2 border-3 rounded-3">
+								<div class="row row-cols-xl-4 row-cols-sm-2">
+									<div class="my-2">
+										<div class="card p-4 h-100">
+											<span>Net Payments ($)</span>
+											<div class="h3 mb-0 mt-2">$296,697.80</div>
+										</div>
+									</div>
+									<div class="my-2">
+										<div class="card p-4 h-100">
+											<span>Authorizations ($)</span>
+											<div class="h3 mb-0 mt-2">$297,229.28</div>
+										</div>
+									</div>
+									<div class="my-2">
+										<div class="card p-4 h-100">
+											<span>Approvals ($)</span>
+											<div class="h3 mb-0 mt-2">$85,979.02</div>
+										</div>
+									</div>
+									<div class="my-2">
+										<div class="card p-4 h-100">
+											<span>Declined ($)</span>
+											<div class="h3 mb-0 mt-2">$229,901.19</div>
+										</div>
+									</div>
+									<div class="my-2">
+										<div class="card p-4 h-100">
+											<span>Net Payments</span>
+											<div class="h3 mb-0 mt-2">405</div>
+										</div>
+									</div>
+									<div class="my-2">
+										<div class="card p-4 h-100">
+											<span>Authorizations</span>
+											<div class="h3 mb-0 mt-2">347</div>
+										</div>
+									</div>
+									<div class="my-2">
+										<div class="card p-4 h-100">
+											<span>Approvals</span>
+											<div class="h3 mb-0 mt-2">70</div>
+										</div>
+									</div>
+									<div class="my-2">
+										<div class="card p-4 h-100">
+											<span>Declined</span>
+											<div class="h3 mb-0 mt-2">141</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- <div class="card mt-4">
+								<div class="card-header">
+									<h2 class="card-title mb-0">Declines by Pharmacy</h2>
+								</div>
+								<div class="card-body">
+									<div class="px-5 py-2">
+										<img src="assets/images/graph1.png" alt="graph1">
+									</div>
+								</div>
+							</div>
+
+							<div class="card my-4">
+								<div class="card-header">
+									<h2 class="card-title mb-0">Volume & Reasons for Decline By Pharmacy</h2>
+								</div>
+								<div class="card-body">
+									<div class="px-5 py-2">
+										<img src="assets/images/graph2.png" alt="graph2">
+									</div>
+								</div>
+							</div>
+
+							<div class="card">
+								<div class="card-header">
+									<h2 class="card-title mb-0">Volume & Reasons for Decline Monthly Total</h2>
+								</div>
+								<div class="card-body">
+									<div class="px-5 py-2">
+										<img src="assets/images/graph3.png" alt="graph3">
+									</div>
+								</div>
+							</div> -->
+
+							<!-- Tabs -->
+							<div class="my-3">
+								<div>
+									<div class="tab-button-wrapper mt-0">
+										<div class="tab-button-link tab-button active">Card Lookup Failures</div>
+										<div class="tab-button-link tab-button">One Time Password Validation Failures</div>
+									</div>
+								</div>
+								<!-- Contents -->
+								<!-- Card Lookup Failures -->
+								<div class="tab-view">
+									<div class="card overflow-auto">
+										<div class="table-responsive">
+											<table class="table table-hover">
+												<div class="table-header">
+													<a href="#!" class="btn download-report">
+														<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+															<path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+														</svg>
+														<span>Download CSV</span>
+													</a>
+													<a href="#!" class="btn add-filters dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+														<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+															<path stroke-linecap="round" stroke-linejoin="round" d="M9 4.5v15m6-15v15m-10.875 0h15.75c.621 0 1.125-.504 1.125-1.125V5.625c0-.621-.504-1.125-1.125-1.125H4.125C3.504 4.5 3 5.004 3 5.625v12.75c0 .621.504 1.125 1.125 1.125z" />
+														</svg>
+														<span>Columns</span>
+													</a>
+													<ul class="dropdown-menu px-2">
+														<li>
+															<div class="form-check">
+																<input type="checkbox" class="form-check-input exampleCheck1" id="exampleCheck1">
+																<label class="form-check-label" for="exampleCheck1">Customer ID</label>
+															</div>
+														</li>
+														<li>
+															<div class="form-check">
+																<input type="checkbox" class="form-check-input exampleCheck2" id="exampleCheck2">
+																<label class="form-check-label" for="exampleCheck2">Last Name</label>
+															</div>
+														</li>
+														<li>
+															<div class="form-check">
+																<input type="checkbox" class="form-check-input exampleCheck3" id="exampleCheck3">
+																<label class="form-check-label" for="exampleCheck3">Email</label>
+															</div>
+														</li>
+														<li>
+															<div class="form-check">
+																<input type="checkbox" class="form-check-input exampleCheck4" id="exampleCheck4">
+																<label class="form-check-label" for="exampleCheck4">DOB</label>
+															</div>
+														</li>
+														<li>
+															<div class="form-check">
+																<input type="checkbox" class="form-check-input exampleCheck5" id="exampleCheck5">
+																<label class="form-check-label" for="exampleCheck5">Timestamp</label>
+															</div>
+														</li>
+														<li>
+															<div class="form-check">
+																<input type="checkbox" class="form-check-input exampleCheck6" id="exampleCheck6">
+																<label class="form-check-label" for="exampleCheck6">Error</label>
+															</div>
+														</li>
+													</ul>
+												</div>
+												<thead>
+													<tr>
+														<th class="sort-th sort-asc check1">
+															<span>Customer ID</span>
+															<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
+																viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+																<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+															</svg>
+
+														</th>
+														<th class="sort-th sort-asc check2">
+															<span>Last Name</span>
+															<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
+																viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+																<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+															</svg>
+
+														</th>
+														<th class="sort-th sort-asc check3">
+															<span>Email</span>
+															<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
+																viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+																<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+															</svg>
+
+														</th>
+														<th class="sort-th sort-asc check4">
+															<span>DOB</span>
+															<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
+																viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+																<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+															</svg>
+
+														</th>
+														<th class="sort-th sort-asc check5">
+															<span>Timestamp</span>
+															<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
+																viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+																<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+															</svg>
+
+														</th>
+														<th class="sort-th sort-dsc check6">
+															<span>Error</span>
+															<svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
+																viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+																<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+															</svg>
+														</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="check1">1384338198</td>
+														<td class="check2">Jackson</td>
+														<td class="check3">delaneyjackson2020@gmail.com</td>
+														<td class="check4">06/19/2000</td>
+														<td class="check5">June 13, 2023, 10:56:39</td>
+														<td class="check6">													
+															<span class="text-danger">Invalid Email</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="check1">1384338198</td>
+														<td class="check2">Jackson</td>
+														<td class="check3">mjackson@bssd.net</td>
+														<td class="check4">02/03/1972</td>
+														<td class="check5">June 13, 2023, 10:55:56</td>
+														<td class="check6">
+															<span class="text-danger">Invalid DOB</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="check1">1377957523</td>
+														<td class="check2">Hayes</td>
+														<td class="check3">brownidgirl75@live.com</td>
+														<td class="check4">12/07/1980</td>
+														<td class="check5">June 13, 2023, 10:54:50</td>
+														<td class="check6">
+															<span class="text-danger">Invalid DOB</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="check1">1377957523</td>
+														<td class="check2">Hayes</td>
+														<td class="check3">brownidgirl75@live.com</td>
+														<td class="check4">11/21/1975</td>
+														<td class="check5">June 13, 2023, 10:53:33</td>
+														<td class="check6">
+															<span class="text-danger">Invalid DOB</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="check1">08947146546</td>
+														<td class="check2">Stumpf</td>
+														<td class="check3">stumpfkara@hmail.com</td>
+														<td class="check4">01/23/1969</td>
+														<td class="check5">June 13, 2023, 10:30:58</td>
+														<td class="check6">													
+															<span class="text-danger">Invalid Email</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="check1">08947146546</td>
+														<td class="check2">Stumpf</td>
+														<td class="check3">stumpfkara@hmail.com</td>
+														<td class="check4">01/23/1969</td>
+														<td class="check5">June 13, 2023, 10:30:48</td>
+														<td class="check6">													
+															<span class="text-danger">Invalid Email</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="check1">1385032666</td>
+														<td class="check2">Freimark</td>
+														<td class="check3">maroneylisa@yahoo.com</td>
+														<td class="check4">04/28/1976</td>
+														<td class="check5">June 13, 2023, 10:09:03</td>
+														<td class="check6">													
+															<span class="text-danger">Invalid Email</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="check1">1385032666</td>
+														<td class="check2">Freimark</td>
+														<td class="check3">maroneylisa@yahoo.com</td>
+														<td class="check4">04/28/1976</td>
+														<td class="check5">June 13, 2023, 10:08:51</td>
+														<td class="check6">													
+															<span class="text-danger">Invalid Email</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="check1">049140601</td>
+														<td class="check2">YEE</td>
+														<td class="check3">MONTYAC@GMAIL.COM03</td>
+														<td class="check4">03/06/1950</td>
+														<td class="check5">June 13, 2023, 09:43:01</td>
+														<td class="check6">													
+															<span class="text-danger">Invalid Email</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="check1">18947132595</td>
+														<td class="check2">Foster-Devoe</td>
+														<td class="check3">sim1lady@hotmail.com</td>
+														<td class="check4">03/14/1966</td>
+														<td class="check5">June 13, 2023, 09:20:37</td>
+														<td class="check6">
+															<span class="text-danger">Invalid Last Name</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="check1">18947132595</td>
+														<td class="check2">Foster-Devoe</td>
+														<td class="check3">sim1lady@hotmail.com</td>
+														<td class="check4">03/14/1966</td>
+														<td class="check5">June 13, 2023, 09:20:16</td>
+														<td class="check6">
+															<span class="text-danger">Invalid Last Name</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="check1">18947132595</td>
+														<td class="check2">Foster-Devoe</td>
+														<td class="check3">sim1lady@hotmail.com</td>
+														<td class="check4">03/14/1966</td>
+														<td class="check5">June 13, 2023, 08:48:28</td>
+														<td class="check6">
+															<span class="text-danger">Invalid Last Name</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="check1">18947132595</td>
+														<td class="check2">Foster-Devoe</td>
+														<td class="check3">sim1lady@hotmail.com</td>
+														<td class="check4">03/14/1966</td>
+														<td class="check5">June 13, 2023, 08:47:58</td>
+														<td class="check6">
+															<span class="text-danger">Invalid Last Name</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="check1">18947390895</td>
+														<td class="check2">Landrau</td>
+														<td class="check3">mjlandrau@gmail.com</td>
+														<td class="check4">10/10/1963</td>
+														<td class="check5">June 13, 2023, 01:57:43</td>
+														<td class="check6">
+															<span class="text-danger">Invalid Last Name</span>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+
+								<!-- One Time Password Validation Failures -->
+								<div class="tab-view d-none">
+									<div class="card overflow-auto">
+										<div class="table-responsive">
+											<table class="table table-hover">
+												<div class="table-header">
+													<a href="#!" class="btn download-report">
+														<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+															<path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+														</svg>
+														<span>Download CSV</span>
+													</a>
+													<a href="#!" class="btn add-filters dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+														<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+															<path stroke-linecap="round" stroke-linejoin="round" d="M9 4.5v15m6-15v15m-10.875 0h15.75c.621 0 1.125-.504 1.125-1.125V5.625c0-.621-.504-1.125-1.125-1.125H4.125C3.504 4.5 3 5.004 3 5.625v12.75c0 .621.504 1.125 1.125 1.125z" />
+														</svg>
+														<span>Columns</span>
+													</a>
+													<ul class="dropdown-menu px-2">
+														<li>
+															<div class="form-check">
+																<input type="checkbox" class="form-check-input" id="exampleCheck01">
+																<label class="form-check-label" for="exampleCheck01">Customer ID</label>
+															</div>
+														</li>
+														<li>
+															<div class="form-check">
+																<input type="checkbox" class="form-check-input" id="exampleCheck02">
+																<label class="form-check-label" for="exampleCheck02">Input OTP</label>
+															</div>
+														</li>
+														<li>
+															<div class="form-check">
+																<input type="checkbox" class="form-check-input" id="exampleCheck03">
+																<label class="form-check-label" for="exampleCheck03">Actual OTP</label>
+															</div>
+														</li>
+														<li>
+															<div class="form-check">
+																<input type="checkbox" class="form-check-input" id="exampleCheck04">
+																<label class="form-check-label" for="exampleCheck04">Validation Failed</label>
+															</div>
+														</li>
+													</ul>
+												</div>
+												<thead>
+													<tr>
+														<th>Customer ID</th>
+														<th>Input OTP</th>
+														<th>Actual OTP</th>
+														<th>Validation Failed</th>
+													</tr>
+												</thead>
+												<tbody></tbody>
+											</table>
+											<div class="d-flex gap-2 p-4 justify-content-center align-items-center">
+												<svg xmlns="http://www.w3.org/2000/svg" style="max-width: 20px;" fill="none"
+													viewBox="0 0 24 24" stroke="#9ca3af">
+													<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+														d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4">
+													</path>
+												</svg>
+												<p class="mb-0">There are no historical failures to display.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="pagination-wrapper">
+								<div class="text-muted small">
+									Result per page
+									<p class="mb-0">Showing 1 to 20 of 10000 Enteries</p>
+								</div>
+								<nav aria-label="Page navigation example">
+									<ul class="pagination">
+										<li class="page-item">
+											<a class="page-link" href="#">Previous</a>
+										</li>
+										<li class="page-item"><a class="page-link" href="#">1</a></li>
+										<li class="page-item"><a class="page-link" href="#">2</a></li>
+										<li class="page-item"><a class="page-link" href="#">3</a></li>
+										<li class="page-item">
+											<a class="page-link" href="#">Next</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
 						</div>
-						<nav aria-label="Page navigation example">
-							<ul class="pagination">
-								<li class="page-item">
-									<a class="page-link" href="#">Previous</a>
-								</li>
-								<li class="page-item"><a class="page-link" href="#">1</a></li>
-								<li class="page-item"><a class="page-link" href="#">2</a></li>
-								<li class="page-item"><a class="page-link" href="#">3</a></li>
-								<li class="page-item">
-									<a class="page-link" href="#">Next</a>
-								</li>
-							</ul>
-						</nav>
 					</div>
 				</div>
 			</div>
